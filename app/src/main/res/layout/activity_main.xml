@@ -46,7 +46,17 @@
         android:id="@+id/property_sale_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="View Property Details"
+        android:text="Properties for sale"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcome_text" />
+
+    <Button
+        android:id="@+id/property_rent_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Properties for rent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

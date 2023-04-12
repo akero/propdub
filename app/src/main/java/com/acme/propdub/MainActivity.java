@@ -47,15 +47,27 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
-
+// property sale button code
         // Initialize UI elements
-        View propertyDetailsButton = findViewById(R.id.property_sale_button);
+        View propertySaleButton = findViewById(R.id.property_sale_button);
 
         // Set up click listeners for UI elements
-        propertyDetailsButton.setOnClickListener(new View.OnClickListener() {
+        propertySaleButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openPropertySaleActivity();
+            }
+        });
+
+
+        //property rent button code
+
+        View propertyRentButton = findViewById(R.id.property_rent_button);
+        // Set up click listeners for UI elements
+        propertyRentButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openPropertyRentActivity();
             }
         });
     }
@@ -63,6 +75,12 @@ public class MainActivity extends AppCompatActivity {
     // Method to navigate to PropertyDetailsActivity
     private void openPropertySaleActivity() {
         Intent intent = new Intent(MainActivity.this, PropertySale.class);
+        startActivity(intent);
+    }
+
+    // Method to navigate to PropertyRent
+    private void openPropertyRentActivity() {
+        Intent intent = new Intent(MainActivity.this, PropertyRent.class);
         startActivity(intent);
     }
     @Override
