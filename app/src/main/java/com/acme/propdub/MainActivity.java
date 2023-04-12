@@ -49,20 +49,20 @@ public class MainActivity extends AppCompatActivity {
         });
 
         // Initialize UI elements
-        View propertyDetailsButton = findViewById(R.id.property_details_button);
+        View propertyDetailsButton = findViewById(R.id.property_sale_button);
 
         // Set up click listeners for UI elements
         propertyDetailsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openPropertyDetailsActivity();
+                openPropertySaleActivity();
             }
         });
     }
 
     // Method to navigate to PropertyDetailsActivity
-    private void openPropertyDetailsActivity() {
-        Intent intent = new Intent(MainActivity.this, PropertyDetailsActivity.class);
+    private void openPropertySaleActivity() {
+        Intent intent = new Intent(MainActivity.this, PropertySale.class);
         startActivity(intent);
     }
     @Override
