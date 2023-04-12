@@ -21,6 +21,7 @@ import com.acme.propdub.databinding.ActivityMainBinding;
 
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.SearchView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -59,8 +60,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
-        //property rent button code
+//property rent button code
 
         View propertyRentButton = findViewById(R.id.property_rent_button);
         // Set up click listeners for UI elements
@@ -83,11 +83,33 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(MainActivity.this, PropertyRent.class);
         startActivity(intent);
     }
+
+    // Adding the search bar and code to handle searches
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
+
+        MenuItem searchItem = menu.findItem(R.id.action_search);
+        SearchView searchView = (SearchView) searchItem.getActionView();
+
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                // Handle search query submission
+                Intent intent = new Intent(MainActivity.this, PropertyDetails.class);
+                intent.putExtra("search_query", query);
+                startActivity(intent);
+                return true;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                // Handle search query text changes
+                return true;
+            }
+        });
+
+        return super.onCreateOptionsMenu(menu);
     }
 
     @Override
