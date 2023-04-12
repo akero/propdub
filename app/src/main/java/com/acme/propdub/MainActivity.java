@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    // Method to navigate to PropertyDetailsActivity
+    // Method to navigate to PropertySale
     private void openPropertySaleActivity() {
         Intent intent = new Intent(MainActivity.this, PropertySale.class);
         startActivity(intent);
@@ -96,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onQueryTextSubmit(String query) {
                 // Handle search query submission
-                Intent intent = new Intent(MainActivity.this, PropertyDetails.class);
+                Intent intent = new Intent(MainActivity.this, SearchResults.class);
                 intent.putExtra("search_query", query);
                 startActivity(intent);
                 return true;
