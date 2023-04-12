@@ -1,7 +1,11 @@
 package com.acme.propdub;
 
 import android.os.Bundle;
-
+import androidx.appcompat.app.AppCompatActivity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import com.google.android.material.snackbar.Snackbar;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -43,8 +47,24 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+        // Initialize UI elements
+        View propertyDetailsButton = findViewById(R.id.property_details_button);
+
+        // Set up click listeners for UI elements
+        propertyDetailsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openPropertyDetailsActivity();
+            }
+        });
     }
 
+    // Method to navigate to PropertyDetailsActivity
+    private void openPropertyDetailsActivity() {
+        Intent intent = new Intent(MainActivity.this, PropertyDetailsActivity.class);
+        startActivity(intent);
+    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
