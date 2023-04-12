@@ -12,6 +12,21 @@
         android:theme="@style/Theme.PropDub"
         tools:targetApi="31">
         <activity
+            android:name=".MortgageCalculator"
+            android:exported="false" />
+        <activity
+            android:name=".SavedSearches"
+            android:exported="false" />
+        <activity
+            android:name=".Support"
+            android:exported="false" />
+        <activity
+            android:name=".Favorites"
+            android:exported="false" />
+        <activity
+            android:name=".AboutUs"
+            android:exported="false" />
+        <activity
             android:name=".AgentProfile"
             android:exported="false" />
         <activity
