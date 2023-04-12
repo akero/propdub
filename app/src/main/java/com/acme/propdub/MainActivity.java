@@ -1,32 +1,30 @@
 package com.acme.propdub;
 
-import android.os.Bundle;
-import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.Settings;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
-import com.google.android.material.snackbar.Snackbar;
-
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
-
-import android.view.View;
-
+import androidx.appcompat.widget.SearchView;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
-
+import com.google.android.material.navigation.NavigationView;
+import com.google.android.material.snackbar.Snackbar;
 import com.acme.propdub.databinding.ActivityMainBinding;
 
-import android.view.Menu;
-import android.view.MenuItem;
-import android.widget.SearchView;
-
-public class MainActivity extends AppCompatActivity {
-
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private AppBarConfiguration appBarConfiguration;
     private ActivityMainBinding binding;
+    private DrawerLayout drawer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +34,15 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         setSupportActionBar(binding.toolbar);
+
+        drawer =findViewById(R.id.drawer_layout);
+        NavigationView navigationView = findViewById(R.id.id_view);
+        navigationView.setNavigationItemSelectedListener(this);
+
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, binding.toolbar,
+                R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawer.addDrawerListener(toggle);
+        toggle.syncState();
 
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
         appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
@@ -48,11 +55,9 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
-// property sale button code
-        // Initialize UI elements
-        View propertySaleButton = findViewById(R.id.property_sale_button);
 
-        // Set up click listeners for UI elements
+        // property sale button code
+        View propertySaleButton = findViewById(R.id.property_sale_button);
         propertySaleButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -60,10 +65,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-//property rent button code
-
+        // property rent button code
         View propertyRentButton = findViewById(R.id.property_rent_button);
-        // Set up click listeners for UI elements
         propertyRentButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -111,22 +114,43 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onCreateOptionsMenu(menu);
     }
-
+//menu code
+    //TODO: idk fix this shit
     @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.ID1:
+                startActivity(new Intent(this, Favorites.class));
+                break;
+            case R.id.ID2:
+                startActivity(new Intent(this, SavedSearches.class));
+                break;
+            case R.id.ID3:
+                startActivity(new Intent(this, MortgageCalculator.class));
+                break;
+            case R.id.ID4:
+                startActivity(new Intent(this, Settings.class));
+                break;
+            case R.id.ID5:
+                startActivity(new Intent(this, Support.class));
+                break;
+            case R.id.ID6:
+                startActivity(new Intent(this, AboutUs.class));
+                break;
         }
 
-        return super.onOptionsItemSelected(item);
+        drawer.closeDrawer(GravityCompat.START);
+        return true;
     }
 
+    @Override
+    public void onBackPressed() {
+        if (drawer.isDrawerOpen(GravityCompat.START)) {
+            drawer.closeDrawer(GravityCompat.START);
+        } else {
+            super.onBackPressed();
+        }
+    }
     @Override
     public boolean onSupportNavigateUp() {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
