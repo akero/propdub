@@ -12,6 +12,15 @@
         android:theme="@style/Theme.PropDub"
         tools:targetApi="31">
         <activity
+            android:name=".ScheduleVisit"
+            android:exported="false" />
+        <activity
+            android:name=".DocViewer"
+            android:exported="false" />
+        <activity
+            android:name=".Contact"
+            android:exported="false" />
+        <activity
             android:name=".MortgageCalculator"
             android:exported="false" />
         <activity

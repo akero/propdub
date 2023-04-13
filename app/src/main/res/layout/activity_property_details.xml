@@ -6,4 +6,81 @@
     android:layout_height="match_parent"
     tools:context=".PropertyDetails">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/property_details_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Property details page"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="32dp"/>
+
+        <Button
+            android:id="@+id/contact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contact"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/property_details_text"
+            android:layout_marginTop="16dp"/>
+
+        <Button
+            android:id="@+id/schedule_viewing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Schedule viewing"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/contact"
+            android:layout_marginTop="16dp"/>
+
+        <Button
+            android:id="@+id/location_on_map"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Location on map"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/schedule_viewing"
+            android:layout_marginTop="16dp"/>
+
+        <Button
+            android:id="@+id/video"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Video"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/location_on_map"
+            android:layout_marginTop="16dp"/>
+
+        <Button
+            android:id="@+id/documents_viewer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Documents viewer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/video"
+            android:layout_marginTop="16dp"/>
+
+        <Button
+            android:id="@+id/mortgage_calculator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mortgage calculator"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/documents_viewer"
+            android:layout_marginTop="16dp"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
