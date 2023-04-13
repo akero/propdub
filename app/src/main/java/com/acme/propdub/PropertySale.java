@@ -9,7 +9,8 @@ import android.view.MenuItem;
 import android.widget.SearchView;
 
 //TODO: add code to handle search query submission while searching only properties for sale
-//properties for sale page
+//TODO: Handle search query text changes
+
 public class PropertySale extends AppCompatActivity {
 
     @Override
@@ -29,7 +30,7 @@ public class PropertySale extends AppCompatActivity {
             public boolean onQueryTextSubmit(String query) {
                 // Handle search query submission
 
-                //TODO: add code to handle search query submission while searching only properties for sale
+//TODO: add code to handle search query submission while searching only properties for sale
 
                 Intent intent = new Intent(PropertySale.this, SearchResults.class);
                 intent.putExtra("search_query", query);
@@ -39,7 +40,7 @@ public class PropertySale extends AppCompatActivity {
 
             @Override
             public boolean onQueryTextChange(String newText) {
-                // Handle search query text changes
+//TODO: Handle search query text changes
                 return true;
             }
         });

@@ -17,8 +17,8 @@ public class AgentProfile extends AppCompatActivity {
         setContentView(R.layout.activity_agent_profile);
 
         //properties listed by agent button code
-
         View propertyRentButton = findViewById(R.id.property_listed_by_agent_button);
+
         // Set up click listeners for UI elements
         propertyRentButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -28,11 +28,11 @@ public class AgentProfile extends AppCompatActivity {
         });
     }
 
-    //TODO: pass value of what property it is to PropertyDetails.class
+//TODO: pass value of what property it is to PropertyDetails.class
 
     // Method to navigate to properties listed by agent
     private void openPropertyListedByAgent() {
         Intent intent = new Intent(AgentProfile.this, PropertyDetails.class);
         startActivity(intent);
     }
-    }
+}

@@ -8,6 +8,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.SearchView;
 
+//TODO: add code to handle search query submission while searching only properties for sale
+//TODO: Handle search query text changes
 public class PropertyRent extends AppCompatActivity {
 
     @Override
@@ -15,6 +17,8 @@ public class PropertyRent extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_property_rent);
     }
+
+    //search bar code
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_main, menu);
@@ -27,7 +31,7 @@ public class PropertyRent extends AppCompatActivity {
             public boolean onQueryTextSubmit(String query) {
                 // Handle search query submission
 
-                //TODO: add code to handle search query submission while searching only properties for sale
+//TODO: add code to handle search query submission while searching only properties for sale
 
                 Intent intent = new Intent(PropertyRent.this, SearchResults.class);
                 intent.putExtra("search_query", query);
@@ -37,7 +41,7 @@ public class PropertyRent extends AppCompatActivity {
 
             @Override
             public boolean onQueryTextChange(String newText) {
-                // Handle search query text changes
+//TODO: Handle search query text changes
                 return true;
             }
         });

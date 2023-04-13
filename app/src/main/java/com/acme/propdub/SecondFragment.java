@@ -10,7 +10,7 @@ import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
 import com.acme.propdub.databinding.FragmentSecondBinding;
-
+//TODO: Remove this without breaking MainActivity. Its pre generated code.
 public class SecondFragment extends Fragment {
 
     private FragmentSecondBinding binding;

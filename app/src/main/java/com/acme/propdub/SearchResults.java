@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-//TODO: add filter
+//TODO: add filter, remove selectPropertyButton
 public class SearchResults extends AppCompatActivity {
 
     @Override
@@ -13,12 +13,13 @@ public class SearchResults extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_results);
 
-        //the searchQuery is coming from the search bar.
-
+    //the searchQuery is coming from the search bar.
         String searchQuery = getIntent().getStringExtra("search_query");
-        // Use the searchQuery to fetch the data or perform any required operation
 
-        //adding button temporarily for app skeleton which links to property details activity
+    // Use the searchQuery to fetch the data or perform any required operation
+
+//TODO: remove this its placeholder till design is done
+    //adding button temporarily for app skeleton which links to property details activity
 
         View selectPropertyButton = findViewById(R.id.select_property_button);
         // Set up click listeners for UI elements
@@ -29,10 +30,11 @@ public class SearchResults extends AppCompatActivity {
             }
         });
     }
-
+    
+//TODO: remove this its placeholder till design is done
     // Method to navigate to PropertyRent
     private void openPropertyDetailsActivity() {
         Intent intent = new Intent(SearchResults.this, PropertyDetails.class);
         startActivity(intent);
     }
-    }
+}
