@@ -1,8 +1,10 @@
 package com.acme.propdub;
 
 import android.content.Intent;
+
 import android.os.Bundle;
 import android.provider.Settings;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -44,9 +46,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
-        appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
-        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
+        //NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
+        //appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
+        //NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
 
         binding.fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,6 +63,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         propertySaleButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Log.d("tag1","In sale click");
                 openPropertySaleActivity();
             }
         });
@@ -70,6 +73,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         propertyRentButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 openPropertyRentActivity();
             }
         });
@@ -77,7 +81,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     // Method to navigate to PropertySale
     private void openPropertySaleActivity() {
+
+        Log.d("tag1","In sale intent");
         Intent intent = new Intent(MainActivity.this, PropertySale.class);
+        Log.d("tag1","In sale intent 2");
         startActivity(intent);
     }
 
@@ -129,7 +136,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 startActivity(new Intent(this, MortgageCalculator.class));
                 break;
             case R.id.ID4:
-                startActivity(new Intent(this, Settings.class));
+                startActivity(new Intent(this, Settings1.class));
                 break;
             case R.id.ID5:
                 startActivity(new Intent(this, Support.class));
@@ -151,10 +158,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             super.onBackPressed();
         }
     }
-    @Override
+   /* @Override
     public boolean onSupportNavigateUp() {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
         return NavigationUI.navigateUp(navController, appBarConfiguration)
                 || super.onSupportNavigateUp();
-    }
+    }*/
 }

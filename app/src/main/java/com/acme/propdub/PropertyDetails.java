@@ -31,7 +31,7 @@ public class PropertyDetails extends AppCompatActivity {
         mortgage_calculatorButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //openPropertySaleActivity();
+                openMortgageActivity();
             }
         });
 
@@ -88,6 +88,11 @@ public class PropertyDetails extends AppCompatActivity {
 
     private void openScheduleButtonActivity() {
         Intent intent = new Intent(PropertyDetails.this, ScheduleVisit.class);
+        startActivity(intent);
+    };
+
+    private void openMortgageActivity() {
+        Intent intent = new Intent(PropertyDetails.this, MortgageCalculator.class);
         startActivity(intent);
     };
 

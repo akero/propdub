@@ -6,10 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.SearchView;
+import androidx.appcompat.widget.SearchView;
 
-//TODO: add code to handle search query submission while searching only properties for sale
-//TODO: Handle search query text changes
 public class PropertyRent extends AppCompatActivity {
 
     @Override
@@ -29,24 +27,22 @@ public class PropertyRent extends AppCompatActivity {
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
-                // Handle search query submission
-
-//TODO: add code to handle search query submission while searching only properties for sale
-
+                // Handle search query submission for properties for rent
                 Intent intent = new Intent(PropertyRent.this, SearchResults.class);
                 intent.putExtra("search_query", query);
+                intent.putExtra("search_type", "rent"); // Add search type (rent) to the intent
                 startActivity(intent);
                 return true;
             }
 
             @Override
             public boolean onQueryTextChange(String newText) {
-//TODO: Handle search query text changes
+                // Handle search query text changes, e.g., show/hide suggestions or filter results
+                // You can implement this part depending on your specific requirements
                 return true;
             }
         });
 
         return super.onCreateOptionsMenu(menu);
     }
-
 }
