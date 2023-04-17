@@ -6,10 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.SearchView;
-
-//TODO: add code to handle search query submission while searching only properties for sale
-//TODO: Handle search query text changes
+import androidx.appcompat.widget.SearchView;
 
 public class PropertySale extends AppCompatActivity {
 
@@ -18,6 +15,7 @@ public class PropertySale extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_property_sale);
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_main, menu);
@@ -28,24 +26,22 @@ public class PropertySale extends AppCompatActivity {
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
-                // Handle search query submission
-
-//TODO: add code to handle search query submission while searching only properties for sale
-
+                // Handle search query submission for properties for sale
                 Intent intent = new Intent(PropertySale.this, SearchResults.class);
                 intent.putExtra("search_query", query);
+                intent.putExtra("search_type", "sale"); // Add search type (sale) to the intent
                 startActivity(intent);
                 return true;
             }
 
             @Override
             public boolean onQueryTextChange(String newText) {
-//TODO: Handle search query text changes
+                // Handle search query text changes, e.g., show/hide suggestions or filter results
+                // You can implement this part depending on your specific requirements
                 return true;
             }
         });
 
         return super.onCreateOptionsMenu(menu);
     }
-
 }
