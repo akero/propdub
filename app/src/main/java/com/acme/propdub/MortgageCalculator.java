@@ -1,14 +1,12 @@
 package com.acme.propdub;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import java.text.DecimalFormat;
 
 //Taking inputs in edittext and passing values to MortgageCalculatorCode to calculate values
@@ -77,9 +75,5 @@ public class MortgageCalculator extends AppCompatActivity{
                 Toast.makeText(MortgageCalculator.this, "Monthly Mortgage: " + monthlyMortgage, Toast.LENGTH_LONG).show();
             }
         });
-
-
-
-
     }
 }
