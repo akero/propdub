@@ -1,9 +1,111 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MortgageCalculator">
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <EditText
+        android:id="@+id/totalAmountEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Total Amount"
+        android:inputType="numberDecimal"/>
+
+    <EditText
+        android:id="@+id/downPaymentEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Down Payment"
+        android:inputType="numberDecimal"/>
+
+    <EditText
+        android:id="@+id/interestRateEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Interest Rate"
+        android:inputType="numberDecimal"/>
+
+    <EditText
+        android:id="@+id/loanTermEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Loan Term (Years)"
+        android:inputType="number"/>
+
+    <EditText
+        android:id="@+id/propertyTaxEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Property Tax"
+        android:inputType="numberDecimal"/>
+
+    <EditText
+        android:id="@+id/homeInsuranceEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Home Insurance"
+        android:inputType="numberDecimal"/>
+
+    <EditText
+        android:id="@+id/pmiEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="PMI"
+        android:inputType="numberDecimal"/>
+
+    <Button
+        android:id="@+id/calculateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Calculate"/>
+
+    <!-- Add this inside the LinearLayout, below the Calculate button -->
+
+    <TextView
+        android:id="@+id/monthlyMortgageTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Monthly Mortgage: "
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/principalAndInterestTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Principal and Interest: "
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/monthlyPropertyTaxTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Monthly Property Tax: "
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/monthlyHomeInsuranceTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Monthly Home Insurance: "
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/monthlyPMITextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Monthly PMI: "
+        android:textSize="16sp" />
+
+
+</LinearLayout>
