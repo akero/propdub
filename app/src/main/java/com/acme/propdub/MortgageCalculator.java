@@ -9,9 +9,12 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.text.DecimalFormat;
+
 //Taking inputs in edittext and passing values to MortgageCalculatorCode to calculate values
 public class MortgageCalculator extends AppCompatActivity{
 
+    DecimalFormat df = new DecimalFormat("#.##");
     private EditText totalAmountEditText, downPaymentEditText, interestRateEditText, loanTermEditText, propertyTaxEditText, homeInsuranceEditText, pmiEditText;
     private Button calculateButton;
     private TextView monthlyMortgageTextView, principalAndInterestTextView, monthlyPropertyTaxTextView, monthlyHomeInsuranceTextView, monthlyPMITextView;
@@ -45,7 +48,7 @@ public class MortgageCalculator extends AppCompatActivity{
                 double homeInsurance = Double.parseDouble(homeInsuranceEditText.getText().toString());
                 double pmi = Double.parseDouble(pmiEditText.getText().toString());
 
-                //calculating mortgage
+            //calculating mortgage
                 MortgageCalculatorCode mortgageCalculator = new MortgageCalculatorCode(totalAmount, downPayment, interestRate, loanTerm, propertyTax, homeInsurance, pmi);
                 double monthlyMortgage = mortgageCalculator.calculateMonthlyMortgage();
                 double principalAndInterest = mortgageCalculator.calculatePrincipalAndInterest();
@@ -53,7 +56,19 @@ public class MortgageCalculator extends AppCompatActivity{
                 double monthlyHomeInsurance = mortgageCalculator.calculateHomeInsurance();
                 double monthlyPMI = mortgageCalculator.calculatePMI();
 
+            //trimming to two decimal points
+                String formattedValue = df.format(monthlyMortgage);
+                monthlyMortgage = Double.parseDouble(formattedValue);
+                formattedValue = df.format(principalAndInterest);
+                principalAndInterest = Double.parseDouble(formattedValue);
+                formattedValue = df.format(monthlyPropertyTax);
+                monthlyPropertyTax = Double.parseDouble(formattedValue);
+                formattedValue = df.format(monthlyHomeInsurance);
+                monthlyHomeInsurance = Double.parseDouble(formattedValue);
+                formattedValue = df.format(monthlyPMI);
+                monthlyPMI = Double.parseDouble(formattedValue);
 
+            //setting textview
                 monthlyMortgageTextView.setText("Monthly Mortgage: " + String.format("%.2f", monthlyMortgage));
                 principalAndInterestTextView.setText("Principal and Interest: " + String.format("%.2f", principalAndInterest));
                 monthlyPropertyTaxTextView.setText("Monthly Property Tax: " + String.format("%.2f", monthlyPropertyTax));
