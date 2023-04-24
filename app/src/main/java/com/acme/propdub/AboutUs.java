@@ -1,8 +1,13 @@
 package com.acme.propdub;
 
+
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import jp.wasabeef.blurry.Blurry;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import jp.wasabeef.blurry.Blurry;
 
 public class AboutUs extends AppCompatActivity {
 
@@ -10,6 +15,7 @@ public class AboutUs extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about_us);
+
         String about= "PropDub is a leading real estate platform in Dubai, connecting trusted developers and select agents with global buyers. Our expert-curated collection of genuine, high-quality investments keeps users updated on the best opportunities.\n" +
                 "\n" +
                 "Our experienced team of professionals, with backgrounds in UAE real estate, digital marketing, and advertising, is our greatest strength. We aim to fulfill global real estate needs by connecting individuals with trusted developers and agents while empowering informed decision-making.\n" +
