@@ -3,8 +3,11 @@ package com.acme.propdub;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 
 
 //TODO: Pass value of what property it is to PropertyDetails.class
@@ -16,6 +19,11 @@ public class AgentProfile extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_agent_profile);
 
+
+        ImageView imageView = findViewById(R.id.background_image1);
+        Bitmap originalBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.bg_about_us);
+        Bitmap blurredBitmap = BlurBuilder.blur(this, originalBitmap);
+        imageView.setImageBitmap(blurredBitmap);
         //properties listed by agent button code
         View propertyRentButton = findViewById(R.id.property_listed_by_agent_button);
 

@@ -3,9 +3,13 @@ package com.acme.propdub;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
+
 import androidx.appcompat.widget.SearchView;
 
 public class PropertyRent extends AppCompatActivity {
@@ -14,6 +18,12 @@ public class PropertyRent extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_property_rent);
+
+        //blurring background image
+        ImageView imageView = findViewById(R.id.background_image9);
+        Bitmap originalBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.bg_about_us);
+        Bitmap blurredBitmap = BlurBuilder.blur(this, originalBitmap);
+        imageView.setImageBitmap(blurredBitmap);
     }
 
     //search bar code

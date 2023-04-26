@@ -3,8 +3,12 @@ package com.acme.propdub;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
+
 //TODO: make all these functional
 public class PropertyDetails extends AppCompatActivity {
 
@@ -13,6 +17,11 @@ public class PropertyDetails extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_property_details);
 
+
+        ImageView imageView = findViewById(R.id.background_image3);
+        Bitmap originalBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.bg_about_us);
+        Bitmap blurredBitmap = BlurBuilder.blur(this, originalBitmap);
+        imageView.setImageBitmap(blurredBitmap);
 
         // contact button code
         View contactButton = findViewById(R.id.contact);

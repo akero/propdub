@@ -6,4 +6,10 @@
     android:layout_height="match_parent"
     tools:context=".SavedSearches">
 
+    <ImageView
+        android:id="@+id/background_image5"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_about_us" />
 </androidx.constraintlayout.widget.ConstraintLayout>
