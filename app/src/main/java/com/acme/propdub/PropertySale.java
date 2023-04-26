@@ -8,6 +8,7 @@ import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ImageView;
 
 import androidx.appcompat.widget.SearchView;
@@ -24,6 +25,15 @@ public class PropertySale extends AppCompatActivity {
         Bitmap originalBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.bg_about_us);
         Bitmap blurredBitmap = BlurBuilder.blur(this, originalBitmap);
         imageView.setImageBitmap(blurredBitmap);
+
+        // Property details code
+        View propertyDetailsButton = findViewById(R.id.property_details_button);
+        propertyDetailsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openPropertyDetailsActivity();
+            }
+        });
     }
 
     @Override
@@ -33,11 +43,12 @@ public class PropertySale extends AppCompatActivity {
         MenuItem searchItem = menu.findItem(R.id.action_search);
         SearchView searchView = (SearchView) searchItem.getActionView();
 
+
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
                 // Handle search query submission for properties for sale
-                Intent intent = new Intent(PropertySale.this, SearchResults.class);
+                Intent intent = new Intent(PropertySale.this, PropertyDetails.class);
                 intent.putExtra("search_query", query);
                 intent.putExtra("search_type", "sale"); // Add search type (sale) to the intent
                 startActivity(intent);
@@ -53,5 +64,11 @@ public class PropertySale extends AppCompatActivity {
         });
 
         return super.onCreateOptionsMenu(menu);
+    }
+
+    // Method to navigate to PropertyRent
+    private void openPropertyDetailsActivity() {
+        Intent intent = new Intent(PropertySale.this, PropertyDetails.class);
+        startActivity(intent);
     }
 }
