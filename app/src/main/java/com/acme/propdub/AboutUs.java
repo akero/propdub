@@ -19,6 +19,7 @@ public class AboutUs extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about_us);
 
+        //test
         ImageView imageView = findViewById(R.id.background_image);
         Bitmap originalBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.bg_about_us);
         Bitmap blurredBitmap = BlurBuilder.blur(this, originalBitmap);
