@@ -54,6 +54,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             }
         });
 
+
+
         // property sale button code
         View propertySaleButton = findViewById(R.id.property_sale_button);
         propertySaleButton.setOnClickListener(new View.OnClickListener() {
