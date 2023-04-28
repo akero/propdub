@@ -31,11 +31,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-    //pre generated code
-        binding = ActivityMainBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
 
-        setSupportActionBar(binding.toolbar);
+        //binding = ActivityMainBinding.inflate(getLayoutInflater());
+        setContentView(R.layout.activity_main);
+
+        /*setSupportActionBar(binding.toolbar);
 
         drawer =findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.id_view);
@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             }
         });
 
-
+*/
 
         // property sale button code
         View propertySaleButton = findViewById(R.id.property_sale_button);
