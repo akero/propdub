@@ -8,6 +8,8 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
@@ -27,19 +29,39 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private AppBarConfiguration appBarConfiguration;
     private ActivityMainBinding binding;
     private DrawerLayout drawer;
+    private ImageView menuIcon;
+
+    private NavigationView navigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+
         //binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(R.layout.activity_main);
+        // Initialize the drawer variable
+        drawer = findViewById(R.id.drawer_layout);
+
+        menuIcon = findViewById(R.id.my_icon);
+        menuIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d("tag1","tag1");
+                if (!drawer.isDrawerOpen(GravityCompat.START)) {
+                    drawer.openDrawer(GravityCompat.START);
+
+                    Log.d("tag1","tag2");
+                }
+            }
+        });
+        navigationView = findViewById(R.id.id_view);
+        navigationView.setNavigationItemSelectedListener(this);
 
         /*setSupportActionBar(binding.toolbar);
 
         drawer =findViewById(R.id.drawer_layout);
-        NavigationView navigationView = findViewById(R.id.id_view);
-        navigationView.setNavigationItemSelectedListener(this);
+
 
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, binding.toolbar,
                 R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -55,7 +77,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         });
 
 */
-
         // property sale button code
         View propertySaleButton = findViewById(R.id.property_sale_button);
         propertySaleButton.setOnClickListener(new View.OnClickListener() {
@@ -78,6 +99,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
     // Method to navigate to PropertySale
+    public void onMenuButtonClick(View view) {
+        if (drawer != null) {
+            drawer.openDrawer(GravityCompat.START);
+        }
+    }
+
     private void openPropertySaleActivity() {
 
         Log.d("tag1","In sale intent");

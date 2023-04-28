@@ -5,6 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
+import android.graphics.PorterDuff;
+import android.graphics.PorterDuffColorFilter;
 import android.os.Bundle;
 import jp.wasabeef.blurry.Blurry;
 import android.widget.ImageView;
@@ -18,10 +21,16 @@ public class AboutUs extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about_us);
-        
         ImageView imageView = findViewById(R.id.background_image);
         Bitmap originalBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.bg_about_us);
         Bitmap blurredBitmap = BlurBuilder.blur(this, originalBitmap);
+
+        // Add a blue tint to the blurred bitmap
+        int blueColor = Color.parseColor("#66004274"); // Adjust the color and transparency as needed
+        PorterDuffColorFilter colorFilter = new PorterDuffColorFilter(blueColor, PorterDuff.Mode.OVERLAY);
+        imageView.setColorFilter(colorFilter);
+
+
         imageView.setImageBitmap(blurredBitmap);
         String about= "PropDub is a leading real estate platform in Dubai, connecting trusted developers and select agents with global buyers. Our expert-curated collection of genuine, high-quality investments keeps users updated on the best opportunities.\n" +
                 "\n" +
