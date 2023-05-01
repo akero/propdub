@@ -3,10 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
+
     <meta-data
         android:name="com.google.android.geo.API_KEY"
         android:value="AIzaSyCyXK4Iv-M4qtXGdLDNFZraKaUIyKbHKnk" />
-
 
     <application
         android:allowBackup="true"
@@ -16,6 +16,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PropDub"
         tools:targetApi="31">
+        <activity
+            android:name=".ImageAdapter1"
+            android:exported="false" />
         <activity
             android:name=".intermediate_screen"
             android:exported="false" />

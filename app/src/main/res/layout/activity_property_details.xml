@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".PropertyDetails">
+
     <ImageView
         android:id="@+id/background_image3"
         android:layout_width="match_parent"
@@ -16,63 +17,24 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-
-
         <TextView
             android:id="@+id/property_details_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Property details page"
             android:textSize="24sp"
-
-
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:layout_marginLeft="60dp"
             android:layout_marginTop="28dp"
-            android:textColor="@android:color/white"/>
+            android:textColor="@android:color/white" />
 
-        <HorizontalScrollView
-            android:id="@+id/scrollingpictures"
-
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewPager1"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="200dp"
             android:layout_marginTop="16dp"
-            app:layout_constraintTop_toBottomOf="@+id/property_details_text">
-
-
-                <FrameLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="200dp">
-
-                <ViewSwitcher
-                    android:id="@+id/image_switcher"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/propertyimage1"/>
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/propertyimage2"/>
-
-
-                <!-- Add more images here -->
-
-                </ViewSwitcher>
-                </FrameLayout>
-
-
-
-        </HorizontalScrollView>
-
+            app:layout_constraintTop_toBottomOf="@+id/property_details_text" />
 
         <Button
             android:id="@+id/contact"
@@ -81,8 +43,7 @@
             android:text="Contact"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-
-            app:layout_constraintTop_toBottomOf="@+id/scrollingpictures"
+            app:layout_constraintTop_toBottomOf="@+id/viewPager1"
             android:layout_marginTop="16dp"/>
 
         <Button
@@ -134,7 +95,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/documents_viewer"
             android:layout_marginTop="16dp"/>
-
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
