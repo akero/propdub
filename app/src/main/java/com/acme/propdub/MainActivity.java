@@ -21,9 +21,11 @@ import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
+
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.snackbar.Snackbar;
 import com.acme.propdub.databinding.ActivityMainBinding;
+
 //TODO: populate search code, UI, sidebar code
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private AppBarConfiguration appBarConfiguration;
@@ -47,11 +49,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         menuIcon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d("tag1","tag1");
+                Log.d("tag1", "tag1");
                 if (!drawer.isDrawerOpen(GravityCompat.START)) {
                     drawer.openDrawer(GravityCompat.START);
 
-                    Log.d("tag1","tag2");
+                    Log.d("tag1", "tag2");
                 }
             }
         });
@@ -75,14 +77,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         .setAction("Action", null).show();
             }
         });
-
+2
 */
         // property sale button code
         View propertySaleButton = findViewById(R.id.property_sale_button);
         propertySaleButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d("tag1","In sale click");
+                Log.d("tag1", "In sale click");
                 openPropertySaleActivity();
             }
         });
@@ -107,9 +109,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     private void openPropertySaleActivity() {
 
-        Log.d("tag1","In sale intent");
+        Log.d("tag1", "In sale intent");
         Intent intent = new Intent(MainActivity.this, PropertySale.class);
-        Log.d("tag1","In sale intent 2");
+        Log.d("tag1", "In sale intent 2");
         startActivity(intent);
     }
 

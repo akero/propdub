@@ -16,7 +16,17 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
+        <TextView
+            android:id="@+id/about_us_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="About Us"
+            android:textColor="@android:color/white"
+            android:textSize="21sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="71dp"
+            android:layout_marginTop="62dp"/>
         <ScrollView
             android:id="@+id/scrollView"
             android:layout_width="0dp"
@@ -31,7 +41,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="16dp">
+
+                android:paddingStart="26dp"
+                android:paddingTop="111dp"
+                android:paddingEnd="26dp"
+                android:paddingBottom="146dp">
 
                 <TextView
                     android:id="@+id/about_us_text"
