@@ -25,10 +25,54 @@
             android:text="Property details page"
             android:textSize="24sp"
 
-            app:layout_constraintEnd_toEndOf="parent"
+
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="32dp"/>
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="28dp"
+            android:textColor="@android:color/white"/>
+
+        <HorizontalScrollView
+            android:id="@+id/scrollingpictures"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/property_details_text">
+
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="200dp">
+
+                <ViewSwitcher
+                    android:id="@+id/image_switcher"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/propertyimage1"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/propertyimage2"/>
+
+
+                <!-- Add more images here -->
+
+                </ViewSwitcher>
+                </FrameLayout>
+
+
+
+        </HorizontalScrollView>
+
 
         <Button
             android:id="@+id/contact"
@@ -37,7 +81,8 @@
             android:text="Contact"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/property_details_text"
+
+            app:layout_constraintTop_toBottomOf="@+id/scrollingpictures"
             android:layout_marginTop="16dp"/>
 
         <Button
