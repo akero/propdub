@@ -135,7 +135,7 @@
                 android:scaleType="centerInside"
                 android:src="@drawable/gym" />
         </LinearLayout>
-
+<!-- todo -->
         <View
             android:id="@+id/horizontal_line1"
             android:layout_width="0dp"
