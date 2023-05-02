@@ -30,6 +30,7 @@ public class PropertyDetails extends AppCompatActivity {
             ImageAdapter1 adapter = new ImageAdapter1(this, imageIds);
             viewPager.setAdapter(adapter);
 
+
             // contact button code
             View contactButton = findViewById(R.id.contact);
             contactButton.setOnClickListener(new View.OnClickListener() {
