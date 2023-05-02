@@ -31,6 +31,7 @@
         android:fillViewport="true">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/scroll_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -135,7 +136,7 @@
                 android:scaleType="centerInside"
                 android:src="@drawable/gym" />
         </LinearLayout>
-<!-- todo -->
+
         <View
             android:id="@+id/horizontal_line1"
             android:layout_width="0dp"
@@ -159,35 +160,89 @@
             android:layout_marginLeft="26dp"
             android:layout_marginTop="16dp" />
 
-        <TextView
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:id="@+id/linear_layout"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:id="@+id/propdocs"
-            android:text="Danube Peralz Updated"
-            android:textSize="14sp"
-            android:textColor="@android:color/white"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
             app:layout_constraintTop_toBottomOf="@+id/documents"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginLeft="73dp"
-            android:layout_marginTop="12dp" />
-        <TextView
-            android:layout_width="wrap_content"
+            app:layout_constraintEnd_toEndOf="@id/scroll_view"
+            android:layout_marginTop="12dp">
+
+            <ImageView
+                android:id="@+id/image_before_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/pdficon"
+                android:layout_marginLeft="39dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/propdocs"
+                android:text="Danube Peralz Updated"
+                android:textSize="14sp"
+                android:textColor="@android:color/white"
+                android:layout_marginLeft="8dp" />
+
+            <ImageButton
+                android:id="@+id/button_after_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/downloadbutton"
+                android:background="@android:color/transparent"
+                android:layout_marginRight="23dp"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/linear_layout1"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:id="@+id/propdocs1"
-            android:text="Danube Peralz floor plan"
-            android:textSize="14sp"
-            android:textColor="@android:color/white"
-            app:layout_constraintTop_toBottomOf="@+id/propdocs"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            app:layout_constraintTop_toBottomOf="@+id/linear_layout"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginLeft="73dp"
-            android:layout_marginTop="12dp" />
+            app:layout_constraintEnd_toEndOf="@id/scroll_view"
+            android:layout_marginTop="12dp">
+
+            <ImageView
+                android:id="@+id/pdficon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/pdficon"
+                android:layout_marginLeft="39dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/propdocs1"
+                android:text="Danube Peralz floor plan"
+                android:textSize="14sp"
+                android:textColor="@android:color/white"
+                android:layout_marginLeft="8dp" />
+
+            <ImageButton
+                android:id="@+id/downloadbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/downloadbutton"
+                android:background="@android:color/transparent"
+                android:layout_marginRight="23dp"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+
 
         <View
             android:id="@+id/horizontal_line2"
             android:layout_width="0dp"
             android:layout_height="1dp"
             android:background="@android:color/white"
-            app:layout_constraintTop_toBottomOf="@+id/propdocs1"
+            app:layout_constraintTop_toBottomOf="@+id/linear_layout1"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginTop="18dp" />
