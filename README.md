@@ -1,2 +1,2 @@
 # propdub
-As the name suggests this is the skeleton of the whole app. mind blowing I know.
+Half the design for property details done, app skeleton is fully completed and need to finish the rest of the design and attach it to the backend.
