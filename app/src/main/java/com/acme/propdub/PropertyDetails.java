@@ -3,13 +3,17 @@ package com.acme.propdub;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewpager2.widget.ViewPager2;
+
+import jp.wasabeef.blurry.Blurry;
 
 public class PropertyDetails extends AppCompatActivity {
 
@@ -20,6 +24,16 @@ public class PropertyDetails extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         try {
             setContentView(R.layout.activity_property_details);
+            ConstraintLayout rootLayout = findViewById(R.id.root_layout);
+            View blueTint = findViewById(R.id.blue_tint);
+
+            Blurry.with(this)
+                    .radius(10)
+                    .sampling(8)
+                    .color(Color.argb(66, 0, 66, 116))
+                    .async()
+                    .onto(rootLayout);
+
 
             ImageView imageView = findViewById(R.id.background_image3);
             Bitmap originalBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.bg_about_us);
