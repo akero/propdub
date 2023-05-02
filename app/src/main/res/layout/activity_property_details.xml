@@ -21,13 +21,15 @@
             android:id="@+id/property_details_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Property details page"
-            android:textSize="24sp"
+            android:text="Property Details"
+            android:textSize="20sp"
+
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:layout_marginLeft="60dp"
             android:layout_marginTop="28dp"
             android:textColor="@android:color/white" />
+        <!-- android:fontFamily="@font/poppins-semibold" -->
 
         <androidx.viewpager2.widget.ViewPager2
             android:id="@+id/viewPager1"
@@ -43,12 +45,13 @@
             android:text="PEARLZ"
             android:textSize="32sp"
             android:textColor="@android:color/white"
-            android:fontFamily="poppins-bold"
+
             app:layout_constraintTop_toBottomOf="@id/viewPager1"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginLeft="26dp"
             android:layout_marginTop="30dp" />
-
+        <!--android:fontFamily="@font/poppins-bold" -->
+        
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -63,6 +66,16 @@
             android:layout_marginRight="26dp"
             />
 
+        <View
+            android:id="@+id/horizontal_line"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@android:color/white"
+            app:layout_constraintTop_toBottomOf="@+id/propertyDetails"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="30dp" />
+
 
         <Button
             android:id="@+id/contact"
@@ -71,7 +84,7 @@
             android:text="Contact"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/propertyDetails"
+            app:layout_constraintTop_toBottomOf="@+id/horizontal_line"
             android:layout_marginTop="16dp"/>
 
         <Button
