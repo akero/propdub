@@ -15,7 +15,7 @@ public class Contact extends AppCompatActivity {
         setContentView(R.layout.activity_contact);
 
 
-        ImageView imageView = findViewById(R.id.background_image2);
+        ImageView imageView = findViewById(R.id.background_image);
         Bitmap originalBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.bg_about_us);
         Bitmap blurredBitmap = BlurBuilder.blur(this, originalBitmap);
         imageView.setImageBitmap(blurredBitmap);
