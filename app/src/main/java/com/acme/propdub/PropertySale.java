@@ -21,19 +21,11 @@ public class PropertySale extends AppCompatActivity {
         setContentView(R.layout.activity_property_sale);
 
         //blurring background image
-        ImageView imageView = findViewById(R.id.background_image4);
+        ImageView imageView = findViewById(R.id.background_image9);
         Bitmap originalBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.bg_about_us);
         Bitmap blurredBitmap = BlurBuilder.blur(this, originalBitmap);
         imageView.setImageBitmap(blurredBitmap);
 
-        // Property details code
-        View propertyDetailsButton = findViewById(R.id.property_details_button);
-        propertyDetailsButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openPropertyDetailsActivity();
-            }
-        });
     }
 
     @Override
@@ -64,11 +56,5 @@ public class PropertySale extends AppCompatActivity {
         });
 
         return super.onCreateOptionsMenu(menu);
-    }
-
-    // Method to navigate to PropertyRent
-    private void openPropertyDetailsActivity() {
-        Intent intent = new Intent(PropertySale.this, PropertyDetails.class);
-        startActivity(intent);
     }
 }
