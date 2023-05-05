@@ -8,7 +8,6 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-<<<<<<< HEAD
         android:layout_gravity="center">
         <ImageView
             android:id="@+id/background_image9"
@@ -316,29 +315,3 @@
         </ScrollView>-
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>
-=======
-        android:scaleType="centerCrop"
-        android:src="@drawable/bg_about_us" />
-    <TextView
-        android:id="@+id/about_us_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Properties for rent"
-        android:textColor="@android:color/white"
-        android:textSize="21sp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="28dp"/>
-
-    <Button
-        android:id="@+id/property_details_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Property details"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/about_us_title"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="16dp"/>
-</androidx.constraintlayout.widget.ConstraintLayout>
->>>>>>> 492ae22 (small fixes)
