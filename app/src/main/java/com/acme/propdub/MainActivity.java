@@ -32,7 +32,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private ActivityMainBinding binding;
     private DrawerLayout drawer;
     private ImageView menuIcon;
-
     private NavigationView navigationView;
 
     @Override

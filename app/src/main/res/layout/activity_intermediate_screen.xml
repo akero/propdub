@@ -13,6 +13,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Let's go"
+        app:layout_margin_Top="692dp"
+        app:layout_constraintTop="parent"
+        app:layout_constraintBottom="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="16dp"/>
