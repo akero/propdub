@@ -79,6 +79,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         });
 2
 */
+        // property details button code
+        View propertyDetailsButton = findViewById(R.id.property_details_button);
+        propertyDetailsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                openPropertyDetailsActivity();
+            }
+        });
+
         // property sale button code
         View propertySaleButton = findViewById(R.id.property_sale_button);
         propertySaleButton.setOnClickListener(new View.OnClickListener() {
@@ -100,6 +110,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         });
     }
 
+
     // Method to navigate to PropertySale
     public void onMenuButtonClick(View view) {
         if (drawer != null) {
@@ -111,6 +122,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         Log.d("tag1", "In sale intent");
         Intent intent = new Intent(MainActivity.this, PropertySale.class);
+        Log.d("tag1", "In sale intent 2");
+        startActivity(intent);
+    }
+
+    private void openPropertyDetailsActivity() {
+
+        Log.d("tag1", "In sale intent");
+        Intent intent = new Intent(MainActivity.this, PropertyDetails.class);
         Log.d("tag1", "In sale intent 2");
         startActivity(intent);
     }

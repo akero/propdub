@@ -233,6 +233,8 @@
                 android:background="@android:color/transparent"
                 android:layout_marginRight="23dp"
                 android:layout_weight="1" />
+
+
         </LinearLayout>
 
 
@@ -246,6 +248,30 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginTop="18dp" />
+
+
+        <LinearLayout
+            android:id="@+id/linear_layout2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            app:layout_constraintTop_toBottomOf="@+id/horizontal_line2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/scroll_view"
+            android:layout_marginTop="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/address"
+                android:text="Address"
+                android:textSize="14sp"
+                android:textColor="@android:color/white"
+                android:layout_marginLeft="8dp" />
+
+
+        </LinearLayout>
 
         <Button
             android:id="@+id/contact"
