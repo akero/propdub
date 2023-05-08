@@ -188,6 +188,7 @@
             <TextView
                 android:id="@+id/propdocs"
                 android:layout_width="0dp"
+                android:layout_marginTop="3dp"
                 android:layout_height="wrap_content"
                 android:text="Danube Peralz Updated"
                 android:textSize="14sp"
@@ -221,12 +222,12 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="Danube Peralz floor plan"
+                android:layout_marginTop="2.4dp"
                 android:textSize="14sp"
                 android:textColor="@android:color/white"
                 app:layout_constraintStart_toEndOf="@+id/pdficon"
                 app:layout_constraintTop_toTopOf="@+id/pdficon"
                 app:layout_constraintEnd_toStartOf="@+id/right_guideline"
-                android:layout_marginTop="0dp"
                 android:layout_marginStart="8dp" />
 
             <ImageButton
@@ -299,7 +300,6 @@
                 android:orientation="vertical"
                 app:layout_constraintGuide_end="79dp" />
 
-            <!-- Address -->
             <TextView
                 android:id="@+id/address_label1"
                 android:layout_width="wrap_content"
