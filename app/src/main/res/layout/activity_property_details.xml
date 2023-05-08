@@ -257,7 +257,7 @@
             android:layout_marginTop="16dp"/>
 
         <LinearLayout
-            android:id="@+id/linear_layout2"
+            android:id="@+id/linear_layout21"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -266,36 +266,51 @@
             app:layout_constraintEnd_toEndOf="@id/scroll_view"
             android:layout_marginTop="12dp">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="30dp">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/linear_layout211"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/address"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/scroll_view"
+                android:layout_marginTop="12dp">
 
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="25dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineRight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="79dp" />
+
+            <!-- Address -->
             <TextView
-                android:id="@+id/address_label"
+                android:id="@+id/address_label1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="  •   Address"
                 android:textColor="@android:color/white"
                 android:textSize="14sp"
-                android:layout_marginLeft="25dp" />
+                app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
+                android:id="@+id/address_value1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Al Furjan"
                 android:textColor="@android:color/white"
-                android:textSize="14sp"
-                android:layout_marginRight="27dp"
-                android:layout_alignBaseline="@+id/address_label"
-                android:layout_alignParentEnd="true" />
-        </RelativeLayout>
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/guidelineRight"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="30dp">
-
+            <!-- City -->
             <TextView
                 android:id="@+id/city_label"
                 android:layout_width="wrap_content"
@@ -303,24 +318,22 @@
                 android:text="  •   City"
                 android:textColor="@android:color/white"
                 android:textSize="14sp"
-                android:layout_marginLeft="25dp" />
+                app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
+                app:layout_constraintTop_toBottomOf="@+id/address_value1"
+                android:layout_marginTop="30dp" />
 
             <TextView
+                android:id="@+id/city_value"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Dubai"
                 android:textColor="@android:color/white"
-                android:textSize="14sp"
-                android:layout_marginRight="27dp"
-                android:layout_alignBaseline="@+id/city_label"
-                android:layout_alignParentEnd="true" />
-        </RelativeLayout>
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/guidelineRight"
+                app:layout_constraintTop_toBottomOf="@+id/address_value1"
+                android:layout_marginTop="30dp" />
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="30dp">
-
+            <!-- Area -->
             <TextView
                 android:id="@+id/area_label"
                 android:layout_width="wrap_content"
@@ -328,23 +341,22 @@
                 android:text="  •   Area"
                 android:textColor="@android:color/white"
                 android:textSize="14sp"
-                android:layout_marginLeft="25dp" />
+                app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
+                app:layout_constraintTop_toBottomOf="@+id/city_value"
+                android:layout_marginTop="30dp" />
 
             <TextView
+                android:id="@+id/area_value"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Al Furjan"
                 android:textColor="@android:color/white"
-                android:textSize="14sp"
-                android:layout_marginRight="27dp"
-                android:layout_alignBaseline="@+id/area_label"
-                android:layout_alignParentEnd="true" />
-        </RelativeLayout>
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/guidelineRight"
+                app:layout_constraintTop_toBottomOf="@+id/city_value"
+                android:layout_marginTop="30dp" />
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
+                <!-- Country -->
                 <TextView
                     android:id="@+id/country_label"
                     android:layout_width="wrap_content"
@@ -352,22 +364,135 @@
                     android:text="  •   Country"
                     android:textColor="@android:color/white"
                     android:textSize="14sp"
-                    android:layout_marginLeft="25dp" />
+                    app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
+                    app:layout_constraintTop_toBottomOf="@+id/area_value"
+                    android:layout_marginTop="30dp" />
 
                 <TextView
+                    android:id="@+id/country_value"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="UAE"
                     android:textColor="@android:color/white"
-                    android:textSize="14sp"
-                    android:layout_marginRight="27dp"
-                    android:layout_alignBaseline="@+id/country_label"
-                    android:layout_alignParentEnd="true" />
-            </RelativeLayout>
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="@+id/guidelineRight"
+                    app:layout_constraintTop_toBottomOf="@+id/area_value"
+                    android:layout_marginTop="30dp" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!--   <RelativeLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginBottom="30dp">
+
+                   <TextView
+                       android:id="@+id/address_label"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="  •   Address"
+                       android:textColor="@android:color/white"
+                       android:textSize="14sp"
+                       android:layout_marginLeft="25dp" />
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Al Furjan"
+                       android:textColor="@android:color/white"
+                       android:textSize="14sp"
+                       android:layout_marginRight="27dp"
+                       android:layout_alignBaseline="@+id/address_label"
+                       android:layout_alignParentEnd="true" />
+               </RelativeLayout>
+
+               <RelativeLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginBottom="30dp">
+
+                   <TextView
+                       android:id="@+id/city_label"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="  •   City"
+                       android:textColor="@android:color/white"
+                       android:textSize="14sp"
+                       android:layout_marginLeft="25dp" />
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Dubai"
+                       android:textColor="@android:color/white"
+                       android:textSize="14sp"
+                       android:layout_marginRight="27dp"
+                       android:layout_alignBaseline="@+id/city_label"
+                       android:layout_alignParentEnd="true" />
+               </RelativeLayout>
+
+               <RelativeLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginBottom="30dp">
+
+                   <TextView
+                       android:id="@+id/area_label"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="  •   Area"
+                       android:textColor="@android:color/white"
+                       android:textSize="14sp"
+                       android:layout_marginLeft="25dp" />
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Al Furjan"
+                       android:textColor="@android:color/white"
+                       android:textSize="14sp"
+                       android:layout_marginRight="27dp"
+                       android:layout_alignBaseline="@+id/area_label"
+                       android:layout_alignParentEnd="true" />
+               </RelativeLayout>
+
+                   <RelativeLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content">
+
+                       <TextView
+                           android:id="@+id/country_label"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="  •   Country"
+                           android:textColor="@android:color/white"
+                           android:textSize="14sp"
+                           android:layout_marginLeft="25dp" />
+
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="UAE"
+                           android:textColor="@android:color/white"
+                           android:textSize="14sp"
+                           android:layout_marginRight="27dp"
+                           android:layout_alignBaseline="@+id/country_label"
+                           android:layout_alignParentEnd="true" />
+                   </RelativeLayout>
+                   -->
         </LinearLayout>
 
-
-
+        <View
+            android:id="@+id/horizontal_line3"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@android:color/white"
+            app:layout_constraintTop_toBottomOf="@+id/linear_layout21"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="18dp" />
 
         <Button
             android:id="@+id/contact"
@@ -376,7 +501,7 @@
             android:text="Contact"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linear_layout2"
+            app:layout_constraintTop_toBottomOf="@+id/horizontal_line3"
             android:layout_marginTop="16dp"/>
 
         <Button
