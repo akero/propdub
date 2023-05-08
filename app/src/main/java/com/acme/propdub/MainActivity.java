@@ -29,7 +29,7 @@ import com.acme.propdub.databinding.ActivityMainBinding;
 //TODO: populate search code, UI, sidebar code
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private AppBarConfiguration appBarConfiguration;
-    private ActivityMainBinding binding;
+  //  private ActivityMainBinding binding;
     private DrawerLayout drawer;
     private ImageView menuIcon;
     private NavigationView navigationView;
@@ -37,27 +37,25 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-
-        //binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(R.layout.activity_main);
+
         // Initialize the drawer variable
         drawer = findViewById(R.id.drawer_layout);
-
         menuIcon = findViewById(R.id.my_icon);
+
         menuIcon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d("tag1", "tag1");
                 if (!drawer.isDrawerOpen(GravityCompat.START)) {
                     drawer.openDrawer(GravityCompat.START);
-
-                    Log.d("tag1", "tag2");
                 }
             }
         });
         navigationView = findViewById(R.id.id_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+
+
         ;// property details button code
         View propertyDetailsButton = findViewById(R.id.property_details_button);
         propertyDetailsButton.setOnClickListener(new View.OnClickListener() {
@@ -88,7 +86,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             }
         });
     }
-
 
     // Method to navigate to PropertySale
     public void onMenuButtonClick(View view) {
@@ -123,7 +120,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_main, menu);
-
         MenuItem searchItem = menu.findItem(R.id.action_search);
         SearchView searchView = (SearchView) searchItem.getActionView();
 
@@ -170,7 +166,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 startActivity(new Intent(this, AboutUs.class));
                 break;
         }
-
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }

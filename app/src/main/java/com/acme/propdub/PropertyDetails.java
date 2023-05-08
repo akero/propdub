@@ -6,18 +6,31 @@ import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.widget.ImageView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.viewpager2.widget.ViewPager2;
+
+import com.google.android.material.navigation.NavigationView;
 
 import jp.wasabeef.blurry.Blurry;
 
-public class PropertyDetails extends AppCompatActivity {
+public class PropertyDetails extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+    // ...
+
+    private DrawerLayout drawer;
+    private ImageView menuIcon;
+    private NavigationView navigationView;
 
     private int[] imageIds = new int[]{R.drawable.propertyimage1, R.drawable.propertyimage2, R.drawable.propertyimage3};
 
@@ -26,6 +39,11 @@ public class PropertyDetails extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         try {
             setContentView(R.layout.activity_property_details);
+
+            // Initialize the drawer variable
+            drawer = findViewById(R.id.drawer_layout);
+            menuIcon = findViewById(R.id.my_icon);
+
             ConstraintLayout rootLayout = findViewById(R.id.root_layout);
             View blueTint = findViewById(R.id.blue_tint);
 
@@ -36,6 +54,16 @@ public class PropertyDetails extends AppCompatActivity {
                     .async()
                     .onto(rootLayout);
 
+            menuIcon.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (!drawer.isDrawerOpen(GravityCompat.START)) {
+                        drawer.openDrawer(GravityCompat.START);
+                    }
+                }
+            });
+            navigationView = findViewById(R.id.id_view);
+            navigationView.setNavigationItemSelectedListener(this);
 
             ImageView imageView = findViewById(R.id.background_image3);
             Bitmap originalBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.bg_about_us);
@@ -121,6 +149,13 @@ public class PropertyDetails extends AppCompatActivity {
         }
     }
 
+    //menu code
+    public void onMenuButtonClick(View view) {
+        if (drawer != null) {
+            drawer.openDrawer(GravityCompat.START);
+        }
+    }
+
     // Method to navigate to DocViewer
     private void openDocViewerActivity() {
         Intent intent = new Intent(PropertyDetails.this, DocViewer.class);
@@ -141,5 +176,47 @@ public class PropertyDetails extends AppCompatActivity {
     private void openContactActivity() {
         Intent intent = new Intent(PropertyDetails.this, Contact.class);
         startActivity(intent);
+    }
+
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.ID1:
+                startActivity(new Intent(this, Favorites.class));
+                break;
+            case R.id.ID2:
+                startActivity(new Intent(this, SavedSearches.class));
+                break;
+            case R.id.ID3:
+                startActivity(new Intent(this, MortgageCalculator.class));
+                break;
+            case R.id.ID4:
+                startActivity(new Intent(this, Settings1.class));
+                break;
+            case R.id.ID5:
+                startActivity(new Intent(this, Support.class));
+                break;
+            case R.id.ID6:
+                startActivity(new Intent(this, AboutUs.class));
+                break;
+        }
+        drawer.closeDrawer(GravityCompat.START);
+        return true;
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+
+
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (drawer.isDrawerOpen(GravityCompat.START)) {
+            drawer.closeDrawer(GravityCompat.START);
+        } else {
+            super.onBackPressed();
+        }
     }
 }
