@@ -7,6 +7,8 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
 import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -43,6 +45,22 @@ public class PropertyDetails extends AppCompatActivity {
             ViewPager2 viewPager = findViewById(R.id.viewPager1);
             ImageAdapter1 adapter = new ImageAdapter1(this, imageIds);
             viewPager.setAdapter(adapter);
+
+            //Code for video
+
+            WebView webView = findViewById(R.id.youtube_video);
+            WebSettings webSettings = webView.getSettings();
+            webSettings.setJavaScriptEnabled(true);
+
+            String videoId = "YOUR_YOUTUBE_VIDEO_ID";
+
+            //feed this the correct video id
+
+            videoId="https://www.youtube.com/watch?v=9bZkp7q19f0";
+
+            String html = "<iframe width=\"100%\" height=\"100%\" src=\"https://www.youtube.com/embed/" + videoId + "\" frameborder=\"0\" allowfullscreen></iframe>";
+            webView.loadData(html, "text/html", "utf-8");
+
 
 
             // contact button code
