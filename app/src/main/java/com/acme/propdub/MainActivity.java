@@ -58,27 +58,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         });
         navigationView = findViewById(R.id.id_view);
         navigationView.setNavigationItemSelectedListener(this);
-
-        /*setSupportActionBar(binding.toolbar);
-
-        drawer =findViewById(R.id.drawer_layout);
-
-
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, binding.toolbar,
-                R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.addDrawerListener(toggle);
-        toggle.syncState();
-
-        binding.fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
-2
-*/
-        // property details button code
+        ;// property details button code
         View propertyDetailsButton = findViewById(R.id.property_details_button);
         propertyDetailsButton.setOnClickListener(new View.OnClickListener() {
             @Override
