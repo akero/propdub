@@ -21,6 +21,7 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.viewpager2.widget.ViewPager2;
 
+import com.google.android.gms.maps.MapView;
 import com.google.android.material.navigation.NavigationView;
 
 import jp.wasabeef.blurry.Blurry;
@@ -31,6 +32,7 @@ public class PropertyDetails extends AppCompatActivity implements NavigationView
     private DrawerLayout drawer;
     private ImageView menuIcon;
     private NavigationView navigationView;
+    MapView mapView;
 
     private int[] imageIds = new int[]{R.drawable.propertyimage1, R.drawable.propertyimage2, R.drawable.propertyimage3};
 
@@ -39,6 +41,9 @@ public class PropertyDetails extends AppCompatActivity implements NavigationView
         super.onCreate(savedInstanceState);
         try {
             setContentView(R.layout.activity_property_details);
+            mapView = findViewById(R.id.map_view);
+            mapView.onCreate(savedInstanceState);
+
 
             // Initialize the drawer variable
             drawer = findViewById(R.id.drawer_layout);
@@ -219,4 +224,29 @@ public class PropertyDetails extends AppCompatActivity implements NavigationView
             super.onBackPressed();
         }
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        mapView.onResume();
+    }
+
+    @Override
+    protected void onPause() {
+        mapView.onPause();
+        super.onPause();
+    }
+
+    @Override
+    protected void onDestroy() {
+        mapView.onDestroy();
+        super.onDestroy();
+    }
+
+    @Override
+    public void onLowMemory() {
+        super.onLowMemory();
+        mapView.onLowMemory();
+    }
+
 }
