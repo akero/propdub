@@ -26,7 +26,7 @@ import com.google.android.material.navigation.NavigationView;
 
 import jp.wasabeef.blurry.Blurry;
 
-public class PropertyDetails extends AppCompatActivity{
+public class PropertyDetails extends AppCompatActivity {
 
 
     private ImageView menuIcon;
@@ -71,7 +71,7 @@ public class PropertyDetails extends AppCompatActivity{
             webView.loadData(html, "text/html", "utf-8");
 
             //back button code
-            View backButton= findViewById(R.id.back_button);
+            View backButton = findViewById(R.id.back_button);
             backButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -138,7 +138,6 @@ public class PropertyDetails extends AppCompatActivity{
     }
 
 
-
     // Method to navigate to DocViewer
     private void openDocViewerActivity() {
         Intent intent = new Intent(PropertyDetails.this, DocViewer.class);
@@ -164,8 +163,8 @@ public class PropertyDetails extends AppCompatActivity{
     @Override
     public void onBackPressed() {
 
-            super.onBackPressed();
-        }
+        super.onBackPressed();
+    }
 
 
     @Override
