@@ -27,7 +27,6 @@ import com.google.android.material.navigation.NavigationView;
 import jp.wasabeef.blurry.Blurry;
 
 public class PropertyDetails extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
-    // ...
 
     private DrawerLayout drawer;
     private ImageView menuIcon;
@@ -44,7 +43,6 @@ public class PropertyDetails extends AppCompatActivity implements NavigationView
             mapView = findViewById(R.id.map_view);
             mapView.onCreate(savedInstanceState);
 
-
             // Initialize the drawer variable
             drawer = findViewById(R.id.drawer_layout);
             menuIcon = findViewById(R.id.my_icon);
@@ -52,12 +50,7 @@ public class PropertyDetails extends AppCompatActivity implements NavigationView
             ConstraintLayout rootLayout = findViewById(R.id.root_layout);
             View blueTint = findViewById(R.id.blue_tint);
 
-            Blurry.with(this)
-                    .radius(10)
-                    .sampling(8)
-                    .color(Color.argb(66, 0, 66, 116))
-                    .async()
-                    .onto(rootLayout);
+            Blurry.with(this).radius(10).sampling(8).color(Color.argb(66, 0, 66, 116)).async().onto(rootLayout);
 
             menuIcon.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -80,21 +73,15 @@ public class PropertyDetails extends AppCompatActivity implements NavigationView
             viewPager.setAdapter(adapter);
 
             //Code for video
-
             WebView webView = findViewById(R.id.youtube_video);
             WebSettings webSettings = webView.getSettings();
             webSettings.setJavaScriptEnabled(true);
 
             String videoId = "YOUR_YOUTUBE_VIDEO_ID";
-
             //feed this the correct video id
-
-            videoId="https://www.youtube.com/watch?v=9bZkp7q19f0";
-
+            videoId = "https://www.youtube.com/watch?v=9bZkp7q19f0";
             String html = "<iframe width=\"100%\" height=\"100%\" src=\"https://www.youtube.com/embed/" + videoId + "\" frameborder=\"0\" allowfullscreen></iframe>";
             webView.loadData(html, "text/html", "utf-8");
-
-
 
             // contact button code
             View contactButton = findViewById(R.id.contact);
@@ -211,8 +198,6 @@ public class PropertyDetails extends AppCompatActivity implements NavigationView
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_main, menu);
-
-
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -248,5 +233,4 @@ public class PropertyDetails extends AppCompatActivity implements NavigationView
         super.onLowMemory();
         mapView.onLowMemory();
     }
-
 }

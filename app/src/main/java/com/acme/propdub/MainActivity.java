@@ -29,7 +29,7 @@ import com.acme.propdub.databinding.ActivityMainBinding;
 //TODO: populate search code, UI, sidebar code
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private AppBarConfiguration appBarConfiguration;
-  //  private ActivityMainBinding binding;
+    //  private ActivityMainBinding binding;
     private DrawerLayout drawer;
     private ImageView menuIcon;
     private NavigationView navigationView;
@@ -54,9 +54,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         navigationView = findViewById(R.id.id_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-
-
-        ;// property details button code
+        // property details button code
         View propertyDetailsButton = findViewById(R.id.property_details_button);
         propertyDetailsButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -139,7 +137,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 return true;
             }
         });
-
         return super.onCreateOptionsMenu(menu);
     }
 
