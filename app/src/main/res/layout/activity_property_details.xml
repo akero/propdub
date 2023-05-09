@@ -1,18 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/drawer_layout"
+    android:id="@+id/root_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     tools:context=".PropertyDetails"
     tools:openDrawer="start">
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/root_layout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
         <ImageView
             android:id="@+id/background_image3"
@@ -42,16 +37,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/my_icon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="21.5dp"
-                    android:onClick="onMenuButtonClick"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/menu" />
+
 
                 <TextView
                     android:id="@+id/property_details_text"
@@ -65,6 +51,19 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
                 <!-- android:fontFamily="@font/poppins-semibold" -->
+
+                <androidx.appcompat.widget.AppCompatImageView
+
+                    android:id="@+id/back_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/back_button"
+                    android:layout_marginTop="1.71dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/viewPager1"
+                    app:layout_constraintEnd_toStartOf="@id/property_details_text"
+                    />
 
                 <androidx.viewpager2.widget.ViewPager2
                     android:id="@+id/viewPager1"
@@ -188,7 +187,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
-                        app:layout_constraintGuide_end="79dp" />
+                        app:layout_constraintGuide_end="55dp" />
 
                     <ImageView
                         android:id="@+id/image_before_text"
@@ -408,6 +407,7 @@
 
                             <com.google.android.gms.maps.MapView
                                 android:id="@+id/map_view"
+                                android:elevation="4dp"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent" />
                         </androidx.cardview.widget.CardView>
@@ -441,6 +441,7 @@
                     android:id="@+id/youtube_video"
                     android:layout_width="wrap_content"
                     android:layout_height="200dp"
+                    android:elevation="4dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/Video" />
@@ -475,6 +476,8 @@
                     android:background="@drawable/rounded_image"
                     android:clipToOutline="true"
                     android:scaleType="centerCrop"
+                    android:elevation="4dp"
+
                     android:src="@drawable/bg_about_us"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -535,6 +538,7 @@
                     android:layout_marginLeft="216dp"
                     android:layout_marginTop="43dp"
                     android:layout_marginRight="26dp"
+                    android:elevation="4dp"
                     android:background="@drawable/rounded_button"
                     android:paddingLeft="0dp"
                     android:paddingRight="0dp"
@@ -566,6 +570,7 @@
                     android:layout_marginRight="26dp"
                     android:background="@drawable/rounded_button"
                     android:paddingLeft="0dp"
+                    android:elevation="4dp"
                     android:paddingRight="0dp"
                     android:text="Submit a tour request"
                     android:textColor="@android:color/white"
@@ -583,6 +588,7 @@
                     android:layout_marginTop="16dp"
                     android:layout_marginRight="26dp"
                     android:layout_marginBottom="26dp"
+                    android:elevation="4dp"
                     android:background="@drawable/rounded_button"
                     android:paddingLeft="0dp"
                     android:paddingRight="0dp"
@@ -664,12 +670,3 @@
         </ScrollView>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <com.google.android.material.navigation.NavigationView
-        android:id="@+id/id_view"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="start"
-        android:fitsSystemWindows="true"
-        app:headerLayout="@layout/nav_header_main"
-        app:menu="@menu/activity_main_drawer" />
-</androidx.drawerlayout.widget.DrawerLayout>

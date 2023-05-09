@@ -26,9 +26,9 @@ import com.google.android.material.navigation.NavigationView;
 
 import jp.wasabeef.blurry.Blurry;
 
-public class PropertyDetails extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class PropertyDetails extends AppCompatActivity{
 
-    private DrawerLayout drawer;
+
     private ImageView menuIcon;
     private NavigationView navigationView;
     MapView mapView;
@@ -43,25 +43,12 @@ public class PropertyDetails extends AppCompatActivity implements NavigationView
             mapView = findViewById(R.id.map_view);
             mapView.onCreate(savedInstanceState);
 
-            // Initialize the drawer variable
-            drawer = findViewById(R.id.drawer_layout);
-            menuIcon = findViewById(R.id.my_icon);
 
             ConstraintLayout rootLayout = findViewById(R.id.root_layout);
             View blueTint = findViewById(R.id.blue_tint);
 
             Blurry.with(this).radius(10).sampling(8).color(Color.argb(66, 0, 66, 116)).async().onto(rootLayout);
 
-            menuIcon.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    if (!drawer.isDrawerOpen(GravityCompat.START)) {
-                        drawer.openDrawer(GravityCompat.START);
-                    }
-                }
-            });
-            navigationView = findViewById(R.id.id_view);
-            navigationView.setNavigationItemSelectedListener(this);
 
             ImageView imageView = findViewById(R.id.background_image3);
             Bitmap originalBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.bg_about_us);
@@ -77,11 +64,20 @@ public class PropertyDetails extends AppCompatActivity implements NavigationView
             WebSettings webSettings = webView.getSettings();
             webSettings.setJavaScriptEnabled(true);
 
-            String videoId = "YOUR_YOUTUBE_VIDEO_ID";
             //feed this the correct video id
+            String videoId = "YOUR_YOUTUBE_VIDEO_ID";
             videoId = "https://www.youtube.com/watch?v=9bZkp7q19f0";
             String html = "<iframe width=\"100%\" height=\"100%\" src=\"https://www.youtube.com/embed/" + videoId + "\" frameborder=\"0\" allowfullscreen></iframe>";
             webView.loadData(html, "text/html", "utf-8");
+
+            //back button code
+            View backButton= findViewById(R.id.back_button);
+            backButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    onBackPressed();
+                }
+            });
 
             // contact button code
             View contactButton = findViewById(R.id.contact);
@@ -141,12 +137,7 @@ public class PropertyDetails extends AppCompatActivity implements NavigationView
         }
     }
 
-    //menu code
-    public void onMenuButtonClick(View view) {
-        if (drawer != null) {
-            drawer.openDrawer(GravityCompat.START);
-        }
-    }
+
 
     // Method to navigate to DocViewer
     private void openDocViewerActivity() {
@@ -170,45 +161,12 @@ public class PropertyDetails extends AppCompatActivity implements NavigationView
         startActivity(intent);
     }
 
-    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.ID1:
-                startActivity(new Intent(this, Favorites.class));
-                break;
-            case R.id.ID2:
-                startActivity(new Intent(this, SavedSearches.class));
-                break;
-            case R.id.ID3:
-                startActivity(new Intent(this, MortgageCalculator.class));
-                break;
-            case R.id.ID4:
-                startActivity(new Intent(this, Settings1.class));
-                break;
-            case R.id.ID5:
-                startActivity(new Intent(this, Support.class));
-                break;
-            case R.id.ID6:
-                startActivity(new Intent(this, AboutUs.class));
-                break;
-        }
-        drawer.closeDrawer(GravityCompat.START);
-        return true;
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return super.onCreateOptionsMenu(menu);
-    }
-
     @Override
     public void onBackPressed() {
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
-            drawer.closeDrawer(GravityCompat.START);
-        } else {
+
             super.onBackPressed();
         }
-    }
+
 
     @Override
     protected void onResume() {
