@@ -62,14 +62,16 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="131dp"
-            android:layout_height="70dp">
+            android:layout_height="70dp"
+            >
 
             <FrameLayout
                 android:id="@+id/rounded_rectangle_container"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent">
+                android:layout_height="fill_parent"
+                android:background="@drawable/white_border">
 
                 <com.acme.propdub.RoundedRectangleView
                     android:id="@+id/rounded_rectangle_view"
@@ -333,68 +335,121 @@
 
 
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/edittextconstraint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="26dp">
 
 
-        <EditText
-            android:id="@+id/totalAmountEditText"
-            style="@style/CustomEditTextHintColor"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Total Amount"
-            android:inputType="numberDecimal"
-            android:textColor="@android:color/white" />
-
-        <EditText
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintlayout1"
+            android:layout_width="wrap_content"
+            android:layout_height="43dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+            <EditText
+                android:id="@+id/totalAmountEditText"
+                style="@style/CustomEditTextHintColor"
+                android:layout_width="308dp"
+                android:layout_height="43dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:hint="Total Amount"
+                android:inputType="numberDecimal"
+                android:textColor="@android:color/white"
+                android:background="@drawable/edittext_background" />
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#FFFFFF"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    <EditText
             android:id="@+id/downPaymentEditText"
             style="@style/CustomEditTextHintColor"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="308dp"
+            android:layout_height="43dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/edittext_background"
+            app:layout_constraintTop_toBottomOf="@id/constraintlayout1"
+            app:layout_constraintStart_toStartOf="parent"
             android:hint="Down Payment"
             android:inputType="numberDecimal" />
 
         <EditText
             android:id="@+id/interestRateEditText"
             style="@style/CustomEditTextHintColor"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-
+            android:layout_width="308dp"
+            android:layout_height="43dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/edittext_background"
+            app:layout_constraintTop_toBottomOf="@id/downPaymentEditText"
+            app:layout_constraintStart_toStartOf="parent"
             android:hint="Interest Rate"
             android:inputType="numberDecimal" />
 
         <EditText
             android:id="@+id/loanTermEditText"
             style="@style/CustomEditTextHintColor"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-
+            android:layout_width="308dp"
+            android:layout_height="43dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/edittext_background"
+            app:layout_constraintTop_toBottomOf="@id/interestRateEditText"
+            app:layout_constraintStart_toStartOf="parent"
             android:hint="Loan Term (years)"
             android:inputType="number" />
 
         <EditText
             android:id="@+id/propertyTaxEditText"
             style="@style/CustomEditTextHintColor"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-
+            android:layout_width="308dp"
+            android:layout_height="43dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/edittext_background"
+            app:layout_constraintTop_toBottomOf="@id/loanTermEditText"
+            app:layout_constraintStart_toStartOf="parent"
             android:hint="Property Tax"
             android:inputType="numberDecimal" />
 
         <EditText
             android:id="@+id/homeInsuranceEditText"
             style="@style/CustomEditTextHintColor"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-
+            android:layout_width="308dp"
+            android:layout_height="43dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/edittext_background"
+            app:layout_constraintTop_toBottomOf="@id/propertyTaxEditText"
+            app:layout_constraintStart_toStartOf="parent"
             android:hint="Home Insurance"
             android:inputType="numberDecimal" />
 
         <EditText
             android:id="@+id/pmiEditText"
             style="@style/CustomEditTextHintColor"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="308dp"
+            android:layout_height="43dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/edittext_background"
+            app:layout_constraintTop_toBottomOf="@id/homeInsuranceEditText"
+            app:layout_constraintStart_toStartOf="parent"
             android:hint="PMI"
             android:inputType="numberDecimal" />
+</androidx.constraintlayout.widget.ConstraintLayout>
 
         <Button
             android:id="@+id/calculateButton"

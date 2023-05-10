@@ -9,5 +9,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="button_color">#00AEFF</color>
     <color name="rectangle_background_color">#33004274</color>
-
+    <color name="edittext_background">#131313</color>
 </resources>

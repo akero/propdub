@@ -33,8 +33,20 @@ public class MortgageCalculator extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mortgage_calculator);
+
         View blueTint = findViewById(R.id.blue_tint);
         ConstraintLayout rootLayout = findViewById(R.id.root_layout);
+        ConstraintLayout editText = findViewById(R.id.edittextconstraint);
+
+
+        Blurry.with(this).radius(10).sampling(8).color(Color.argb(66, 0, 66, 116)).async().onto(rootLayout);
+        Blurry.with(this).radius(10).sampling(8).color(Color.argb(66, 0, 66, 116)).async().onto(editText);
+
+
+        ImageView imageView = findViewById(R.id.background_image3);
+        Bitmap originalBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.bg_about_us);
+        Bitmap blurredBitmap = BlurBuilder.blur(this, originalBitmap);
+        imageView.setImageBitmap(blurredBitmap);
 
         //back button code
         View backButton = findViewById(R.id.back_button);
@@ -44,18 +56,6 @@ public class MortgageCalculator extends AppCompatActivity {
                 onBackPressed();
             }
         });
-
-
-        Blurry.with(this).radius(10).sampling(8).color(Color.argb(66, 0, 66, 116)).async().onto(rootLayout);
-
-
-        ImageView imageView = findViewById(R.id.background_image3);
-        Bitmap originalBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.bg_about_us);
-        Bitmap blurredBitmap = BlurBuilder.blur(this, originalBitmap);
-        imageView.setImageBitmap(blurredBitmap);
-
-
-
 
         totalAmountEditText = findViewById(R.id.totalAmountEditText);
         downPaymentEditText = findViewById(R.id.downPaymentEditText);
@@ -70,6 +70,7 @@ public class MortgageCalculator extends AppCompatActivity {
         monthlyPropertyTaxTextView = findViewById(R.id.monthlyPropertyTaxTextView);
         monthlyHomeInsuranceTextView = findViewById(R.id.monthlyHomeInsuranceTextView);
         monthlyPMITextView = findViewById(R.id.monthlyPMITextView);
+
 
         calculateButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -111,14 +112,17 @@ public class MortgageCalculator extends AppCompatActivity {
                 Toast.makeText(MortgageCalculator.this, "Monthly Mortgage: " + monthlyMortgage, Toast.LENGTH_LONG).show();
             }
         });
-try{
-        View roundedRectangleView = findViewById(R.id.rounded_rectangle_container);
-        Blurry.with(this)
-                .radius(10)
-                .sampling(8)
-                .color(Color.argb(66, 0, 66, 116))
-                .async()
-                .onto((ViewGroup) roundedRectangleView);
-    }catch (Exception e){
-    Log.d("aaaaa",e.toString());
-}}}
+        try {
+            View roundedRectangleView = findViewById(R.id.rounded_rectangle_container);
+            Blurry.with(this)
+                    .radius(10)
+                    .sampling(8)
+                    .color(Color.argb(66, 0, 66, 116))
+                    .async()
+                    .onto((ViewGroup) roundedRectangleView);
+        } catch (Exception e) {
+            Log.d("aaaaa", e.toString());
+        }
+
+    }
+}
