@@ -27,8 +27,6 @@ public class intermediate_screen extends AppCompatActivity {
             getSupportActionBar().hide();
         }
         setContentView(R.layout.activity_intermediate_screen);
-
-
         ConstraintLayout rootLayout = findViewById(R.id.root_layout);
 
         // Create an ImageView and set its layout parameters
@@ -50,14 +48,11 @@ public class intermediate_screen extends AppCompatActivity {
                 openMainActivity();
             }
         });
-
     }
+
     // Method to navigate to mainactivity
     private void openMainActivity() {
-
-       // Log.d("tag1","In sale intent");
         Intent intent = new Intent(intermediate_screen.this, MainActivity.class);
-       // Log.d("tag1","In sale intent 2");
         startActivity(intent);
     }
 }

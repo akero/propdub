@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
 import com.acme.propdub.databinding.FragmentFirstBinding;
+
 //TODO: Remove this without breaking MainActivity
 public class FirstFragment extends Fragment {
 
@@ -18,9 +19,7 @@ public class FirstFragment extends Fragment {
     @Override
     public View onCreateView(
             LayoutInflater inflater, ViewGroup container,
-            Bundle savedInstanceState
-    ) {
-
+            Bundle savedInstanceState) {
         binding = FragmentFirstBinding.inflate(inflater, container, false);
         return binding.getRoot();
 
@@ -43,5 +42,4 @@ public class FirstFragment extends Fragment {
         super.onDestroyView();
         binding = null;
     }
-
 }

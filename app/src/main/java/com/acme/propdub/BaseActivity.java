@@ -18,7 +18,6 @@ public class BaseActivity extends AppCompatActivity {
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.id_view);
         toolbar = findViewById(R.id.toolbar);
-
         setSupportActionBar(toolbar);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -26,9 +25,3 @@ public class BaseActivity extends AppCompatActivity {
         toggle.syncState();
     }
 }
-
-
-
-
-
-
