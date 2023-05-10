@@ -8,8 +8,7 @@
     <string name="navigation_drawer_open">Next</string>
     <string name="navigation_drawer_close">Next</string>
     <string name="previous">Previous</string>
-
-
+    <string name="dihram">\u062F.\u0625</string>
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 </resources>
