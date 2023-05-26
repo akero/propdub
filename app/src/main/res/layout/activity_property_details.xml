@@ -9,10 +9,6 @@
     tools:context=".PropertyDetails"
     tools:openDrawer="start">
 
-
-
-
-
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -22,8 +18,6 @@
                 android:id="@+id/scroll_view"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
-
-
 
                 <TextView
                     android:id="@+id/property_details_text"
@@ -60,17 +54,177 @@
 
                 <TextView
                     android:id="@+id/titleofproperty"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="119dp"
+                    android:layout_height="37dp"
                     android:layout_marginLeft="26dp"
                     android:layout_marginTop="26dp"
+                    android:fontFamily="@font/poppins_semibold"
                     android:text="PEARLZ"
                     android:textColor="@color/figmablue"
                     android:textSize="32sp"
-                    android:fontFamily="@font/poppins_semibold"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/viewPager1" />
                 <!--android:fontFamily="@font/poppins-bold" -->
+                <LinearLayout
+                    android:id="@+id/star_container"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="23.33dp"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/titleofproperty">
+
+                <FrameLayout
+                    android:id="@+id/framelayout1"
+                    android:layout_width="60.66dp"
+                    android:layout_height="25dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:background="@drawable/smallbutton_bg"
+                    app:layout_constraintTop_toBottomOf="@+id/titleofproperty"
+                    app:layout_constraintBottom_toTopOf="@+id/propertyDetails">
+
+                <TextView
+                    android:layout_gravity="center"
+                    android:id="@+id/typeofproperty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="House"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textColor="@color/figmablue"
+            />
+            </FrameLayout>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/star"
+                    android:layout_marginLeft="10dp"
+                    />
+
+                    <TextView
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="3.33dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="4.5  (1225 reviews)"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/icon_container0"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginEnd="14dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/star_container">
+
+                    <ImageView
+                        android:id="@+id/icon11"
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:layout_weight="1"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/bedrooms" />
+
+                    <ImageView
+                        android:id="@+id/icon12"
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:layout_weight="1"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/bathrooms" />
+
+                    <ImageView
+                        android:id="@+id/icon13"
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:layout_weight="1"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/parking" />
+
+                    <ImageView
+                        android:id="@+id/icon14"
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:layout_weight="1"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/gym" />
+                    <ImageView
+                        android:id="@+id/icon15"
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:layout_weight="1"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/bedrooms" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/horizontal_line11"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@android:color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/icon_container0" />
+
+
+                <LinearLayout
+                    android:id="@+id/agent_details"
+                    android:layout_width="0dp"
+                    android:gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/horizontal_line11">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/agent_pic" />
+                <LinearLayout
+                    android:id="@+id/linear_layout2111"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    >
+                    <TextView
+                        android:id="@+id/agent_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="0dp"
+                        android:text="John Doe"
+                        android:textColor="@color/black"
+                        android:textSize="17sp"
+                        android:fontFamily="@font/poppins_regular"
+                         />
+                    <TextView
+                        android:id="@+id/contact_agent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="12sp"
+                        android:text="contact"
+                        android:textColor="@color/figmablue"
+                        android:fontFamily="@font/poppins_regular"
+                        />
+
+
+                </LinearLayout>
+                </LinearLayout>
+
 
                 <TextView
                     android:id="@+id/propertyDetails"
@@ -84,7 +238,7 @@
                     android:fontFamily="@font/poppins_regular"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/titleofproperty" />
+                    app:layout_constraintTop_toBottomOf="@+id/agent_details" />
 
                 <View
                     android:id="@+id/horizontal_line"
