@@ -9,23 +9,9 @@
     tools:context=".PropertyDetails"
     tools:openDrawer="start">
 
-        <ImageView
-            android:id="@+id/background_image3"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="centerCrop"
-            android:src="@drawable/bg_about_us" />
 
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
 
-            <View
-                android:id="@+id/blue_tint"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="#33004274" />
-        </FrameLayout>
+
 
         <ScrollView
             android:layout_width="match_parent"
@@ -46,7 +32,7 @@
                     android:layout_marginLeft="60dp"
                     android:layout_marginTop="16dp"
                     android:text="Property Details"
-                    android:textColor="@android:color/white"
+                    android:textColor="@color/white"
                     android:textSize="20sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -79,7 +65,7 @@
                     android:layout_marginLeft="26dp"
                     android:layout_marginTop="26dp"
                     android:text="PEARLZ"
-                    android:textColor="@android:color/white"
+                    android:textColor="@color/figmablue"
                     android:textSize="32sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/viewPager1" />
@@ -93,7 +79,7 @@
                     android:layout_marginTop="8dp"
                     android:layout_marginRight="26dp"
                     android:text="PEARLZ by Danube properties, located in Al Furjan, brings a new change in residential living in the Al Furjan community. The building has been aesthetically designed in a Modern style to seamlessly and beautifully blend with the surroundings. The plot is located within walking distance of the Al Furjan Metro Station. The ground floor consists of Entrance Lobbies for the Residents, Retail stores, "
-                    android:textColor="@android:color/white"
+                    android:textColor="@color/color1"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/titleofproperty" />
@@ -168,7 +154,7 @@
                     android:layout_marginLeft="26dp"
                     android:layout_marginTop="16dp"
                     android:text="Property Documents"
-                    android:textColor="@android:color/white"
+                    android:textColor="@color/figmablue"
                     android:textSize="21sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/horizontal_line1" />
@@ -205,7 +191,7 @@
                         android:layout_marginStart="8dp"
                         android:layout_marginTop="3dp"
                         android:text="Danube Peralz Updated"
-                        android:textColor="@android:color/white"
+                        android:textColor="@android:color/black"
                         android:textSize="14sp"
                         app:layout_constraintEnd_toStartOf="@+id/right_guideline"
                         app:layout_constraintStart_toEndOf="@+id/image_before_text"
@@ -237,7 +223,7 @@
                         android:layout_marginStart="8dp"
                         android:layout_marginTop="2.4dp"
                         android:text="Danube Peralz floor plan"
-                        android:textColor="@android:color/white"
+                        android:textColor="@android:color/black"
                         android:textSize="14sp"
                         app:layout_constraintEnd_toStartOf="@+id/right_guideline"
                         app:layout_constraintStart_toEndOf="@+id/pdficon"
@@ -270,8 +256,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="26dp"
                     android:layout_marginTop="16dp"
-                    android:text="Address"
-                    android:textColor="@android:color/white"
+                    android:text="Location"
+                    android:textColor="@color/figmablue"
                     android:textSize="21sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/horizontal_line2" />
@@ -313,7 +299,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="  •   Address"
-                            android:textColor="@android:color/white"
+                            android:textColor="@android:color/black"
                             android:textSize="14sp"
                             app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
                             app:layout_constraintTop_toTopOf="parent" />
@@ -323,7 +309,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Al Furjan"
-                            android:textColor="@android:color/white"
+                            android:textColor="@android:color/black"
                             android:textSize="12sp"
                             app:layout_constraintStart_toStartOf="@+id/guidelineRight"
                             app:layout_constraintTop_toTopOf="parent" />
@@ -432,7 +418,7 @@
                     android:layout_marginLeft="26dp"
                     android:layout_marginTop="16dp"
                     android:text="Video"
-                    android:textColor="@android:color/white"
+                    android:textColor="@android:color/black"
                     android:textSize="21sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/horizontal_line3" />
@@ -490,7 +476,7 @@
                     android:layout_marginLeft="60dp"
                     android:layout_marginTop="30dp"
                     android:text="Azizi Properties"
-                    android:textColor="@android:color/white"
+                    android:textColor="@android:color/black"
                     android:textSize="16sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/dealer_image" />

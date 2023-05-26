@@ -45,15 +45,15 @@ public class PropertyDetails extends AppCompatActivity {
 
 
             ConstraintLayout rootLayout = findViewById(R.id.root_layout);
-            View blueTint = findViewById(R.id.blue_tint);
+            //View blueTint = findViewById(R.id.blue_tint);
 
-            Blurry.with(this).radius(10).sampling(8).color(Color.argb(66, 0, 66, 116)).async().onto(rootLayout);
+            //Blurry.with(this).radius(10).sampling(8).color(Color.argb(66, 0, 66, 116)).async().onto(rootLayout);
 
 
-            ImageView imageView = findViewById(R.id.background_image3);
+            /*ImageView imageView = findViewById(R.id.background_image3);
             Bitmap originalBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.bg_about_us);
             Bitmap blurredBitmap = BlurBuilder.blur(this, originalBitmap);
-            imageView.setImageBitmap(blurredBitmap);
+            imageView.setImageBitmap(blurredBitmap); */
 
             ViewPager2 viewPager = findViewById(R.id.viewPager1);
             ImageAdapter1 adapter = new ImageAdapter1(this, imageIds);
