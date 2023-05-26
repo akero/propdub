@@ -257,6 +257,18 @@
 
                 </LinearLayout>
                 </LinearLayout>
+                <TextView
+                    android:id="@+id/overview"
+                    android:layout_width="119dp"
+                    android:layout_height="37dp"
+                    android:layout_marginLeft="26dp"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Overview"
+                    android:textColor="@color/figmablue"
+                    android:textSize="21sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/agent_details" />
 
 
                 <TextView
@@ -264,14 +276,14 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="26dp"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="30dp"
                     android:layout_marginRight="26dp"
                     android:text="PEARLZ by Danube properties, located in Al Furjan, brings a new change in residential living in the Al Furjan community. The building has been aesthetically designed in a Modern style to seamlessly and beautifully blend with the surroundings. The plot is located within walking distance of the Al Furjan Metro Station. The ground floor consists of Entrance Lobbies for the Residents, Retail stores, "
                     android:textColor="@color/color1"
                     android:fontFamily="@font/poppins_regular"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/agent_details" />
+                    app:layout_constraintTop_toBottomOf="@+id/overview" />
 
                 <View
                     android:id="@+id/horizontal_line"
@@ -283,6 +295,19 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/propertyDetails" />
 
+                <TextView
+                    android:id="@+id/facilities"
+                    android:layout_width="119dp"
+                    android:layout_height="37dp"
+                    android:layout_marginLeft="26dp"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Facilities"
+                    android:textColor="@color/figmablue"
+                    android:textSize="21sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/propertyDetails" />
+
                 <LinearLayout
                     android:id="@+id/icon_container"
                     android:layout_width="0dp"
@@ -291,7 +316,7 @@
                     android:orientation="horizontal"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/horizontal_line">
+                    app:layout_constraintTop_toBottomOf="@+id/facilities">
 
                     <ImageView
                         android:id="@+id/icon1"
@@ -324,17 +349,87 @@
                         android:layout_weight="1"
                         android:scaleType="centerInside"
                         android:src="@drawable/gym" />
+                    <ImageView
+                        android:id="@+id/icon5"
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:layout_weight="1"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/bedrooms" />
                 </LinearLayout>
-
-                <View
-                    android:id="@+id/horizontal_line1"
+                <LinearLayout
+                    android:id="@+id/icon_container11"
                     android:layout_width="0dp"
-                    android:layout_height="1dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:background="@android:color/white"
+                    android:orientation="horizontal"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/icon_container" />
+                    app:layout_constraintTop_toBottomOf="@+id/icon_container">
+
+                    <ImageView
+                        android:id="@+id/icon122"
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:layout_weight="1"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/bedrooms" />
+
+                    <ImageView
+                        android:id="@+id/icon222"
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:layout_weight="1"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/bathrooms" />
+
+                    <ImageView
+                        android:id="@+id/icon322"
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:layout_weight="1"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/parking" />
+
+                    <ImageView
+                        android:id="@+id/icon422"
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:layout_weight="1"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/gym" />
+                    <ImageView
+                        android:id="@+id/icon522"
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:layout_weight="1"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/bedrooms" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/Video1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="26dp"
+                    android:layout_marginTop="16dp"
+                    android:text="Video"
+                    android:textColor="@color/figmablue"
+                    android:textSize="21sp"
+                    android:fontFamily="@font/poppins_medium"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/icon_container11" />
+
+                <WebView
+                    android:id="@+id/youtube_video1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="200dp"
+                    android:elevation="4dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/Video1" />
+
+
 
                 <TextView
                     android:id="@+id/documents"
@@ -347,7 +442,7 @@
                     android:textSize="21sp"
                     android:fontFamily="@font/poppins_medium"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/horizontal_line1" />
+                    app:layout_constraintTop_toBottomOf="@id/youtube_video1" />
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/constraint_layout"
