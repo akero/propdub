@@ -74,6 +74,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             }
         });
 
+        // schedule visit button code
+        View propertyVisitButton = findViewById(R.id.schedule_visit_button);
+        propertyVisitButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d("tag1", "In sale click");
+                openScheduleActivity();
+            }
+        });
+
         // property rent button code
         View propertyRentButton = findViewById(R.id.property_rent_button);
         propertyRentButton.setOnClickListener(new View.OnClickListener() {
@@ -111,6 +121,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     // Method to navigate to PropertyRent
     private void openPropertyRentActivity() {
         Intent intent = new Intent(MainActivity.this, PropertyRent.class);
+        startActivity(intent);
+    }
+
+    // Method to navigate to schedule visit
+    private void openScheduleActivity() {
+        Intent intent = new Intent(MainActivity.this, ScheduleVisit.class);
         startActivity(intent);
     }
 
