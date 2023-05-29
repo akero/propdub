@@ -222,9 +222,8 @@
                         android:textColor="@color/figmablue"
                         android:fontFamily="@font/poppins_regular"
                         />
-
-
                 </LinearLayout>
+
                 <LinearLayout
                     android:id="@+id/icons"
                     android:layout_width="wrap_content"
@@ -548,125 +547,51 @@
                     android:textSize="21sp"
                     android:fontFamily="@font/poppins_medium"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/horizontal_line2" />
+                    app:layout_constraintTop_toBottomOf="@+id/horizontal_line2" />
+
+                <LinearLayout
+                    android:id="@+id/address1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="12dp"
+                    app:layout_constraintTop_toBottomOf="@id/address"
+                    app:layout_constraintStart_toStartOf="parent">
+                    <ImageView
+                        android:id="@+id/image_before_text1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="39dp"
+                        android:src="@drawable/location1"
+                         />
+
+                    <TextView
+                        android:id="@+id/address11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="3dp"
+                        android:text="Address Al Furjan Dubai UAE"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/poppins_regular"
+                        />
+
+                </LinearLayout>
 
                 <LinearLayout
                     android:id="@+id/linear_layout21"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="2dp"
                     android:orientation="vertical"
                     app:layout_constraintEnd_toEndOf="@id/scroll_view"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/address">
+                    android:gravity="center"
+                    app:layout_constraintTop_toBottomOf="@+id/address1">
 
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:id="@+id/linear_layout211"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        app:layout_constraintEnd_toEndOf="@id/scroll_view"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/address">
 
-                        <androidx.constraintlayout.widget.Guideline
-                            android:id="@+id/guidelineLeft"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            app:layout_constraintGuide_begin="25dp" />
 
-                        <androidx.constraintlayout.widget.Guideline
-                            android:id="@+id/guidelineRight"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            app:layout_constraintGuide_end="79dp" />
-
-                        <TextView
-                            android:id="@+id/address_label1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="  •   Address"
-                            android:textColor="@android:color/black"
-                            android:textSize="14sp"
-                            app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                        <TextView
-                            android:id="@+id/address_value1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Al Furjan"
-                            android:textColor="@android:color/black"
-                            android:textSize="12sp"
-                            app:layout_constraintStart_toStartOf="@+id/guidelineRight"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                        <TextView
-                            android:id="@+id/city_label"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="20dp"
-                            android:text="  •   City"
-                            android:textColor="@android:color/white"
-                            android:textSize="14sp"
-                            app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
-                            app:layout_constraintTop_toBottomOf="@+id/address_value1" />
-
-                        <TextView
-                            android:id="@+id/city_value"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="20dp"
-                            android:text="Dubai"
-                            android:textColor="@android:color/white"
-                            android:textSize="12sp"
-                            app:layout_constraintStart_toStartOf="@+id/guidelineRight"
-                            app:layout_constraintTop_toBottomOf="@+id/address_value1" />
-
-                        <TextView
-                            android:id="@+id/area_label"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="20dp"
-                            android:text="  •   Area"
-                            android:textColor="@android:color/white"
-                            android:textSize="14sp"
-                            app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
-                            app:layout_constraintTop_toBottomOf="@+id/city_value" />
-
-                        <TextView
-                            android:id="@+id/area_value"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="20dp"
-                            android:text="Al Furjan"
-                            android:textColor="@android:color/white"
-                            android:textSize="12sp"
-                            app:layout_constraintStart_toStartOf="@+id/guidelineRight"
-                            app:layout_constraintTop_toBottomOf="@+id/city_value" />
-
-                        <TextView
-                            android:id="@+id/country_label"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="20dp"
-                            android:text="  •   Country"
-                            android:textColor="@android:color/white"
-                            android:textSize="14sp"
-                            app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
-                            app:layout_constraintTop_toBottomOf="@+id/area_value" />
-
-                        <TextView
-                            android:id="@+id/country_value"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="20dp"
-                            android:text="UAE"
-                            android:textColor="@android:color/white"
-                            android:textSize="12sp"
-                            app:layout_constraintStart_toStartOf="@+id/guidelineRight"
-                            app:layout_constraintTop_toBottomOf="@+id/area_value" />
 
                         <androidx.cardview.widget.CardView
                             android:id="@+id/map_view_card"
@@ -675,9 +600,7 @@
                             android:layout_marginTop="18dp"
                             app:cardCornerRadius="10dp"
                             app:cardElevation="0dp"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/country_value">
+                            >
 
                             <com.google.android.gms.maps.MapView
                                 android:id="@+id/map_view"
@@ -686,260 +609,180 @@
                                 android:layout_height="match_parent" />
                         </androidx.cardview.widget.CardView>
 
-                    </androidx.constraintlayout.widget.ConstraintLayout>
                 </LinearLayout>
 
-                <View
-                    android:id="@+id/horizontal_line3"
+                <LinearLayout
+                    android:id="@+id/star_container1"
                     android:layout_width="0dp"
-                    android:layout_height="1dp"
-                    android:layout_marginTop="18dp"
-                    android:background="@android:color/white"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="23.33dp"
+                    android:layout_marginEnd="33.33dp"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/linear_layout21" />
+                    app:layout_constraintTop_toBottomOf="@+id/linear_layout21">
+
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/star2"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="0dp"
+                        />
+
+                    <TextView
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5.22dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="4.5  (1225 reviews)"
+                        android:textColor="@color/figmablue"
+                        android:layout_weight="1"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="See All"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textColor="@color/figmablue"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/agent_details1"
+                    android:layout_width="0dp"
+                    android:gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="22dp"
+                    app:layout_constraintTop_toBottomOf="@+id/star_container1">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/agent_pic" />
+
+
+                        <TextView
+                            android:id="@+id/agent_name1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="0dp"
+                            android:text="John Doe"
+                            android:textColor="@color/black"
+                            android:textSize="17sp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:layout_weight="1"
+                            />
+
+                        <LinearLayout
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/reviewbox"
+                            android:orientation="horizontal"
+                            android:layout_marginEnd="22dp"
+
+                            >
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/star1button"
+                                android:layout_weight="1"
+                                />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="5"
+                                android:textColor="@color/figmablue"
+                                android:layout_marginStart="5dp"
+                                android:fontFamily="@font/poppins_medium"
+                                android:layout_weight="1"
+                                />
+
+                        </LinearLayout>
+
+
+
+                </LinearLayout>
 
                 <TextView
-                    android:id="@+id/Video"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/agentdetails2"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="26dp"
-                    android:layout_marginTop="16dp"
-                    android:text="Video"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="25dp"
+                    android:text="Sample agent details"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins_regular"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/agent_details1" />
+
+                <TextView
+                    android:id="@+id/lastseen"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginRight="25dp"
+                    android:text="6 days ago"
                     android:textColor="@color/figmablue"
-                    android:textSize="21sp"
-                    android:fontFamily="@font/poppins_medium"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/horizontal_line3" />
-
-                <WebView
-                    android:id="@+id/youtube_video"
-                    android:layout_width="wrap_content"
-                    android:layout_height="200dp"
-                    android:elevation="4dp"
+                    android:fontFamily="@font/poppins_regular"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/Video" />
+                    app:layout_constraintTop_toBottomOf="@+id/agentdetails2" />
 
-                <View
-                    android:id="@+id/horizontal_line4"
+                <LinearLayout
+                    android:id="@+id/price"
                     android:layout_width="0dp"
-                    android:layout_height="1dp"
-                    android:layout_marginTop="18dp"
-                    android:background="@android:color/transparent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/youtube_video" />
-
-                <TextView
-                    android:id="@+id/dealer_details"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="26dp"
-                    android:layout_marginTop="16dp"
-                    android:text="Dealer Details"
-                    android:textColor="@android:color/white"
-                    android:textSize="21sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/horizontal_line4" />
-
-                <ImageView
-                    android:id="@+id/dealer_image"
-                    android:layout_width="308dp"
-                    android:layout_height="139dp"
-                    android:layout_marginTop="16dp"
-                    android:background="@drawable/rounded_image"
-                    android:clipToOutline="true"
-                    android:scaleType="centerCrop"
-                    android:elevation="4dp"
-
-                    android:src="@drawable/bg_about_us"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/dealer_details" />
-
-                <TextView
-                    android:id="@+id/dealer_name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="60dp"
-                    android:layout_marginTop="30dp"
-                    android:text="Azizi Properties"
-                    android:textColor="@android:color/black"
-                    android:textSize="16sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/dealer_image" />
-
-                <ImageView
-                    android:id="@+id/dealer_icon"
-                    android:layout_width="0dp"
-                    android:layout_height="24dp"
-                    android:layout_marginLeft="26dp"
-                    android:layout_marginTop="30dp"
-                    android:layout_weight="1"
-                    android:scaleType="centerInside"
-                    android:src="@drawable/profile"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/dealer_image" />
-
-                <TextView
-                    android:id="@+id/dealer_number"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="60dp"
-                    android:layout_marginTop="20dp"
-                    android:text="+971 542660997"
-                    android:textColor="@android:color/white"
-                    android:textSize="16sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/dealer_name" />
-
-                <ImageView
-                    android:id="@+id/call_icon"
-                    android:layout_width="0dp"
-                    android:layout_height="24dp"
-                    android:layout_marginStart="26dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_weight="1"
-                    android:scaleType="centerInside"
-                    android:src="@drawable/call"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/dealer_name" />
-
-                <Button
-                    android:id="@+id/view_listings"
-                    android:layout_width="118dp"
-                    android:layout_height="37dp"
-                    android:layout_marginLeft="216dp"
-                    android:layout_marginTop="43dp"
-                    android:layout_marginRight="26dp"
-                    android:elevation="4dp"
-                    android:background="@drawable/rounded_button"
-                    android:paddingLeft="0dp"
-                    android:paddingRight="0dp"
-                    android:text="View Listings"
-                    android:textColor="@android:color/white"
-                    android:textSize="12sp"
-                    app:backgroundTint="@color/button_color"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/dealer_image" />
-
-                <View
-                    android:id="@+id/horizontal_line5"
-                    android:layout_width="0dp"
-                    android:layout_height="1dp"
-                    android:layout_marginTop="20dp"
-                    android:background="@android:color/white"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="1.0"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/dealer_number" />
-
-                <Button
-                    android:id="@+id/schedule_tour"
-                    android:layout_width="308dp"
-                    android:layout_height="43dp"
-                    android:layout_marginLeft="26dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginRight="26dp"
-                    android:background="@drawable/rounded_button"
-                    android:paddingLeft="0dp"
-                    android:elevation="4dp"
-                    android:paddingRight="0dp"
-                    android:text="Submit a tour request"
-                    android:textColor="@android:color/white"
-                    android:textSize="16sp"
-                    app:backgroundTint="#77C720"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/horizontal_line5" />
-
-                <Button
-                    android:id="@+id/mortgage_calculator1"
-                    android:layout_width="308dp"
-                    android:layout_height="43dp"
-                    android:layout_marginLeft="26dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginRight="26dp"
-                    android:layout_marginBottom="26dp"
-                    android:elevation="4dp"
-                    android:background="@drawable/rounded_button"
-                    android:paddingLeft="0dp"
-                    android:paddingRight="0dp"
-                    android:text="Calculate mortgage"
-                    android:textColor="@android:color/white"
-                    android:textSize="16sp"
-                    app:backgroundTint="#77C720"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/schedule_tour" />
-
-                <Button
-                    android:id="@+id/contact"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="90dp"
-                    android:text="Contact"
-                    android:visibility="gone"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/mortgage_calculator1" />
-
-                <Button
-                    android:id="@+id/schedule_viewing"
-                    android:layout_width="wrap_content"
+                    android:gravity="center_horizontal"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:text="Schedule viewing"
-                    android:visibility="gone"
+                    android:orientation="horizontal"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/contact" />
+                    android:layout_marginStart="22dp"
+                    app:layout_constraintTop_toBottomOf="@+id/lastseen">
 
-                <Button
-                    android:id="@+id/location_on_map"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:text="Location on map"
-                    android:visibility="gone"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/schedule_viewing" />
 
-                <Button
-                    android:id="@+id/video"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:text="Video"
-                    android:visibility="gone"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/location_on_map" />
+                    <TextView
+                        android:id="@+id/costofproperty"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginBottom="31dp"
+                        android:text="$56800"
+                        android:layout_weight="1"
+                        android:textColor="@color/black"
+                        android:textSize="32sp"
+                        android:fontFamily="@font/poppins_semibold"
 
-                <Button
-                    android:id="@+id/documents_viewer"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:text="Documents viewer"
-                    android:visibility="gone"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/video" />
+                        />
 
-                <Button
-                    android:id="@+id/mortgage_calculator"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:text="Mortgage calculator"
-                    android:visibility="gone"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/documents_viewer" />
+
+                    <Button
+                        android:layout_width="156dp"
+                        android:layout_height="43dp"
+                        android:text="Book Now"
+                        android:textSize="20sp"
+                        android:layout_marginBottom="31dp"
+                        android:textColor="@android:color/white"
+                        android:background="@drawable/button_gradient"
+                        android:layout_weight="1"
+                        android:layout_marginRight="18dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:gravity="center"
+                         />
+                </LinearLayout>
+
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </ScrollView>

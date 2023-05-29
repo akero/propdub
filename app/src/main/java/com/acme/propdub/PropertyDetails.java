@@ -60,7 +60,7 @@ public class PropertyDetails extends AppCompatActivity {
             viewPager.setAdapter(adapter);
 
             //Code for video
-            WebView webView = findViewById(R.id.youtube_video);
+            WebView webView = findViewById(R.id.youtube_video1);
             WebSettings webSettings = webView.getSettings();
             webSettings.setJavaScriptEnabled(true);
 
@@ -70,6 +70,7 @@ public class PropertyDetails extends AppCompatActivity {
             String html = "<iframe width=\"100%\" height=\"100%\" src=\"https://www.youtube.com/embed/" + videoId + "\" frameborder=\"0\" allowfullscreen></iframe>";
             webView.loadData(html, "text/html", "utf-8");
 
+          /*
             //back button code
             View backButton = findViewById(R.id.back_button);
             backButton.setOnClickListener(new View.OnClickListener() {
@@ -131,7 +132,7 @@ public class PropertyDetails extends AppCompatActivity {
                 public void onClick(View v) {
                     openDocViewerActivity();
                 }
-            });
+            }); */
         } catch (Exception e) {
             Log.d("tag4", e.toString());
         }
