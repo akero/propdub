@@ -27,7 +27,7 @@
             android:title="Settings" />
         <item
             android:id="@+id/ID5"
-            android:title="Support" />
+            android:title="Contact Us" />
         <item
             android:id="@+id/ID6"
             android:title="About us" />
