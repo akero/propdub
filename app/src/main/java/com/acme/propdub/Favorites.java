@@ -14,10 +14,10 @@ public class Favorites extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_favorites);
 
-        //blurring background image
+      /*  //blurring background image
         ImageView imageView = findViewById(R.id.background_image8);
         Bitmap originalBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.bg_about_us);
         Bitmap blurredBitmap = BlurBuilder.blur(this, originalBitmap);
-        imageView.setImageBitmap(blurredBitmap);
+        imageView.setImageBitmap(blurredBitmap); */
     }
 }
