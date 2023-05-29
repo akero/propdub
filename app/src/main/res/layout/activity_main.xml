@@ -75,10 +75,11 @@
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/id_view"
-        android:layout_width="wrap_content"
+        android:layout_width="261dp"
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
+        android:background="#004274"
         app:headerLayout="@layout/nav_header_main"
         app:menu="@menu/activity_main_drawer" />
 
