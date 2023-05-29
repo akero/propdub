@@ -21,18 +21,18 @@ public class AboutUs extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about_us);
-        ImageView imageView = findViewById(R.id.background_image);
+        //ImageView imageView = findViewById(R.id.background_image);
         Bitmap originalBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.bg_about_us);
         Bitmap blurredBitmap = BlurBuilder.blur(this, originalBitmap);
 
         // Add a blue tint to the blurred bitmap
-        int blueColor = Color.parseColor("#66004274"); // Adjust the color and transparency as needed
-        PorterDuffColorFilter colorFilter = new PorterDuffColorFilter(blueColor, PorterDuff.Mode.OVERLAY);
-        imageView.setColorFilter(colorFilter);
+      //  int blueColor = Color.parseColor("#66004274"); // Adjust the color and transparency as needed
+        //PorterDuffColorFilter colorFilter = new PorterDuffColorFilter(blueColor, PorterDuff.Mode.OVERLAY);
+        //imageView.setColorFilter(colorFilter);
 
 
-        imageView.setImageBitmap(blurredBitmap);
-        String about= "PropDub is a leading real estate platform in Dubai, connecting trusted developers and select agents with global buyers. Our expert-curated collection of genuine, high-quality investments keeps users updated on the best opportunities.\n" +
+        //imageView.setImageBitmap(blurredBitmap);
+        /*String about= "PropDub is a leading real estate platform in Dubai, connecting trusted developers and select agents with global buyers. Our expert-curated collection of genuine, high-quality investments keeps users updated on the best opportunities.\n" +
                 "\n" +
                 "Our experienced team of professionals, with backgrounds in UAE real estate, digital marketing, and advertising, is our greatest strength. We aim to fulfill global real estate needs by connecting individuals with trusted developers and agents while empowering informed decision-making.\n" +
                 "\n" +
@@ -40,6 +40,6 @@ public class AboutUs extends AppCompatActivity {
                 "\n" +
                 "At PropDub, we value integrity, clarity, promptness, and commitment, striving for mutual benefit for all parties involved.";
         TextView aboutUsText = findViewById(R.id.about_us_text);
-        aboutUsText.setText(about);
+        aboutUsText.setText(about); */
     }
 }
