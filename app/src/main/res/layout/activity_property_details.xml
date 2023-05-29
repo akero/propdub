@@ -65,49 +65,50 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/viewPager1" />
                 <!--android:fontFamily="@font/poppins-bold" -->
+
                 <LinearLayout
                     android:id="@+id/star_container"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="23.33dp"
-                    android:layout_marginTop="12dp"
-                    android:orientation="horizontal"
+                    android:layout_marginTop="24dp"
                     android:gravity="center_vertical"
+                    android:orientation="horizontal"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/titleofproperty">
 
-                <FrameLayout
-                    android:id="@+id/framelayout1"
-                    android:layout_width="60.66dp"
-                    android:layout_height="25dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    android:background="@drawable/smallbutton_bg"
-                    app:layout_constraintTop_toBottomOf="@+id/titleofproperty"
-                    app:layout_constraintBottom_toTopOf="@+id/propertyDetails">
+                    <FrameLayout
+                        android:id="@+id/framelayout1"
+                        android:layout_width="60.66dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/smallbutton_bg"
+                        app:layout_constraintBottom_toTopOf="@+id/propertyDetails"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/titleofproperty">
 
-                <TextView
-                    android:layout_gravity="center"
-                    android:id="@+id/typeofproperty"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="House"
-                    android:textSize="12sp"
-                    android:fontFamily="@font/poppins_medium"
-                    android:textColor="@color/figmablue"
-            />
-            </FrameLayout>
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/star"
-                    android:layout_marginLeft="10dp"
-                    />
+                        <TextView
+                            android:id="@+id/typeofproperty"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="House"
+                            android:textColor="@color/figmablue"
+                            android:textSize="12sp" />
+                    </FrameLayout>
 
-                    <TextView
-                        android:layout_gravity="center"
+                    <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/star" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
                         android:layout_marginStart="3.33dp"
                         android:fontFamily="@font/poppins_medium"
                         android:text="4.5  (1225 reviews)"
