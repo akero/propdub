@@ -37,7 +37,7 @@ public class AgentProfile extends AppCompatActivity {
     //TODO: pass value of what property it is to PropertyDetails.class
     // Method to navigate to properties listed by agent
     private void openPropertyListedByAgent() {
-        Intent intent = new Intent(AgentProfile.this, PropertyDetails.class);
+        Intent intent = new Intent(AgentProfile.this, AgentListings.class);
         startActivity(intent);
     }
 }

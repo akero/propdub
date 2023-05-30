@@ -310,7 +310,7 @@
         android:id="@+id/property_listed_by_agent_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Properties listed by agent"
+        android:text="Listings"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
