@@ -43,10 +43,10 @@ public class MortgageCalculator extends AppCompatActivity {
         Blurry.with(this).radius(10).sampling(8).color(Color.argb(66, 0, 66, 116)).async().onto(editText);
 
 
-        ImageView imageView = findViewById(R.id.background_image3);
+       /* ImageView imageView = findViewById(R.id.background_image3);
         Bitmap originalBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.bg_about_us);
         Bitmap blurredBitmap = BlurBuilder.blur(this, originalBitmap);
-        imageView.setImageBitmap(blurredBitmap);
+        imageView.setImageBitmap(blurredBitmap); */
 
         //back button code
         View backButton = findViewById(R.id.back_button);

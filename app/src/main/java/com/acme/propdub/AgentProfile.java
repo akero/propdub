@@ -17,10 +17,10 @@ public class AgentProfile extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_agent_profile);
-        ImageView imageView = findViewById(R.id.background_image1);
+       /* ImageView imageView = findViewById(R.id.background_image1);
         Bitmap originalBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.bg_about_us);
         Bitmap blurredBitmap = BlurBuilder.blur(this, originalBitmap);
-        imageView.setImageBitmap(blurredBitmap);
+        imageView.setImageBitmap(blurredBitmap);  */
 
         //properties listed by agent button code
         View propertyRentButton = findViewById(R.id.property_listed_by_agent_button);

@@ -64,6 +64,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             }
         });
 
+        // agent profile button code
+        View agentButton = findViewById(R.id.agent_button);
+        agentButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                openAgentActivity();
+            }
+        });
         // property sale button code
         View propertySaleButton = findViewById(R.id.property_sale_button);
         propertySaleButton.setOnClickListener(new View.OnClickListener() {
@@ -127,6 +136,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     // Method to navigate to schedule visit
     private void openScheduleActivity() {
         Intent intent = new Intent(MainActivity.this, ScheduleVisit.class);
+        startActivity(intent);
+    }
+
+    // Method to navigate to agent details
+    private void openAgentActivity() {
+        Intent intent = new Intent(MainActivity.this, AgentProfile.class);
         startActivity(intent);
     }
 
