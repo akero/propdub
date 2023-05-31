@@ -11,5 +11,6 @@
     <color name="rectangle_background_color">#33004274</color>
     <color name="edittext_background">#131313</color>
     <color name="color1">#6A778B</color>
-    <color name="figmablue">#004274</color>"
+    <color name="figmablue">#014273</color>"
+    <color name="transparentblack">#80000000</color>
 </resources>
