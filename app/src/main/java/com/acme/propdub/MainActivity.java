@@ -24,7 +24,6 @@ import androidx.navigation.ui.NavigationUI;
 
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.snackbar.Snackbar;
-import com.acme.propdub.databinding.ActivityMainBinding;
 
 //TODO: populate search code, UI, sidebar code
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -73,6 +72,18 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 openAgentActivity();
             }
         });
+
+        // search button code
+        View searchButton = findViewById(R.id.search_button);
+        searchButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                openSearchActivity();
+            }
+        });
+
+
         // property sale button code
         View propertySaleButton = findViewById(R.id.property_sale_button);
         propertySaleButton.setOnClickListener(new View.OnClickListener() {
@@ -130,6 +141,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     // Method to navigate to PropertyRent
     private void openPropertyRentActivity() {
         Intent intent = new Intent(MainActivity.this, PropertyRent.class);
+        startActivity(intent);
+    }
+
+    private void openSearchActivity(){
+        Intent intent= new Intent(MainActivity.this, Search.class);
         startActivity(intent);
     }
 
