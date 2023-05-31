@@ -101,6 +101,7 @@
         </LinearLayout>
     </LinearLayout>
 
+
     <LinearLayout
         android:id="@+id/details"
         android:layout_width="match_parent"
@@ -111,16 +112,23 @@
         app:layout_constraintTop_toBottomOf="@id/agent_details"
         android:orientation="vertical">
 
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
+
             >
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="175dp" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Company Name"
-                android:layout_weight="1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 android:fontFamily="@font/poppins_regular"
                 android:textSize="14sp"
                 android:textColor="@color/figmablue"/>
@@ -128,22 +136,30 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/figmablue"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="@id/guidelineLeft"
                 android:fontFamily="@font/poppins_light"
                 android:textSize="14sp"
-                android:layout_weight="1"
                 android:text=":XYZ Pvt. ltd."/>
-        </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
+
             >
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineLeft1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="175dp" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Email"
-                android:layout_weight="1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 android:fontFamily="@font/poppins_regular"
                 android:textSize="14sp"
                 android:textColor="@color/figmablue"/>
@@ -153,20 +169,28 @@
                 android:textColor="@color/figmablue"
                 android:fontFamily="@font/poppins_light"
                 android:textSize="14sp"
-                android:layout_weight="1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="@id/guidelineLeft1"
                 android:text=":XYZ@gmail.com"/>
-        </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
+
             >
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineLeft2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="175dp" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Website"
-                android:layout_weight="1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 android:fontFamily="@font/poppins_regular"
                 android:textSize="14sp"
                 android:textColor="@color/figmablue"/>
@@ -176,20 +200,28 @@
                 android:textColor="@color/figmablue"
                 android:fontFamily="@font/poppins_light"
                 android:textSize="14sp"
-                android:layout_weight="1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="@id/guidelineLeft2"
                 android:text=":probdub.com"/>
-        </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
+
             >
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineLeft3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="175dp" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Response time"
-                android:layout_weight="1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 android:fontFamily="@font/poppins_regular"
                 android:textSize="14sp"
                 android:textColor="@color/figmablue"/>
@@ -199,20 +231,28 @@
                 android:textColor="@color/figmablue"
                 android:fontFamily="@font/poppins_light"
                 android:textSize="14sp"
-                android:layout_weight="1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="@id/guidelineLeft3"
                 android:text=":Less than 5 minutes"/>
-        </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
+
             >
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineLeft4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="175dp" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Experience"
-                android:layout_weight="1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 android:fontFamily="@font/poppins_regular"
                 android:textSize="14sp"
                 android:textColor="@color/figmablue"/>
@@ -222,20 +262,28 @@
                 android:textColor="@color/figmablue"
                 android:fontFamily="@font/poppins_light"
                 android:textSize="14sp"
-                android:layout_weight="1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="@id/guidelineLeft4"
                 android:text=": 5 years"/>
-        </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
+
             >
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineLeft5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="175dp" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Languages"
-                android:layout_weight="1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 android:fontFamily="@font/poppins_regular"
                 android:textSize="14sp"
                 android:textColor="@color/figmablue"/>
@@ -245,9 +293,9 @@
                 android:textColor="@color/figmablue"
                 android:fontFamily="@font/poppins_light"
                 android:textSize="14sp"
-                android:layout_weight="1"
+                app:layout_constraintStart_toStartOf="@id/guidelineLeft5"
                 android:text=":English, Hindi"/>
-        </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 
