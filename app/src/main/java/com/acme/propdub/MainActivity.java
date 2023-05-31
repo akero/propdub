@@ -83,6 +83,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             }
         });
 
+        // searchmap button code
+        View searchMapButton = findViewById(R.id.search_map_button);
+        searchMapButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                openSearchMapActivity();
+            }
+        });
+
 
         // property sale button code
         View propertySaleButton = findViewById(R.id.property_sale_button);
@@ -146,6 +156,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     private void openSearchActivity(){
         Intent intent= new Intent(MainActivity.this, Search.class);
+        startActivity(intent);
+    }
+
+    private void openSearchMapActivity(){
+        Intent intent= new Intent(MainActivity.this, SearchByMap.class);
         startActivity(intent);
     }
 
