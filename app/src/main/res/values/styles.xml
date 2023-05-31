@@ -15,8 +15,11 @@
         <!-- Add other desired text style attributes if needed -->
     </style>
         <style name="CustomEditTextHintColor" parent="Widget.AppCompat.EditText">
-            <item name="android:textColorHint">@color/white</item>
+            <item name="android:textColorHint">@color/black</item>
         </style>
 
+    <style name="CustomEditTextHintColorSupport" parent="Widget.AppCompat.EditText">
+        <item name="android:textColorHint">#80000000</item>
+    </style>
 </resources>
 

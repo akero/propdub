@@ -34,13 +34,13 @@ public class MortgageCalculator extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mortgage_calculator);
 
-        View blueTint = findViewById(R.id.blue_tint);
+        //View blueTint = findViewById(R.id.blue_tint);
         ConstraintLayout rootLayout = findViewById(R.id.root_layout);
         ConstraintLayout editText = findViewById(R.id.edittextconstraint);
 
 
-        Blurry.with(this).radius(10).sampling(8).color(Color.argb(66, 0, 66, 116)).async().onto(rootLayout);
-        Blurry.with(this).radius(10).sampling(8).color(Color.argb(66, 0, 66, 116)).async().onto(editText);
+        //Blurry.with(this).radius(10).sampling(8).color(Color.argb(66, 0, 66, 116)).async().onto(rootLayout);
+        //Blurry.with(this).radius(10).sampling(8).color(Color.argb(66, 0, 66, 116)).async().onto(editText);
 
 
        /* ImageView imageView = findViewById(R.id.background_image3);
@@ -65,7 +65,7 @@ public class MortgageCalculator extends AppCompatActivity {
         homeInsuranceEditText = findViewById(R.id.homeInsuranceEditText);
         pmiEditText = findViewById(R.id.pmiEditText);
         calculateButton = findViewById(R.id.calculateButton);
-        monthlyMortgageTextView = findViewById(R.id.monthlyMortgageTextView);
+        //monthlyMortgageTextView = findViewById(R.id.monthlyMortgageTextView);
         principalAndInterestTextView = findViewById(R.id.principalAndInterestTextView);
         monthlyPropertyTaxTextView = findViewById(R.id.monthlyPropertyTaxTextView);
         monthlyHomeInsuranceTextView = findViewById(R.id.monthlyHomeInsuranceTextView);
@@ -112,17 +112,7 @@ public class MortgageCalculator extends AppCompatActivity {
                 Toast.makeText(MortgageCalculator.this, "Monthly Mortgage: " + monthlyMortgage, Toast.LENGTH_LONG).show();
             }
         });
-        try {
-            View roundedRectangleView = findViewById(R.id.rounded_rectangle_container);
-            Blurry.with(this)
-                    .radius(10)
-                    .sampling(8)
-                    .color(Color.argb(66, 0, 66, 116))
-                    .async()
-                    .onto((ViewGroup) roundedRectangleView);
-        } catch (Exception e) {
-            Log.d("aaaaa", e.toString());
-        }
+
 
     }
 }

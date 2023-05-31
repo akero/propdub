@@ -9,16 +9,7 @@
 
 
 
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
-        <View
-            android:id="@+id/blue_tint"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#33004274" />
-    </FrameLayout>
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/back_button"
@@ -38,50 +29,35 @@
         android:layout_marginLeft="60dp"
         android:layout_marginTop="16dp"
         android:text="Mortgage Calculator"
-        android:textColor="@android:color/white"
+        android:textColor="@android:color/black"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/top_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="Monthly \u062F.\u06250.00"
+        android:textColor="@color/figmablue"
+        android:textSize="21sp"
+        android:fontFamily="@font/poppins_medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mortgage_calculator_text" />
 
     <LinearLayout
         android:id="@+id/linear_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="12dp"
         android:gravity="center"
         android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/mortgage_calculator_text">
+        app:layout_constraintTop_toBottomOf="@id/top_text">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="131dp"
-            android:layout_height="70dp">
 
-            <FrameLayout
-                android:id="@+id/rounded_rectangle_container"
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:background="@drawable/white_border"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-
-                <com.acme.propdub.RoundedRectangleView
-                    android:id="@+id/rounded_rectangle_view"
-                    android:layout_width="fill_parent"
-                    android:layout_height="fill_parent" />
-            </FrameLayout>
-
-            <TextView
-                android:id="@+id/monthlyMortgageTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="\u062F.\u06250.00 \n Monthly"
-                android:textSize="16sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="fill_parent"
@@ -363,7 +339,7 @@
                     android:text="@string/dihram"
                     android:textColor="@color/black"
                     android:textSize="16sp"
-                    android:fontFamily="@font/poppins_regular"
+                    android:fontFamily="@font/poppins_light"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/vertical_line"
                     app:layout_constraintStart_toStartOf="parent"
@@ -381,7 +357,7 @@
                     android:paddingEnd="56dp"
                     android:textColor="@color/black"
                     android:textSize="16sp"
-                    android:fontFamily="@font/poppins_regular"
+                    android:fontFamily="@font/poppins_light"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
@@ -391,7 +367,7 @@
                     android:id="@+id/vertical_line"
                     android:layout_width="1dp"
                     android:layout_height="match_parent"
-                    android:background="#FFFFFF"
+                    android:background="#13131326"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.14"
                     app:layout_constraintStart_toStartOf="parent"
