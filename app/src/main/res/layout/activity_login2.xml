@@ -6,6 +6,7 @@
     android:layout_height="wrap_content"
     tools:context=".login"
     >
+
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -70,6 +71,7 @@
             app:layout_constraintEnd_toStartOf="@+id/vertical_line"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
     <EditText
         android:id="@+id/totalAmountEditText"
         style="@style/CustomEditTextHintColorlogin"
@@ -80,7 +82,6 @@
         android:inputType="numberDecimal"
         android:paddingStart="56dp"
         android:paddingEnd="56dp"
-
         android:textColor="@color/black"
         android:textSize="16sp"
         android:fontFamily="@font/poppins_light"
@@ -98,9 +99,6 @@
         app:layout_constraintHorizontal_bias="0.14"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -146,7 +144,6 @@
             android:inputType="numberDecimal"
             android:paddingStart="56dp"
             android:paddingEnd="56dp"
-
             android:textColor="@color/black"
             android:textSize="16sp"
             android:fontFamily="@font/poppins_light"
@@ -180,7 +177,6 @@
         android:layout_marginTop="10dp"
         />
 
-
     <Button
         android:id="@+id/btn"
         android:layout_width="match_parent"
@@ -196,14 +192,14 @@
 
     <LinearLayout
         android:id="@+id/linearlayout1"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    app:layout_constraintTop_toBottomOf="@id/btn"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    android:gravity="center"
-    android:layout_marginTop="20dp">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center"
+        android:layout_marginTop="20dp">
 
         <ImageView
             android:layout_width="wrap_content"
@@ -258,8 +254,6 @@
             android:src="@drawable/facebook"
             />
 
-
-
     </LinearLayout>
 
     <LinearLayout
@@ -276,6 +270,7 @@
             android:layout_height="wrap_content"
             android:src="@drawable/rect1"
             />
+
     <TextView
         android:id="@+id/txt4"
         android:layout_width="wrap_content"
@@ -333,7 +328,6 @@
         app:layout_constraintTop_toBottomOf="@id/img1"
         app:layout_constraintEnd_toEndOf="parent"
         android:src="@drawable/rightbotplus"/>
-
 
     <ImageView
         android:id="@+id/img4"

@@ -83,6 +83,26 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             }
         });
 
+        // Sign up button code
+        View signupButton = findViewById(R.id.signup_button);
+        signupButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                openSignUpActivity();
+            }
+        });
+
+        // Sign in button code
+        View signinButton = findViewById(R.id.signin_button);
+        signinButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                openSignInActivity();
+            }
+        });
+
         // search button code
         View searchButton = findViewById(R.id.search_button);
         searchButton.setOnClickListener(new View.OnClickListener() {
@@ -156,6 +176,22 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         Log.d("tag1", "In sale intent");
         Intent intent = new Intent(MainActivity.this, PropertyDetails.class);
+        Log.d("tag1", "In sale intent 2");
+        startActivity(intent);
+    }
+
+    private void openSignInActivity() {
+
+        Log.d("tag1", "In sale intent");
+        Intent intent = new Intent(MainActivity.this, login.class);
+        Log.d("tag1", "In sale intent 2");
+        startActivity(intent);
+    }
+
+    private void openSignUpActivity() {
+
+        Log.d("tag1", "In sale intent");
+        Intent intent = new Intent(MainActivity.this, SignUp.class);
         Log.d("tag1", "In sale intent 2");
         startActivity(intent);
     }

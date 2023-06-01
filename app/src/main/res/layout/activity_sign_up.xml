@@ -6,6 +6,7 @@
     android:layout_height="wrap_content"
     tools:context=".SignUp"
     >
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -70,6 +71,7 @@
                 app:layout_constraintEnd_toStartOf="@+id/vertical_line"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
             <EditText
                 android:id="@+id/totalAmountEditText"
                 style="@style/CustomEditTextHintColorlogin"
@@ -80,7 +82,6 @@
                 android:inputType="numberDecimal"
                 android:paddingStart="56dp"
                 android:paddingEnd="56dp"
-
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:fontFamily="@font/poppins_light"
@@ -98,9 +99,6 @@
                 app:layout_constraintHorizontal_bias="0.14"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
-
-
-
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -136,6 +134,7 @@
                 app:layout_constraintEnd_toStartOf="@+id/vertical_line11"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
             <EditText
                 android:id="@+id/totalAmountEditText11"
                 style="@style/CustomEditTextHintColorlogin"
@@ -146,7 +145,6 @@
                 android:inputType="numberDecimal"
                 android:paddingStart="56dp"
                 android:paddingEnd="56dp"
-
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:fontFamily="@font/poppins_light"
@@ -164,9 +162,6 @@
                 app:layout_constraintHorizontal_bias="0.14"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
-
-
-
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -202,6 +197,7 @@
                 app:layout_constraintEnd_toStartOf="@+id/vertical_line1"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
             <EditText
                 android:id="@+id/totalAmountEditText1"
                 style="@style/CustomEditTextHintColorlogin"
@@ -212,7 +208,6 @@
                 android:inputType="numberDecimal"
                 android:paddingStart="56dp"
                 android:paddingEnd="56dp"
-
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:fontFamily="@font/poppins_light"
@@ -232,8 +227,6 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
-
 
         <Button
             android:id="@+id/btn"
@@ -312,8 +305,6 @@
                 android:src="@drawable/facebook"
                 />
 
-
-
         </LinearLayout>
 
         <LinearLayout
@@ -330,6 +321,7 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/rect1"
                 />
+
             <TextView
                 android:id="@+id/txt4"
                 android:layout_width="wrap_content"
@@ -387,7 +379,6 @@
             app:layout_constraintTop_toBottomOf="@id/img1"
             app:layout_constraintEnd_toEndOf="parent"
             android:src="@drawable/rightbotplus"/>
-
 
         <ImageView
             android:id="@+id/img4"
