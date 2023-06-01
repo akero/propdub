@@ -35,6 +35,9 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
+
+
         <androidx.cardview.widget.CardView
             android:id="@+id/map_view_card"
             android:layout_width="match_parent"

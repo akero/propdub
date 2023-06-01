@@ -24,5 +24,9 @@
     <style name="CustomEditTextHintColorSupport" parent="Widget.AppCompat.EditText">
         <item name="android:textColorHint">#80000000</item>
     </style>
+
+    <style name="CustomEditTextHintColorReview" parent="Widget.AppCompat.EditText">
+        <item name="android:textColorHint">#0142734D</item>
+    </style>
 </resources>
 

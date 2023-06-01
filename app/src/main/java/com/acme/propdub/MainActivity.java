@@ -73,6 +73,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             }
         });
 
+        // review popup button code
+        View reviewButton = findViewById(R.id.review_popup_button);
+        reviewButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                openReviewPopupActivity();
+            }
+        });
+
         // search button code
         View searchButton = findViewById(R.id.search_button);
         searchButton.setOnClickListener(new View.OnClickListener() {
@@ -132,6 +142,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
     }
 
+
+
     private void openPropertySaleActivity() {
 
         Log.d("tag1", "In sale intent");
@@ -173,6 +185,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     // Method to navigate to agent details
     private void openAgentActivity() {
         Intent intent = new Intent(MainActivity.this, AgentProfile.class);
+        startActivity(intent);
+    }
+
+    // Method to navigate to agent details
+    private void openReviewPopupActivity() {
+        Intent intent = new Intent(MainActivity.this, ReviewPopup.class);
         startActivity(intent);
     }
 

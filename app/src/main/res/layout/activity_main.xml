@@ -109,6 +109,16 @@
                 app:layout_constraintTop_toBottomOf="@+id/search_button"
                 android:layout_marginTop="16dp" />
 
+            <Button
+                android:id="@+id/review_popup_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Review popup"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/search_map_button"
+                android:layout_marginTop="16dp" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>

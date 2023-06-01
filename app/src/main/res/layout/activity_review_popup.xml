@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ReviewPopup">
+
+    <TextView
+        android:id="@+id/leavereview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Leave a review"
+        android:textColor="#004274"
+        android:fontFamily="@font/poppins_medium"
+        android:textSize="30sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="85dp"
+        android:layout_marginStart="25dp"
+        />
+
+    <TextView
+        android:id="@+id/howdidwedo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="How did we do?"
+        android:fontFamily="@font/poppins_regular"
+        android:textSize="21sp"
+        app:layout_constraintTop_toBottomOf="@+id/leavereview"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="35dp"
+        android:textColor="#434343"
+        />
+
+    <LinearLayout
+        android:id="@+id/icon_container0"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="101dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/howdidwedo">
+
+        <ImageView
+            android:id="@+id/icon11"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:layout_weight="1"
+            android:scaleType="centerInside"
+            android:src="@drawable/reviewstaractive" />
+
+        <ImageView
+            android:id="@+id/icon12"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:layout_weight="1"
+            android:scaleType="centerInside"
+            android:src="@drawable/reviewstaractive"  />
+
+        <ImageView
+            android:id="@+id/icon13"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:layout_weight="1"
+            android:scaleType="centerInside"
+            android:src="@drawable/reviewstaractive"  />
+
+        <ImageView
+            android:id="@+id/icon14"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:layout_weight="1"
+            android:scaleType="centerInside"
+            android:src="@drawable/reviewstaractive"  />
+        <ImageView
+            android:id="@+id/icon15"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:layout_weight="1"
+            android:scaleType="centerInside"
+            android:src="@drawable/reviewstarinactive"  />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/leavemessageforus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Leave a message for us!"
+        android:textColor="#014273"
+        android:textSize="14sp"
+        android:fontFamily="@font/poppins_medium"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="25dp"
+        app:layout_constraintTop_toBottomOf="@+id/icon_container0"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <EditText
+        android:id="@+id/totalAmountEditText4"
+        style="@style/CustomEditTextHintColorSupport"
+        android:layout_width="match_parent"
+        android:layout_height="131dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:background="@drawable/edittext_background"
+        android:hint="Enter Your Message"
+        android:inputType="numberDecimal"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:fontFamily="@font/poppins_light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/leavemessageforus" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="25dp"
+        android:text="Submit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/totalAmountEditText4"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="25dp"
+        android:text="Maybe Later"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
