@@ -4,11 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    tools:context=".login"
     >
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".login">
+    >
 
     <TextView
         android:id="@+id/login"
@@ -30,7 +31,7 @@
         android:layout_height="wrap_content"
         android:textColor="@color/figmablue"
         android:textSize="14sp"
-        android:text="welcome back we missed you"
+        android:text="Welcome back we missed you"
         android:fontFamily="@font/poppins_regular"
         app:layout_constraintTop_toBottomOf="@+id/login"
         app:layout_constraintStart_toStartOf="parent"
