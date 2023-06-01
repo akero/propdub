@@ -162,7 +162,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
     }
 
-
     private void openPropertySaleActivity() {
 
         Log.d("tag1", "In sale intent");
