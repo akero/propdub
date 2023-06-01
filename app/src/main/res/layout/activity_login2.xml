@@ -11,6 +11,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     >
+    <ImageView
+        android:id="@+id/img0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/topleftsquare"/>
 
     <TextView
         android:id="@+id/login"
@@ -20,7 +25,7 @@
         android:textSize="32sp"
         android:text="Login"
         android:fontFamily="@font/poppins_semibold"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/img0"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="164dp"
         android:layout_marginStart="23dp"
@@ -335,15 +340,16 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="21dp"
         android:layout_marginEnd="32dp"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/img3"
         app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="15dp"
         android:layout_marginStart="144dp"
         android:src="@drawable/squares"/>
 
     <Space
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="img3"
+        app:layout_constraintBottom_toBottomOf="parent"
         android:layout_width="match_parent"
         android:layout_height="30dp" />
 

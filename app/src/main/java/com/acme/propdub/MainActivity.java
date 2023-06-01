@@ -50,6 +50,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 }
             }
         });
+
         navigationView = findViewById(R.id.id_view);
         navigationView.setNavigationItemSelectedListener(this);
 
@@ -123,7 +124,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             }
         });
 
-
         // property sale button code
         View propertySaleButton = findViewById(R.id.property_sale_button);
         propertySaleButton.setOnClickListener(new View.OnClickListener() {
@@ -161,7 +161,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             drawer.openDrawer(GravityCompat.START);
         }
     }
-
 
 
     private void openPropertySaleActivity() {
