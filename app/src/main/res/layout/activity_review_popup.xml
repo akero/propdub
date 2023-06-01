@@ -5,7 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ReviewPopup">
-
+<ImageView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:src="@drawable/closecircle"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    android:layout_marginEnd="22dp"
+    android:layout_marginTop="22dp"
+    />
     <TextView
         android:id="@+id/leavereview"
         android:layout_width="wrap_content"

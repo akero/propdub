@@ -84,6 +84,7 @@ public class MortgageCalculator extends AppCompatActivity {
                 double pmi = Double.parseDouble(pmiEditText.getText().toString());
 
                 //calculating mortgage
+
                 MortgageCalculatorCode mortgageCalculator = new MortgageCalculatorCode(totalAmount, downPayment, interestRate, loanTerm, propertyTax, homeInsurance, pmi);
                 double monthlyMortgage = mortgageCalculator.calculateMonthlyMortgage();
                 double principalAndInterest = mortgageCalculator.calculatePrincipalAndInterest();
