@@ -36,7 +36,7 @@
             android:id="@+id/welcome"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/figmablue"
+            android:textColor="#80004274"
             android:textSize="14sp"
             android:text="Welcome to PropDub"
             android:fontFamily="@font/poppins_regular"
@@ -118,7 +118,7 @@
             android:textColor="@color/figmabluedark"
             android:textSize="14sp"
             android:layout_marginStart="22dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="12dp"
             />
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -181,7 +181,7 @@
             android:textColor="@color/figmabluedark"
             android:textSize="14sp"
             android:layout_marginStart="22dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="12dp"
             />
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -241,7 +241,7 @@
             app:layout_constraintTop_toBottomOf="@id/constraintlayout11"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="27dp"
             android:layout_marginEnd="23dp"
             android:layout_marginStart="23dp"
             android:text="Sign Up"
