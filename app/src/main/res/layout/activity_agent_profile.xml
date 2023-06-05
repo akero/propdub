@@ -41,7 +41,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-
             android:layout_weight="1"
             android:layout_gravity="center"
             >
@@ -52,7 +51,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="0dp"
                 android:text="John Doe"
-                android:textColor="@color/black"
+                android:textColor="@color/figmabluedark"
                 android:textSize="17sp"
                 android:fontFamily="@font/poppins_regular"
                 />
@@ -319,7 +318,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="26dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="4dp"
         android:layout_marginRight="26dp"
         android:text="You Will Have Everything Nearby:SupermarketBuses, Stations, Cinemas, Theaters, The Carmen Neighborhood, Etc. You Will Have Everything Nearby: Supermarket Buses, Stations, Cinemas, Theaters, The Carmen Neighborhood."
         android:textColor="@color/color1"
@@ -349,7 +348,7 @@
         android:layout_marginTop="20dp"
         android:fontFamily="@font/poppins_regular"
         android:text="See all"
-        android:textColor="@color/figmablue"
+        android:textColor="#336890"
         android:textSize="17sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/agentDetails2" />

@@ -67,6 +67,7 @@ The cornerstone of PropDub is our talented and enthusiastic team of professional
                     android:fontFamily="@font/poppins_medium"
                     android:lineSpacingExtra="6sp"
                     android:textColor="#004274"
+                    android:layout_marginTop="16dp"
                     android:text="Our Vision" />
 
                 <TextView
@@ -86,6 +87,7 @@ The cornerstone of PropDub is our talented and enthusiastic team of professional
                     android:fontFamily="@font/poppins_medium"
                     android:lineSpacingExtra="6sp"
                     android:textColor="#004274"
+                    android:layout_marginTop="16dp"
                     android:text="Our Mission" />
 
                 <TextView
@@ -104,6 +106,7 @@ The cornerstone of PropDub is our talented and enthusiastic team of professional
                     android:textSize="21sp"
                     android:fontFamily="@font/poppins_medium"
                     android:lineSpacingExtra="6sp"
+                    android:layout_marginTop="16dp"
                     android:textColor="#004274"
                     android:text="Objective" />
 
