@@ -61,8 +61,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:textSize="12sp"
-                android:text="contact"
-                android:textColor="@color/figmablue"
+                android:text="Contact"
+                android:textColor="#33014273"
                 android:fontFamily="@font/poppins_regular"
                 />
         </LinearLayout>
@@ -95,7 +95,6 @@
                 android:layout_marginLeft="18.2dp"
                 android:scaleType="centerInside"
                 android:src="@drawable/call1" />
-
 
         </LinearLayout>
     </LinearLayout>
