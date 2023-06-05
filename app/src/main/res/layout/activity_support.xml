@@ -57,17 +57,18 @@
 
             <EditText
                 android:id="@+id/totalAmountEditText"
-                style="@style/CustomEditTextHintColorSupport"
+
                 android:layout_width="match_parent"
                 android:layout_height="43dp"
+                style="@style/CustomEditTextHintColorSupport"
                 android:background="@drawable/edittext_background"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:fontFamily="@font/poppins_light"
                 android:hint="Total Amount"
                 android:inputType="numberDecimal"
                 android:paddingStart="16dp"
                 android:paddingEnd="16dp"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                android:fontFamily="@font/poppins_light"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/title" />
