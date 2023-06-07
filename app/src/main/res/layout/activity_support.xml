@@ -142,8 +142,22 @@
             android:textSize="14sp"
             app:layout_constraintTop_toBottomOf="@+id/totalAmountEditText2"
             android:textColor="@color/figmablue"/>
+        <Spinner
+            android:id="@+id/totalAmountEditText3"
+            style="@style/CustomEditTextHintColorSupport"
+            android:background="@drawable/edittext_background"
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:textSize="15sp"
+            android:fontFamily="@font/poppins_light"
+            app:layout_constraintTop_toBottomOf="@+id/title3" />
 
-        <EditText
+     <!--   <EditText
             android:id="@+id/totalAmountEditText3"
             style="@style/CustomEditTextHintColorSupport"
             android:layout_width="match_parent"
@@ -159,7 +173,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/title3" />
-
+ -->
         <TextView
             android:id="@+id/title4"
             android:layout_width="wrap_content"
@@ -366,7 +380,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
-
             android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -386,7 +399,6 @@
                     android:elevation="4dp"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" />
-
 
             </androidx.cardview.widget.CardView>
 

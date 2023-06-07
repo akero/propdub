@@ -3,16 +3,65 @@ package com.acme.propdub;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 
 import com.google.android.gms.maps.MapView;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Support extends AppCompatActivity {
-MapView mapView=null;
+MapView mapView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_support);
+
         mapView = findViewById(R.id.map_view);
-        mapView.onCreate(savedInstanceState);
+            mapView.onCreate(savedInstanceState);
+
+        Spinner countrySpinner = findViewById(R.id.totalAmountEditText3);
+
+// Create a list of countries
+        List<String> countries = new ArrayList<>();
+        countries.add("Country 1");
+        countries.add("Country 2");
+        countries.add("Country 3");
+// Add more countries as needed
+
+// Create an ArrayAdapter for the Spinner
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.spinner_dropdown_item, countries);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+// Set the adapter for the Spinner
+        countrySpinner.setAdapter(adapter);
+
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        mapView.onResume();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        mapView.onPause();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        mapView.onDestroy();
+    }
+
+    @Override
+    public void onLowMemory() {
+        super.onLowMemory();
+        mapView.onLowMemory();
+    }
+
 }
