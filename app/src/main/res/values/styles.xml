@@ -13,6 +13,7 @@
     <style name="SpinnerStyle" parent="Widget.AppCompat.Spinner.DropDown">
         <item name="android:textColor">@color/black</item> <!-- Replace with your desired text color -->
     </style>
+    
 
     <style name="CustomMenuItemText" parent="android:TextAppearance">
         <item name="android:textColor">#004274</item>

@@ -62,7 +62,7 @@
                 android:layout_marginLeft="10dp"
                 android:textSize="12sp"
                 android:text="Contact"
-                android:textColor="#33004274"
+                android:textColor="#80004274"
                 android:fontFamily="@font/poppins_regular"
                 />
         </LinearLayout>
@@ -339,15 +339,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/agentDetails2" />
 
-    <TextView
+    <Button
         android:id="@+id/see_all"
         android:layout_width="wrap_content"
-        android:layout_height="37dp"
+        android:layout_height="wrap_content"
         android:layout_marginEnd="26dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="11dp"
         android:fontFamily="@font/poppins_regular"
         android:text="See all"
+        android:textAllCaps="false"
         android:textColor="#336890"
+        android:background="#00000000"
         android:textSize="17sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/agentDetails2" />
