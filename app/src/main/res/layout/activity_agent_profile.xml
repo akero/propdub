@@ -6,31 +6,20 @@
     android:layout_height="match_parent"
     tools:context=".AgentProfile">
 
-    <TextView
-        android:id="@+id/agent_details_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="60dp"
-        android:layout_marginTop="16dp"
-        android:text="Agent details"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:fontFamily="@font/poppins_regular"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+
 
     <LinearLayout
         android:id="@+id/agent_details"
         android:layout_width="0dp"
         android:gravity="center_vertical"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="26dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginStart="22dp"
         android:layout_marginEnd="22dp"
-        app:layout_constraintTop_toBottomOf="@+id/agent_details_text">
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:layout_width="wrap_content"

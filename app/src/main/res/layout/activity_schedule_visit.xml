@@ -26,18 +26,7 @@
         android:paddingEnd="26dp"
         android:paddingBottom="146dp">
 
-        <TextView
-            android:id="@+id/mortgage_calculator_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="36dp"
-            android:layout_marginTop="16dp"
-            android:text="Schedule a Tour"
-            android:textColor="@android:color/black"
-            android:fontFamily="@font/poppins_regular"
-            android:textSize="20sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+
 
     <TextView
         android:id="@+id/heading0"

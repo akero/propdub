@@ -1,11 +1,13 @@
 package com.acme.propdub;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+import androidx.appcompat.widget.Toolbar;
 
 import com.google.android.gms.maps.MapView;
 
@@ -19,6 +21,16 @@ MapView mapView;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_support);
 
+try{
+    ActionBar actionBar = getSupportActionBar();
+    if (actionBar != null) {
+        actionBar.setDisplayHomeAsUpEnabled(true);
+        actionBar.setHomeAsUpIndicator(R.drawable.back_button);
+        actionBar.setTitle("Contact");
+    }
+}catch(Exception e){
+    Log.d("tag9",e.toString());
+}
         mapView = findViewById(R.id.map_view);
             mapView.onCreate(savedInstanceState);
 

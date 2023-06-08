@@ -1,5 +1,6 @@
 package com.acme.propdub;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -19,6 +20,12 @@ public class SearchResults extends AppCompatActivity implements OnMapReadyCallba
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_results);
+
+        ActionBar actionBar = getSupportActionBar();
+        if (actionBar != null) {
+            actionBar.setDisplayHomeAsUpEnabled(true);
+            actionBar.setHomeAsUpIndicator(R.drawable.back_button);
+            actionBar.setTitle("Results");}
 
         // Initialize the map fragment
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()

@@ -1,5 +1,6 @@
 package com.acme.propdub;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.graphics.Bitmap;
@@ -15,6 +16,12 @@ public class ScheduleVisit extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_schedule_visit);
+
+        ActionBar actionBar = getSupportActionBar();
+        if (actionBar != null) {
+            actionBar.setDisplayHomeAsUpEnabled(true);
+            actionBar.setHomeAsUpIndicator(R.drawable.back_button);
+            actionBar.setTitle("Schedule a Visit");}
         Spinner spinner;
         Spinner spinner1;
         Spinner spinner2;

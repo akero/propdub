@@ -14,41 +14,20 @@
     android:layout_height="wrap_content"
     tools:context=".MortgageCalculator">
 
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/back_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        app:layout_constraintEnd_toStartOf="@id/mortgage_calculator_text"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/back_button" />
 
-    <TextView
-        android:id="@+id/mortgage_calculator_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="60dp"
-        android:layout_marginTop="16dp"
-        android:text="Mortgage Calculator"
-        android:textColor="@android:color/black"
-        android:fontFamily="@font/poppins_regular"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/top_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="28dp"
         android:text="Monthly \u062F.\u06250.00"
         android:textColor="@color/figmablue"
         android:textSize="21sp"
         android:fontFamily="@font/poppins_medium"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/mortgage_calculator_text" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:id="@+id/linear_layout"

@@ -1,5 +1,6 @@
 package com.acme.propdub;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -17,6 +18,12 @@ public class AgentProfile extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_agent_profile);
+
+        ActionBar actionBar = getSupportActionBar();
+        if (actionBar != null) {
+            actionBar.setDisplayHomeAsUpEnabled(true);
+            actionBar.setHomeAsUpIndicator(R.drawable.back_button);
+            actionBar.setTitle("Agent Details");}
        /* ImageView imageView = findViewById(R.id.background_image1);
         Bitmap originalBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.bg_about_us);
         Bitmap blurredBitmap = BlurBuilder.blur(this, originalBitmap);

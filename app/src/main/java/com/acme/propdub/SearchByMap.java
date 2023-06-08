@@ -1,5 +1,6 @@
 package com.acme.propdub;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -15,7 +16,11 @@ public class SearchByMap extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_by_map);
-
+        ActionBar actionBar = getSupportActionBar();
+        if (actionBar != null) {
+            actionBar.setDisplayHomeAsUpEnabled(true);
+            actionBar.setHomeAsUpIndicator(R.drawable.back_button);
+            actionBar.setTitle("Search by Map");}
         try {
             mapView=findViewById(R.id.map_view);
             mapView.onCreate(savedInstanceState);

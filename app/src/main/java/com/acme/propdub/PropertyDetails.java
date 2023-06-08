@@ -14,6 +14,7 @@ import android.webkit.WebView;
 import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -41,6 +42,12 @@ public class PropertyDetails extends AppCompatActivity {
             setContentView(R.layout.activity_property_details);
             mapView = findViewById(R.id.map_view);
             mapView.onCreate(savedInstanceState);
+
+            ActionBar actionBar = getSupportActionBar();
+            if (actionBar != null) {
+                actionBar.setDisplayHomeAsUpEnabled(true);
+                actionBar.setHomeAsUpIndicator(R.drawable.back_button);
+                actionBar.setTitle("Property Details");}
 
             ConstraintLayout rootLayout = findViewById(R.id.root_layout);
 

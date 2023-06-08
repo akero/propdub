@@ -7,39 +7,22 @@
     android:layout_marginBottom="20dp"
     android:fillViewport="true">
 
+
+
     <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="16dp"
     tools:context=".Support">
 
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/back_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="1.71dp"
-            app:layout_constraintBottom_toTopOf="@id/edittextconstraint"
-            app:layout_constraintEnd_toStartOf="@id/contact_us_text"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/back_button" />
 
-        <TextView
-            android:id="@+id/contact_us_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="60dp"
-            android:layout_marginTop="16dp"
-            android:text="Contact Us"
-            android:textColor="@android:color/black"
-            android:textSize="20sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/edittextconstraint"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/contact_us_text"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginStart="26dp"
         android:layout_marginTop="24dp"

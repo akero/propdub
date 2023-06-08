@@ -1,5 +1,6 @@
 package com.acme.propdub;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -32,6 +33,11 @@ public class MortgageCalculator extends AppCompatActivity {
         pmiEditText = findViewById(R.id.pmiEditText);
         calculateButton = findViewById(R.id.calculateButton);
         monthlyMortgageTextView = findViewById(R.id.top_text);
+        ActionBar actionBar = getSupportActionBar();
+        if (actionBar != null) {
+            actionBar.setDisplayHomeAsUpEnabled(true);
+            actionBar.setHomeAsUpIndicator(R.drawable.back_button);
+            actionBar.setTitle("Mortgage Calculator");}
 
         calculateButton.setOnClickListener(new View.OnClickListener() {
             @Override
