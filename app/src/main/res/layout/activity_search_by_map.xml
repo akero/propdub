@@ -6,12 +6,14 @@
         android:layout_height="match_parent"
         android:layout_gravity="center"
         tools:context=".SearchByMap">
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintlayout2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
+
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/back_button"
         android:layout_width="wrap_content"
@@ -35,9 +37,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-
-
-
         <androidx.cardview.widget.CardView
             android:id="@+id/map_view_card"
             android:layout_width="match_parent"
@@ -54,7 +53,6 @@
                 android:layout_height="match_parent" />
         </androidx.cardview.widget.CardView>
 
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintlayout1"
         android:layout_width="328dp"
@@ -64,15 +62,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/searchmap_text">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/glass"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/vertical_line"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
-
         <EditText
             android:id="@+id/totalAmountEditText"
             style="@style/CustomEditTextHintColorBlue"
@@ -80,10 +69,10 @@
             android:layout_height="43dp"
             android:background="@drawable/edittext_background"
             android:hint="Search"
-            android:inputType="numberDecimal"
+            android:inputType="text"
             android:paddingStart="56dp"
             android:paddingEnd="56dp"
-            android:textColor="@color/black"
+            android:textColor="@color/figmabluedark"
             android:textSize="17sp"
             android:fontFamily="@font/poppins_regular"
             app:layout_constraintEnd_toEndOf="parent"
@@ -100,10 +89,47 @@
             app:layout_constraintHorizontal_bias="0.14"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/glass"
+            app:layout_constraintBottom_toBottomOf="@id/totalAmountEditText"
+            app:layout_constraintEnd_toStartOf="@+id/vertical_line"
+            app:layout_constraintStart_toStartOf="@id/totalAmountEditText"
+            app:layout_constraintTop_toTopOf="@id/totalAmountEditText"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            app:layout_constraintTop_toBottomOf="@id/constraintlayout1"
+            app:layout_constraintStart_toStartOf="parent"
+            android:gravity="center"
+            >
 
+            <Button
+                android:layout_width="84dp"
+                android:layout_height="match_parent"
+                android:text="All"
+                android:background="@drawable/rounded_button"
+                />
+
+            <Button
+                android:layout_width="84dp"
+                android:layout_height="match_parent"
+                android:text="All"
+                android:background="@drawable/rounded_button"
+                />
+
+            <Button
+                android:layout_width="84dp"
+                android:layout_height="match_parent"
+                android:text="All"
+                android:background="@drawable/rounded_button"
+                />
+
+        </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>
