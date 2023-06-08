@@ -16,7 +16,7 @@
     </style>
 
 
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/figmabluedark</item>
         <item name="android:fontFamily">@font/poppins_regular</item>

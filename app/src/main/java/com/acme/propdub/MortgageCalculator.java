@@ -4,6 +4,7 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -23,7 +24,7 @@ public class MortgageCalculator extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mortgage_calculator);
-
+try{
         totalAmountEditText = findViewById(R.id.totalAmountEditText);
         downPaymentEditText = findViewById(R.id.downPaymentEditText);
         interestRateEditText = findViewById(R.id.interestRateEditText);
@@ -65,5 +66,7 @@ public class MortgageCalculator extends AppCompatActivity {
                 Toast.makeText(MortgageCalculator.this, "Monthly Mortgage: " + formattedMonthlyMortgage, Toast.LENGTH_LONG).show();
             }
         });
+    }catch(Exception e){
+        Log.d("tag11",e.toString());
     }
-}
+}}

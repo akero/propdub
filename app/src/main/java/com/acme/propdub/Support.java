@@ -45,7 +45,7 @@ try{
 
 // Create an ArrayAdapter for the Spinner
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.spinner_dropdown_item, countries);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        adapter.setDropDownViewResource(R.layout.custom_spinner_dropdown_item);
 
 // Set the adapter for the Spinner
         countrySpinner.setAdapter(adapter);

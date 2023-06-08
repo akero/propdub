@@ -5,13 +5,14 @@
     android:id="@+id/scroll"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="20dp"
+
     android:fillViewport="true">
 
 <androidx.constraintlayout.widget.ConstraintLayout
     android:id="@+id/root_layout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:paddingBottom="20dp"
     tools:context=".MortgageCalculator">
 
 
