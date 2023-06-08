@@ -32,8 +32,12 @@ public class ScheduleVisit extends AppCompatActivity {
 
         // Example: Populating the spinner with data
         String[] items = {"Option 1", "Option 2", "Option 3"};
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.spinner_dropdown_item, items);
+        adapter.setDropDownViewResource(R.layout.custom_spinner_dropdown_item);
+
         spinner.setAdapter(adapter);
+
+
 
         // Example: Retrieving the selected item from the spinner
         String selectedItem = spinner.getSelectedItem().toString();
@@ -41,7 +45,7 @@ public class ScheduleVisit extends AppCompatActivity {
         // Example: Populating the spinner with data
         String[] items1 = {"Option 1", "Option 2", "Option 3"};
         ArrayAdapter<String> adapter1 = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);
-        spinner.setAdapter(adapter);
+        spinner1.setAdapter(adapter);
 
         // Example: Retrieving the selected item from the spinner
         String selectedItem1 = spinner.getSelectedItem().toString();
@@ -50,7 +54,7 @@ public class ScheduleVisit extends AppCompatActivity {
         // Example: Populating the spinner with data
         String[] items2 = {"Option 1", "Option 2", "Option 3"};
         ArrayAdapter<String> adapter2 = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);
-        spinner.setAdapter(adapter);
+        spinner2.setAdapter(adapter);
 
         // Example: Retrieving the selected item from the spinner
         String selectedItem2 = spinner.getSelectedItem().toString();
