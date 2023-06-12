@@ -79,7 +79,7 @@
                 android:layout_height="55dp"
                 android:background="@drawable/edittext_background"
                 android:hint="Email"
-                android:inputType="numberDecimal"
+                android:inputType="textEmailAddress"
                 android:paddingStart="56dp"
                 android:paddingEnd="56dp"
                 android:textColor="@color/black"
@@ -144,7 +144,7 @@
                 android:layout_height="55dp"
                 android:background="@drawable/edittext_background"
                 android:hint="Name"
-                android:inputType="numberDecimal"
+                android:inputType="textPersonName"
                 android:paddingStart="56dp"
                 android:paddingEnd="56dp"
                 android:textColor="@color/black"
@@ -209,7 +209,7 @@
                 android:layout_height="55dp"
                 android:background="@drawable/edittext_background"
                 android:hint="*******"
-                android:inputType="numberDecimal"
+                android:inputType="textPassword"
                 android:paddingStart="56dp"
                 android:paddingEnd="56dp"
                 android:textColor="@color/black"
@@ -353,6 +353,8 @@
                 android:text="Sign in"
                 android:fontFamily="@font/poppins_medium"
                 android:textColor="#004274"
+                android:clickable="true"
+                android:focusable="true"
                 />
 
             <ImageView
