@@ -69,9 +69,16 @@ public class login extends AppCompatActivity {
             }
         });
 
-
+        //TODO: add forgot password code
+        forgotpass.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                //Intent intent= new Intent(login.this, ForgotPassword.class);
+                //startActivity(intent);
+            }
+        });
     }
-    }
+}
 
 
 

@@ -135,7 +135,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
-
         <EditText
             android:id="@+id/totalAmountEditText1"
             style="@style/CustomEditTextHintColorlogin"
@@ -143,7 +142,7 @@
             android:layout_height="55dp"
             android:background="@drawable/edittext_background"
             android:hint="*******"
-            android:inputType="numberDecimal"
+            android:inputType="textPassword"
             android:paddingStart="56dp"
             android:paddingEnd="56dp"
             android:textColor="@color/black"
@@ -151,6 +150,7 @@
             android:fontFamily="@font/poppins_light"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
+            android:nextFocusDown="@id/btn"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
