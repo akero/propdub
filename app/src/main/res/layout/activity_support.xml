@@ -50,7 +50,7 @@
                 android:textSize="15sp"
                 android:fontFamily="@font/poppins_light"
                 android:hint="Your Name"
-                android:inputType="text"
+                android:inputType="textPersonName"
                 android:paddingStart="16dp"
                 android:paddingEnd="16dp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -385,14 +385,7 @@
 
             </androidx.cardview.widget.CardView>
 
-            <Button
-                android:id="@+id/button1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Get Directions"
-                android:layout_alignParentBottom="true"
-                android:layout_centerHorizontal="true"
-                 />
+
 
         </RelativeLayout>
 

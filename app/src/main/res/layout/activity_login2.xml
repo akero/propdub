@@ -10,9 +10,8 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="20dp"
+    android:paddingBottom="20dp">
 
-    >
     <ImageView
         android:id="@+id/img0"
         android:layout_width="wrap_content"
