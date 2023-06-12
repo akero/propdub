@@ -69,5 +69,4 @@ public class ReviewPopup extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
-
 }
