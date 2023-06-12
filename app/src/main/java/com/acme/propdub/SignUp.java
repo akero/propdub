@@ -51,6 +51,12 @@ public class SignUp extends AppCompatActivity {
                         if(TextUtils.isEmpty(email1)){
                             Toast.makeText(SignUp.this, "Please enter your email", Toast.LENGTH_SHORT).show();
                         }
+                        // Check if the input is a valid email
+                        else
+                            if (!android.util.Patterns.EMAIL_ADDRESS.matcher(email1).matches()) {
+                                // Input is not a valid email, show a message to the user
+                                Toast.makeText(SignUp.this, "Please enter a valid email", Toast.LENGTH_SHORT).show();
+                            }
                         else if(TextUtils.isEmpty(name1)){
                                 Toast.makeText(SignUp.this, "Please enter your name", Toast.LENGTH_SHORT).show();
                             }
