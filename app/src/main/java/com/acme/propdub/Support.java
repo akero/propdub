@@ -11,6 +11,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -20,6 +21,7 @@ import androidx.appcompat.widget.Toolbar;
 import com.google.android.gms.maps.MapView;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Support extends AppCompatActivity {
@@ -46,9 +48,207 @@ try{
 
 // Create a list of countries
         List<String> countries = new ArrayList<>();
-        countries.add("Country 1");
-        countries.add("Country 2");
-        countries.add("Country 3");
+        String[] allCountries = {
+                "Afghanistan",
+                "Albania",
+                "Algeria",
+                "Andorra",
+                "Angola",
+                "Antigua and Barbuda",
+                "Argentina",
+                "Armenia",
+                "Australia",
+                "Austria",
+                "Azerbaijan",
+                "Bahamas",
+                "Bahrain",
+                "Bangladesh",
+                "Barbados",
+                "Belarus",
+                "Belgium",
+                "Belize",
+                "Benin",
+                "Bhutan",
+                "Bolivia",
+                "Bosnia and Herzegovina",
+                "Botswana",
+                "Brazil",
+                "Brunei",
+                "Bulgaria",
+                "Burkina Faso",
+                "Burundi",
+                "Cabo Verde",
+                "Cambodia",
+                "Cameroon",
+                "Canada",
+                "Central African Republic",
+                "Chad",
+                "Chile",
+                "China",
+                "Colombia",
+                "Comoros",
+                "Congo (Brazzaville)",
+                "Congo (Kinshasa)",
+                "Costa Rica",
+                "Croatia",
+                "Cuba",
+                "Cyprus",
+                "Czech Republic",
+                "Denmark",
+                "Djibouti",
+                "Dominica",
+                "Dominican Republic",
+                "East Timor",
+                "Ecuador",
+                "Egypt",
+                "El Salvador",
+                "Equatorial Guinea",
+                "Eritrea",
+                "Estonia",
+                "Eswatini",
+                "Ethiopia",
+                "Fiji",
+                "Finland",
+                "France",
+                "Gabon",
+                "Gambia",
+                "Georgia",
+                "Germany",
+                "Ghana",
+                "Greece",
+                "Grenada",
+                "Guatemala",
+                "Guinea",
+                "Guinea-Bissau",
+                "Guyana",
+                "Haiti",
+                "Honduras",
+                "Hungary",
+                "Iceland",
+                "India",
+                "Indonesia",
+                "Iran",
+                "Iraq",
+                "Ireland",
+                "Israel",
+                "Italy",
+                "Ivory Coast",
+                "Jamaica",
+                "Japan",
+                "Jordan",
+                "Kazakhstan",
+                "Kenya",
+                "Kiribati",
+                "Korea, North",
+                "Korea, South",
+                "Kosovo",
+                "Kuwait",
+                "Kyrgyzstan",
+                "Laos",
+                "Latvia",
+                "Lebanon",
+                "Lesotho",
+                "Liberia",
+                "Libya",
+                "Liechtenstein",
+                "Lithuania",
+                "Luxembourg",
+                "Madagascar",
+                "Malawi",
+                "Malaysia",
+                "Maldives",
+                "Mali",
+                "Malta",
+                "Marshall Islands",
+                "Mauritania",
+                "Mauritius",
+                "Mexico",
+                "Micronesia",
+                "Moldova",
+                "Monaco",
+                "Mongolia",
+                "Montenegro",
+                "Morocco",
+                "Mozambique",
+                "Myanmar",
+                "Namibia",
+                "Nauru",
+                "Nepal",
+                "Netherlands",
+                "New Zealand",
+                "Nicaragua",
+                "Niger",
+                "Nigeria",
+                "North Macedonia",
+                "Norway",
+                "Oman",
+                "Pakistan",
+                "Palau",
+                "Palestine",
+                "Panama",
+                "Papua New Guinea",
+                "Paraguay",
+                "Peru",
+                "Philippines",
+                "Poland",
+                "Portugal",
+                "Qatar",
+                "Romania",
+                "Russia",
+                "Rwanda",
+                "Saint Kitts and Nevis",
+                "Saint Lucia",
+                "Saint Vincent and the Grenadines",
+                "Samoa",
+                "San Marino",
+                "Sao Tome and Principe",
+                "Saudi Arabia",
+                "Senegal",
+                "Serbia",
+                "Seychelles",
+                "Sierra Leone",
+                "Singapore",
+                "Slovakia",
+                "Slovenia",
+                "Solomon Islands",
+                "Somalia",
+                "South Africa",
+                "South Sudan",
+                "Spain",
+                "Sri Lanka",
+                "Sudan",
+                "Suriname",
+                "Sweden",
+                "Switzerland",
+                "Syria",
+                "Taiwan",
+                "Tajikistan",
+                "Tanzania",
+                "Thailand",
+                "Togo",
+                "Tonga",
+                "Trinidad and Tobago",
+                "Tunisia",
+                "Turkey",
+                "Turkmenistan",
+                "Tuvalu",
+                "Uganda",
+                "Ukraine",
+                "United Arab Emirates",
+                "United Kingdom",
+                "United States",
+                "Uruguay",
+                "Uzbekistan",
+                "Vanuatu",
+                "Vatican City",
+                "Venezuela",
+                "Vietnam",
+                "Yemen",
+                "Zambia",
+                "Zimbabwe"
+        };
+
+        countries.addAll(Arrays.asList(allCountries));
 // Add more countries as needed
 
 // Create an ArrayAdapter for the Spinner
@@ -58,6 +258,10 @@ try{
 // Set the adapter for the Spinner
         countrySpinner.setAdapter(adapter);
 
+        //Set "United Arab Emirates" as the preselected option
+        int spinnerPosition = adapter.getPosition("United Arab Emirates");
+        countrySpinner.setSelection(spinnerPosition);
+
         EditText name, phone, email, message;
         name = findViewById(R.id.totalAmountEditText);
         phone = findViewById(R.id.totalAmountEditText1);
@@ -66,6 +270,10 @@ try{
 
         Button submit;
         submit= findViewById(R.id.button);
+
+        CheckBox checkbox;
+        checkbox= findViewById(R.id.checkbox_id);
+
 
         submit.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -92,6 +300,9 @@ try{
                 }
                 else if(TextUtils.isEmpty(message1)){
                     Toast.makeText(Support.this, "Please enter your message", Toast.LENGTH_SHORT).show();
+                }
+                else if(checkbox.isChecked()==false){
+                    Toast.makeText(Support.this, "Please accept the GDPR agreement", Toast.LENGTH_SHORT).show();
                 }
                 else{
                     //continue with login

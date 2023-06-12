@@ -126,6 +126,7 @@
             android:textSize="14sp"
             app:layout_constraintTop_toBottomOf="@+id/totalAmountEditText2"
             android:textColor="@color/figmablue"/>
+
         <Spinner
             android:id="@+id/totalAmountEditText3"
             style="@style/CustomEditTextHintColorSupport"
