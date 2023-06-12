@@ -29,4 +29,6 @@ public class RoundedRectangleView extends View {
         super.onDraw(canvas);
         canvas.drawRoundRect(rect, 25, 25, paint);
     }
+
+
 }

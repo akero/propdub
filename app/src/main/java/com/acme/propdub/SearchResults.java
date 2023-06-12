@@ -11,6 +11,7 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 //TODO: add filter, remove selectPropertyButton
 public class SearchResults extends AppCompatActivity implements OnMapReadyCallback {
@@ -67,4 +68,18 @@ public class SearchResults extends AppCompatActivity implements OnMapReadyCallba
         Intent intent = new Intent(SearchResults.this, PropertyDetails.class);
         startActivity(intent);
     }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle item selection
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                // Respond to the action bar's Up/Home button
+                onBackPressed();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
 }
