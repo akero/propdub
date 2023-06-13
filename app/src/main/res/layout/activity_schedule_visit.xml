@@ -142,10 +142,21 @@
             android:textColor="#004274"
             android:text="Date" />
 
-        <Spinner
-            android:id="@+id/spinner1"
+        <EditText
+            android:id="@+id/datepicker"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="43dp"
+            android:focusable="false"
+            android:clickable="true"
+            style="@style/CustomEditTextHintColorSupport"
+            android:background="@drawable/edittext_background"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:fontFamily="@font/poppins_light"
+            android:inputType="textEmailAddress"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:hint="Pick a Date" />
 
         <TextView
             android:id="@+id/time"

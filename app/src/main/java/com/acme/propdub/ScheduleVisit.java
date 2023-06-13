@@ -3,6 +3,7 @@ package com.acme.propdub;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.DatePickerDialog;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
@@ -11,12 +12,18 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import java.util.Calendar;
+
 public class ScheduleVisit extends AppCompatActivity {
+
+    String date;
+    int mYear, mMonth, mDay;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,12 +37,12 @@ public class ScheduleVisit extends AppCompatActivity {
             actionBar.setTitle("Schedule a Visit");}
 
         Spinner spinner;
-        Spinner spinner1;
+        //Spinner spinner1;
         Spinner spinner2;
 
 //TODO: implement the 3 spinners
         spinner = findViewById(R.id.spinner);
-        spinner1 = findViewById(R.id.spinner1);
+        //spinner1 = findViewById(R.id.spinner1);
         spinner2 = findViewById(R.id.spinner2);
 
         // Example: Populating the spinner with data
@@ -92,10 +99,33 @@ public class ScheduleVisit extends AppCompatActivity {
         // Example: Retrieving the selected item from the spinner
         String selectedItem = spinner.getSelectedItem().toString();
 
-        // Example: Populating the spinner with data
-        String[] items1 = {"Option 1", "Option 2", "Option 3"};
-        ArrayAdapter<String> adapter1 = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);
-        spinner1.setAdapter(adapter);
+
+
+        //saving the picked date to a string
+
+        EditText getSelectedDate;
+
+        getSelectedDate=findViewById(R.id.datepicker);
+        getSelectedDate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final Calendar c = Calendar.getInstance();
+                mYear = c.get(Calendar.YEAR);
+                mMonth = c.get(Calendar.MONTH);
+                mDay = c.get(Calendar.DAY_OF_MONTH);
+
+                DatePickerDialog datePickerDialog = new DatePickerDialog(ScheduleVisit.this,
+                        new DatePickerDialog.OnDateSetListener() {
+                            @Override
+                            public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
+                                getSelectedDate.setText(dayOfMonth + "-" + (monthOfYear + 1) + "-" + year);
+                                date=dayOfMonth + "-" + (monthOfYear + 1) + "-" + year;
+                            }
+                        }, mYear, mMonth, mDay);
+                datePickerDialog.show();
+            }
+        });
+
 
         // Example: Retrieving the selected item from the spinner
         String selectedItem1 = spinner.getSelectedItem().toString();
@@ -108,6 +138,8 @@ public class ScheduleVisit extends AppCompatActivity {
 
         // Example: Retrieving the selected item from the spinner
         String selectedItem2 = spinner.getSelectedItem().toString();
+
+
 
     }
 
