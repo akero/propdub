@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.webkit.WebView;
 
 public class DocViewer extends AppCompatActivity {
 
@@ -11,6 +12,15 @@ public class DocViewer extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_doc_viewer);
+        WebView webView = findViewById(R.id.webview);
+
+// Enable JavaScript (necessary for Google Drive's viewer)
+        webView.getSettings().setJavaScriptEnabled(true);
+
+        String pdfUrl = "https://arxiv.org/pdf/2303.12712.pdf";  // Replace with your PDF URL
+        String googleDocsUrl = "https://drive.google.com/viewerng/viewer?embedded=true&url=" + pdfUrl;
+
+        webView.loadUrl(googleDocsUrl);
     }
 
     @Override
@@ -25,5 +35,4 @@ public class DocViewer extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
-
 }

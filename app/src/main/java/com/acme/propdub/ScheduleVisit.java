@@ -103,8 +103,6 @@ public class ScheduleVisit extends AppCompatActivity {
         // Example: Retrieving the selected item from the spinner
         String selectedItem = spinner.getSelectedItem().toString();
 
-
-
         //saving the picked date to a string
 
         EditText getSelectedDate;
@@ -130,8 +128,8 @@ public class ScheduleVisit extends AppCompatActivity {
             }
         });
 
-        //date picker
-        editText3 = findViewById(R.id.edittext3);
+        //time picker
+        editText3 = findViewById(R.id.timepicker);
 
         editText3.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -154,7 +152,6 @@ public class ScheduleVisit extends AppCompatActivity {
             }
         });
 
-
         // Example: Retrieving the selected item from the spinner
         String selectedItem1 = spinner.getSelectedItem().toString();
 
@@ -166,7 +163,6 @@ public class ScheduleVisit extends AppCompatActivity {
 
         // Example: Retrieving the selected item from the spinner
         String selectedItem2 = spinner.getSelectedItem().toString();
-
     }
 
     @Override
