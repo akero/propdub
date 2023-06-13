@@ -11,7 +11,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
@@ -71,6 +74,144 @@ public class PropertyDetails extends AppCompatActivity {
         } catch (Exception e) {
             Log.d("tag4", e.toString());
         }
+
+        //contact agent button code
+        TextView contactAgent;
+        contactAgent= findViewById(R.id.contact_agent);
+        contactAgent.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+
+            }
+        });
+
+        //message agent button code
+        ImageView messageAgent;
+        messageAgent= findViewById(R.id.icon1111);
+        messageAgent.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+
+            }
+        });
+
+        //video agent button code
+        ImageView videoAgent;
+        videoAgent= findViewById(R.id.icon111111);
+        videoAgent.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+
+            }
+        });
+
+        //call agent button code
+        ImageView callAgent;
+        callAgent= findViewById(R.id.icon1111111);
+        callAgent.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+
+            }
+        });
+
+//TODO
+
+//5 property features at top of class
+        ImageView feature1, feature2, feature3, feature4, feature5;
+        feature1 = findViewById(R.id.icon11);
+        feature2=findViewById(R.id.icon12);
+        feature3=findViewById(R.id.icon13);
+        feature4=findViewById(R.id.icon14);
+        feature5=findViewById(R.id.icon15);
+
+//12 facilities
+        ImageView facility1, facility2, facility3, facility4, facility5, facility6, facility7, facility8, facility9, facility10;
+        facility1= findViewById(R.id.icon1);
+        facility2= findViewById(R.id.icon2);
+        facility3= findViewById(R.id.icon3);
+        facility4= findViewById(R.id.icon4);
+        facility5= findViewById(R.id.icon5);
+        facility6= findViewById(R.id.icon122);
+        facility7=findViewById(R.id.icon222);
+        facility8=findViewById(R.id.icon322);
+        facility9=findViewById(R.id.icon422);
+        facility10=findViewById(R.id.icon522);
+
+        //documents
+
+        TextView doc1, doc2;
+        doc1=findViewById(R.id.propdocs);
+        doc2=findViewById(R.id.propdocs1);
+
+        ImageButton downloaddoc1, downloaddoc2;
+        downloaddoc1=findViewById(R.id.button_after_text);
+        downloaddoc2=findViewById(R.id.downloadbutton);
+
+//TODO
+        downloaddoc1.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                //download pdf
+            }
+        });
+
+        downloaddoc2.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                //download pdf
+            }
+        });
+
+        TextView address= findViewById(R.id.address);
+
+
+        //see all button code
+        TextView seeAll;
+        seeAll= findViewById(R.id.see_all);
+        seeAll.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                //all reviews
+            }
+        });
+
+        //price of property
+        TextView price= findViewById(R.id.costofproperty);
+        //price.setText("\u062F.\u0625"+"");
+
+        //book now button
+        Button booknow= findViewById(R.id.booknow);
+        booknow.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                //connect to api to book
+            }
+        });
+
+        //overview description
+        TextView overview= findViewById(R.id.propertyDetails);
+        //overview.setText("");
+
+        //agentdetails link
+        TextView agentdetails= findViewById(R.id.agent_name);
+        ImageView agentimage= findViewById(R.id.agent_pic);
+
+        agentdetails.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                openAgentProfileActivity();
+            }
+        });
+
+        agentimage.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                openAgentProfileActivity();
+            }
+        });
+
+
     }
 
     // Method to navigate to DocViewer
@@ -84,8 +225,9 @@ public class PropertyDetails extends AppCompatActivity {
         startActivity(intent);
     }
 
-    private void openMortgageActivity() {
-        Intent intent = new Intent(PropertyDetails.this, MortgageCalculator.class);
+    private void openAgentProfileActivity(){
+        Intent intent= new Intent(PropertyDetails.this, AgentProfile.class);
+        //putextra required
         startActivity(intent);
     }
 

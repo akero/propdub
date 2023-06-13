@@ -168,6 +168,9 @@
                     app:layout_constraintTop_toBottomOf="@+id/horizontal_line11">
 
                     <ImageView
+                        android:id="@+id/agent_pic"
+                        android:clickable="true"
+                        android:focusable="true"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/agent_pic" />
@@ -183,6 +186,8 @@
                         android:id="@+id/agent_name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="true"
                         android:layout_marginLeft="10dp"
                         android:layout_marginTop="0dp"
                         android:text="John Doe"
@@ -739,7 +744,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="0dp"
                         android:layout_marginBottom="31dp"
-                        android:text="$56800"
+                        android:layout_marginEnd="30dp"
+                        android:text="\u062F.\u062556800"
                         android:layout_weight="1"
                         android:textColor="@color/black"
                         android:textSize="32sp"
@@ -749,6 +755,7 @@
 
 
                     <Button
+                        android:id="@+id/booknow"
                         android:layout_width="156dp"
                         android:layout_height="43dp"
                         android:text="Book Now"
