@@ -50,6 +50,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:textSize="12sp"
+                android:clickable="true"
+                android:focusable="true"
                 android:text="Contact"
                 android:textColor="#80004274"
                 android:fontFamily="@font/poppins_regular"
@@ -69,11 +71,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="55dp"
                 android:scaleType="centerInside"
+                android:clickable="true"
+                android:focusable="true"
                 android:src="@drawable/message" />
             <ImageView
                 android:id="@+id/icon111111"
                 android:layout_width="wrap_content"
                 android:layout_height="55dp"
+                android:clickable="true"
+                android:focusable="true"
                 android:layout_marginLeft="18.2dp"
                 android:scaleType="centerInside"
                 android:src="@drawable/videochat" />
@@ -81,6 +87,8 @@
                 android:id="@+id/icon1111111"
                 android:layout_width="wrap_content"
                 android:layout_height="55dp"
+                android:clickable="true"
+                android:focusable="true"
                 android:layout_marginLeft="18.2dp"
                 android:scaleType="centerInside"
                 android:src="@drawable/call1" />
@@ -328,7 +336,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/agentDetails2" />
 
-    <Button
+    <TextView
         android:id="@+id/see_all"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -336,6 +344,8 @@
         android:layout_marginTop="11dp"
         android:fontFamily="@font/poppins_regular"
         android:text="See all"
+        android:clickable="true"
+        android:focusable="true"
         android:textAllCaps="false"
         android:textColor="#336890"
         android:background="#00000000"
@@ -343,12 +353,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/agentDetails2" />
 
-    <Button
-        android:id="@+id/property_listed_by_agent_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Listings"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

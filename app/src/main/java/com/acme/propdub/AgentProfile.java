@@ -9,7 +9,9 @@ import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 //TODO: Pass value of what property it is to PropertyDetails.class
 //TODO: Add "contact" from wireframe to PropertyDetails.class
@@ -30,13 +32,54 @@ public class AgentProfile extends AppCompatActivity {
         Bitmap blurredBitmap = BlurBuilder.blur(this, originalBitmap);
         imageView.setImageBitmap(blurredBitmap);  */
 
-        //properties listed by agent button code
-        View propertyRentButton = findViewById(R.id.property_listed_by_agent_button);
 
-        // Set up click listeners for UI elements
-        propertyRentButton.setOnClickListener(new View.OnClickListener() {
+
+        //contact agent button code
+        TextView contactAgent;
+        contactAgent= findViewById(R.id.contact_agent);
+        contactAgent.setOnClickListener(new View.OnClickListener(){
             @Override
-            public void onClick(View v) {
+            public void onClick(View v){
+
+            }
+        });
+
+        //message agent button code
+        ImageView messageAgent;
+        messageAgent= findViewById(R.id.icon1111);
+        messageAgent.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+
+            }
+        });
+
+        //video agent button code
+        ImageView videoAgent;
+        videoAgent= findViewById(R.id.icon111111);
+        videoAgent.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+
+            }
+        });
+
+        //call agent button code
+        ImageView callAgent;
+        callAgent= findViewById(R.id.icon1111111);
+        callAgent.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+
+            }
+        });
+
+        //see all button code
+        TextView seeAll;
+        seeAll= findViewById(R.id.see_all);
+        seeAll.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
                 openPropertyListedByAgent();
             }
         });
