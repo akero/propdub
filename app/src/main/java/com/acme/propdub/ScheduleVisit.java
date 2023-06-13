@@ -4,6 +4,7 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
+import android.app.TimePickerDialog;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
@@ -16,14 +17,17 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.TimePicker;
 import android.widget.Toast;
 
 import java.util.Calendar;
 
 public class ScheduleVisit extends AppCompatActivity {
 
-    String date;
+    String date, time;
     int mYear, mMonth, mDay;
+    private EditText editText3;
+    private int mHour, mMinute;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +47,7 @@ public class ScheduleVisit extends AppCompatActivity {
 //TODO: implement the 3 spinners
         spinner = findViewById(R.id.spinner);
         //spinner1 = findViewById(R.id.spinner1);
-        spinner2 = findViewById(R.id.spinner2);
+        //spinner2 = findViewById(R.id.spinner2);
 
         // Example: Populating the spinner with data
         String[] items = {"Option 1", "Option 2", "Option 3"};
@@ -126,20 +130,42 @@ public class ScheduleVisit extends AppCompatActivity {
             }
         });
 
+        //date picker
+        editText3 = findViewById(R.id.edittext3);
+
+        editText3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Get Current Time
+                final Calendar c = Calendar.getInstance();
+                mHour = c.get(Calendar.HOUR_OF_DAY);
+                mMinute = c.get(Calendar.MINUTE);
+
+                // Launch Time Picker Dialog
+                TimePickerDialog timePickerDialog = new TimePickerDialog(ScheduleVisit.this,
+                        new TimePickerDialog.OnTimeSetListener() {
+                            @Override
+                            public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
+                                editText3.setText(hourOfDay + ":" + minute);
+                                time=hourOfDay + ":" + minute;
+                            }
+                        }, mHour, mMinute, false);
+                timePickerDialog.show();
+            }
+        });
+
 
         // Example: Retrieving the selected item from the spinner
         String selectedItem1 = spinner.getSelectedItem().toString();
 
 
         // Example: Populating the spinner with data
-        String[] items2 = {"Option 1", "Option 2", "Option 3"};
-        ArrayAdapter<String> adapter2 = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);
-        spinner2.setAdapter(adapter);
+        //String[] items2 = {"Option 1", "Option 2", "Option 3"};
+        //ArrayAdapter<String> adapter2 = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);
+        //spinner2.setAdapter(adapter);
 
         // Example: Retrieving the selected item from the spinner
         String selectedItem2 = spinner.getSelectedItem().toString();
-
-
 
     }
 
