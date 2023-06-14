@@ -74,6 +74,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             }
         });
 
+        // home button code
+        View homeButton = findViewById(R.id.home_button);
+        homeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                openHomeActivity();
+            }
+        });
+
         // review popup button code
         View reviewButton = findViewById(R.id.review_popup_button);
         reviewButton.setOnClickListener(new View.OnClickListener() {
@@ -197,6 +207,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     // Method to navigate to PropertyRent
     private void openPropertyRentActivity() {
         Intent intent = new Intent(MainActivity.this, PropertyRent.class);
+        startActivity(intent);
+    }
+
+    // Method to navigate to Home activity
+    private void openHomeActivity() {
+        Intent intent = new Intent(MainActivity.this, HomeActivity.class);
         startActivity(intent);
     }
 

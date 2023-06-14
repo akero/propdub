@@ -27,11 +27,6 @@ public class AgentProfile extends AppCompatActivity {
             actionBar.setDisplayHomeAsUpEnabled(true);
             actionBar.setHomeAsUpIndicator(R.drawable.back_button);
             actionBar.setTitle("Agent Details");}
-       /* ImageView imageView = findViewById(R.id.background_image1);
-        Bitmap originalBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.bg_about_us);
-        Bitmap blurredBitmap = BlurBuilder.blur(this, originalBitmap);
-        imageView.setImageBitmap(blurredBitmap);  */
-
 
 
         //contact agent button code
