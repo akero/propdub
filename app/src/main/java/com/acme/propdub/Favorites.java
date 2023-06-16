@@ -22,11 +22,6 @@ public class Favorites extends AppCompatActivity {
             actionBar.setHomeAsUpIndicator(R.drawable.back_button);
             actionBar.setTitle("Favorites");}
 
-      /*  //blurring background image
-        ImageView imageView = findViewById(R.id.background_image8);
-        Bitmap originalBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.bg_about_us);
-        Bitmap blurredBitmap = BlurBuilder.blur(this, originalBitmap);
-        imageView.setImageBitmap(blurredBitmap); */
     }
 
     @Override

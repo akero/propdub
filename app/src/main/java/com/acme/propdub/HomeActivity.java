@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.viewpager2.widget.MarginPageTransformer;
@@ -14,6 +15,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.util.TypedValue;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.google.android.material.navigation.NavigationView;
 
@@ -48,7 +50,34 @@ try{
     viewPager.setPageTransformer(new MarginPageTransformer((int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 16, getResources().getDisplayMetrics())));
 
     navigationView = findViewById(R.id.id_view);
-        navigationView.setNavigationItemSelectedListener(this);}catch (Exception e){
+        navigationView.setNavigationItemSelectedListener(this);
+
+    CoordinatorLayout coordinatorLayout = findViewById(R.id.featured1);
+        coordinatorLayout.setOnClickListener(new CoordinatorLayout.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            startActivity(new Intent(HomeActivity.this, PropertyDetails.class));
+        }
+    });
+
+        CoordinatorLayout coordinatorLayout1 = findViewById(R.id.featured2);
+
+        coordinatorLayout1.setOnClickListener(new CoordinatorLayout.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HomeActivity.this, PropertyDetails.class));
+            }
+        });
+
+        CoordinatorLayout coordinatorLayout2 = findViewById(R.id.featured3);
+        coordinatorLayout2.setOnClickListener(new CoordinatorLayout.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HomeActivity.this, PropertyDetails.class));
+            }
+        });
+
+}catch (Exception e){
     Log.d("tag15",e.toString());}
     }
 

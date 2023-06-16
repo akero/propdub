@@ -2,6 +2,7 @@ package com.acme.propdub;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -32,6 +33,10 @@ public class AgentProfile extends AppCompatActivity {
         //contact agent button code
         TextView contactAgent;
         contactAgent= findViewById(R.id.contact_agent);
+
+        //image of agent
+        ImageView imageOfAgent= findViewById(R.id.image_of_agent);
+
         contactAgent.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
@@ -76,6 +81,44 @@ public class AgentProfile extends AppCompatActivity {
             @Override
             public void onClick(View v){
                 openPropertyListedByAgent();
+            }
+        });
+
+        //first half details
+        TextView companyName, email, website, responsetime, experience, languages;
+        companyName= findViewById(R.id.company_name);
+        email= findViewById(R.id.email);
+        website= findViewById(R.id.website);
+        responsetime= findViewById(R.id.responsetime);
+        experience= findViewById(R.id.experience);
+        languages= findViewById(R.id.languages);
+
+        //second half details
+        TextView description;
+        description= findViewById(R.id.agentDetails2);
+
+        CoordinatorLayout coordinatorLayout = findViewById(R.id.featured1);
+        coordinatorLayout.setOnClickListener(new CoordinatorLayout.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(AgentProfile.this, PropertyDetails.class));
+            }
+        });
+
+        CoordinatorLayout coordinatorLayout1 = findViewById(R.id.featured2);
+
+        coordinatorLayout1.setOnClickListener(new CoordinatorLayout.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(AgentProfile.this, PropertyDetails.class));
+            }
+        });
+
+        CoordinatorLayout coordinatorLayout2 = findViewById(R.id.featured3);
+        coordinatorLayout2.setOnClickListener(new CoordinatorLayout.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(AgentProfile.this, PropertyDetails.class));
             }
         });
     }

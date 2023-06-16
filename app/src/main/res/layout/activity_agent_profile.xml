@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+<androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".AgentProfile">
@@ -13,18 +17,20 @@
         android:layout_width="0dp"
         android:gravity="center_vertical"
         android:layout_height="wrap_content"
-        android:layout_marginTop="26dp"
+        android:layout_marginTop="35dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginStart="22dp"
-        android:layout_marginEnd="22dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginEnd="26dp"
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
+            android:id="@+id/image_of_agent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/agent_pic" />
+
         <LinearLayout
             android:id="@+id/linear_layout2111"
             android:layout_width="wrap_content"
@@ -38,12 +44,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="0dp"
+                android:layout_marginTop="4dp"
                 android:text="John Doe"
                 android:textColor="@color/figmabluedark"
                 android:textSize="17sp"
                 android:fontFamily="@font/poppins_regular"
                 />
+
             <TextView
                 android:id="@+id/contact_agent"
                 android:layout_width="wrap_content"
@@ -63,9 +70,8 @@
             android:layout_width="wrap_content"
             android:gravity="center_vertical"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginRight="30dp"
-            >
+            android:orientation="horizontal">
+
             <ImageView
                 android:id="@+id/icon1111"
                 android:layout_width="wrap_content"
@@ -74,6 +80,7 @@
                 android:clickable="true"
                 android:focusable="true"
                 android:src="@drawable/message" />
+
             <ImageView
                 android:id="@+id/icon111111"
                 android:layout_width="wrap_content"
@@ -83,6 +90,7 @@
                 android:layout_marginLeft="18.2dp"
                 android:scaleType="centerInside"
                 android:src="@drawable/videochat" />
+
             <ImageView
                 android:id="@+id/icon1111111"
                 android:layout_width="wrap_content"
@@ -109,15 +117,15 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="wrap_content">
 
-            >
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guidelineLeft"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 app:layout_constraintGuide_begin="175dp" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -127,7 +135,9 @@
                 android:fontFamily="@font/poppins_regular"
                 android:textSize="14sp"
                 android:textColor="@color/figmablue"/>
+
             <TextView
+                android:id="@+id/company_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/figmablue"
@@ -135,7 +145,7 @@
                 app:layout_constraintStart_toStartOf="@id/guidelineLeft"
                 android:fontFamily="@font/poppins_light"
                 android:textSize="14sp"
-                android:text=":XYZ Pvt. ltd."/>
+                android:text=": XYZ Pvt. ltd."/>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -159,6 +169,7 @@
                 android:textSize="14sp"
                 android:textColor="@color/figmablue"/>
             <TextView
+                android:id="@+id/email"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/figmablue"
@@ -166,7 +177,7 @@
                 android:textSize="14sp"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="@id/guidelineLeft1"
-                android:text=":XYZ@gmail.com"/>
+                android:text=": XYZ@gmail.com"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -190,6 +201,7 @@
                 android:textSize="14sp"
                 android:textColor="@color/figmablue"/>
             <TextView
+                android:id="@+id/website"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/figmablue"
@@ -197,7 +209,7 @@
                 android:textSize="14sp"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="@id/guidelineLeft2"
-                android:text=":probdub.com"/>
+                android:text=": probdub.com"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -221,6 +233,7 @@
                 android:textSize="14sp"
                 android:textColor="@color/figmablue"/>
             <TextView
+                android:id="@+id/responsetime"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/figmablue"
@@ -228,7 +241,7 @@
                 android:textSize="14sp"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="@id/guidelineLeft3"
-                android:text=":Less than 5 minutes"/>
+                android:text=": Less than 5 minutes"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -252,6 +265,7 @@
                 android:textSize="14sp"
                 android:textColor="@color/figmablue"/>
             <TextView
+                android:id="@+id/experience"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/figmablue"
@@ -283,13 +297,15 @@
                 android:textSize="14sp"
                 android:textColor="@color/figmablue"/>
             <TextView
+                android:id="@+id/languages"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/figmablue"
                 android:fontFamily="@font/poppins_light"
                 android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="@id/guidelineLeft5"
-                android:text=":English, Hindi"/>
+                android:text=": English, Hindi"/>
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 
@@ -300,7 +316,7 @@
         android:id="@+id/overview"
         android:layout_width="wrap_content"
         android:layout_height="37dp"
-        android:layout_marginLeft="26dp"
+        android:layout_marginLeft="25dp"
         android:layout_marginTop="20dp"
         android:fontFamily="@font/poppins_medium"
         android:text="Description"
@@ -313,9 +329,9 @@
         android:id="@+id/agentDetails2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="26dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginRight="26dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginRight="25dp"
         android:text="You Will Have Everything Nearby:SupermarketBuses, Stations, Cinemas, Theaters, The Carmen Neighborhood, Etc. You Will Have Everything Nearby: Supermarket Buses, Stations, Cinemas, Theaters, The Carmen Neighborhood."
         android:textColor="@color/color1"
         android:fontFamily="@font/poppins_regular"
@@ -327,7 +343,7 @@
         android:id="@+id/listings"
         android:layout_width="wrap_content"
         android:layout_height="37dp"
-        android:layout_marginLeft="26dp"
+        android:layout_marginLeft="25dp"
         android:layout_marginTop="20dp"
         android:fontFamily="@font/poppins_medium"
         android:text="Listings"
@@ -340,8 +356,8 @@
         android:id="@+id/see_all"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="26dp"
-        android:layout_marginTop="11dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/poppins_regular"
         android:text="See all"
         android:clickable="true"
@@ -353,5 +369,198 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/agentDetails2" />
 
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/see_all"
+        android:scrollbars="none">
 
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="25dp"
+            android:orientation="horizontal">
+
+            <androidx.coordinatorlayout.widget.CoordinatorLayout
+                android:id="@+id/featured1"
+                android:layout_width="196dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="26dp"
+                >
+
+                <FrameLayout
+
+                    android:layout_width="196dp"
+                    android:layout_height="114dp"
+                    android:background="@drawable/image_background">
+
+                    <com.acme.propdub.RoundedImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/houseimage"
+                        android:background="@drawable/image_background"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:src="@drawable/favicon"
+                        android:layout_marginEnd="6dp"
+                        android:layout_marginTop="6dp"/>
+
+                </FrameLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="21dp"
+                    android:layout_marginTop="114dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Ellington House 4"
+                    android:textColor="#0A2753" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="135dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/pinicon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_light"
+                        android:text="Dubai Hills Park"
+                        android:textColor="#6A778B"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+            <androidx.coordinatorlayout.widget.CoordinatorLayout
+                android:id="@+id/featured2"
+                android:layout_width="196dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="26dp"
+                android:background="@drawable/border_background">
+
+                <FrameLayout
+                    android:layout_width="196dp"
+                    android:layout_height="114dp"
+                    android:background="@drawable/image_background">
+
+                    <com.acme.propdub.RoundedImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/houseimage1" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:src="@drawable/favicon"
+                        android:layout_marginEnd="6dp"
+                        android:layout_marginTop="6dp"/>
+                </FrameLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="21dp"
+                    android:layout_marginTop="114dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Royal Bay"
+                    android:textColor="#0A2753" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="135dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/pinicon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_light"
+                        android:text="Dubai Hills Park"
+                        android:textColor="#6A778B"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+            <androidx.coordinatorlayout.widget.CoordinatorLayout
+                android:id="@+id/featured3"
+                android:layout_width="196dp"
+                android:layout_marginEnd="26dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/border_background">
+
+                <FrameLayout
+                    android:layout_width="196dp"
+                    android:layout_height="114dp"
+                    android:background="@drawable/image_background">
+
+                    <com.acme.propdub.RoundedImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/houseimage2" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:src="@drawable/favicon"
+                        android:layout_marginEnd="6dp"
+                        android:layout_marginTop="6dp"/>
+                </FrameLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="21dp"
+                    android:layout_marginTop="114dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Azizi Mina"
+                    android:textColor="#0A2753" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="135dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/pinicon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_light"
+                        android:text="Palm Jumeriah"
+                        android:textColor="#6A778B"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+            <!-- Add more CoordinatorLayouts here as needed -->
+        </LinearLayout>
+    </HorizontalScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>
