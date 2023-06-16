@@ -26,13 +26,19 @@ public class login extends AppCompatActivity {
         TextView forgotpass;
         TextView registernow;
 
+        //entered email and password
         email = findViewById(R.id.totalAmountEditText);
         password= findViewById(R.id.totalAmountEditText1);
 
+
+        //sign in button
         btn= findViewById(R.id.btn);
+
+        //forgot password and register now
         forgotpass= findViewById(R.id.txt3);
         registernow= findViewById(R.id.txt5);
 
+        //register now action
         registernow.setOnClickListener(new View.OnClickListener(){
             @Override
                 public void onClick(View v){
@@ -41,6 +47,7 @@ public class login extends AppCompatActivity {
             }
         });
 
+        //sign in action
         btn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
@@ -69,7 +76,7 @@ public class login extends AppCompatActivity {
             }
         });
 
-        //TODO: add forgot password code
+        //add forgot password code
         forgotpass.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){

@@ -25,14 +25,14 @@ public class AboutUs extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about_us);
 
-        ActionBar actionBar = getSupportActionBar();
-        if (actionBar != null) {
-            actionBar.setDisplayHomeAsUpEnabled(true);
-            actionBar.setHomeAsUpIndicator(R.drawable.back_button);
-            actionBar.setTitle("Agent Details");}
-        //ImageView imageView = findViewById(R.id.background_image);
-        Bitmap originalBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.bg_about_us);
-        Bitmap blurredBitmap = BlurBuilder.blur(this, originalBitmap);
+        //data for 4 headings
+        TextView propdub, ourvision, ourmission, objective;
+        propdub = findViewById(R.id.about_us_text);
+        ourvision = findViewById(R.id.about_us_text1);
+        ourvision= findViewById(R.id.about_us_text2);
+        objective = findViewById(R.id.about_us_text3);
+
+
 
         
     }
