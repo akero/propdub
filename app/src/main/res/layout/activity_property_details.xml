@@ -80,6 +80,7 @@
                         android:src="@drawable/star" />
 
                     <TextView
+                        android:id="@+id/rating"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -179,8 +180,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:layout_weight="1"
-                    android:layout_gravity="center"
-                    >
+                    android:layout_gravity="center">
                     <TextView
                         android:id="@+id/agent_name"
                         android:layout_width="wrap_content"
@@ -198,6 +198,8 @@
                         android:id="@+id/contact_agent"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="true"
                         android:layout_marginLeft="10dp"
                         android:textSize="12sp"
                         android:text="contact"
@@ -621,6 +623,7 @@
                         />
 
                     <TextView
+                        android:id="@+id/rating1"
                         android:layout_gravity="center"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"

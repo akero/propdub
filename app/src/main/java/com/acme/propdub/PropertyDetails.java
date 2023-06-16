@@ -28,6 +28,8 @@ import androidx.viewpager2.widget.ViewPager2;
 import com.google.android.gms.maps.MapView;
 import com.google.android.material.navigation.NavigationView;
 
+import org.w3c.dom.Text;
+
 import jp.wasabeef.blurry.Blurry;
 
 public class PropertyDetails extends AppCompatActivity {
@@ -58,6 +60,118 @@ public class PropertyDetails extends AppCompatActivity {
             ImageAdapter1 adapter = new ImageAdapter1(this, imageIds);
             viewPager.setAdapter(adapter);
 
+            //top fragment like title etc
+            TextView titleofproperty = findViewById(R.id.titleofproperty);
+            TextView typeofproperty = findViewById(R.id.typeofproperty);
+            TextView rating= findViewById(R.id.rating);
+
+
+            //icon features
+            ImageView topicon1 = findViewById(R.id.icon11);
+            ImageView topicon2 = findViewById(R.id.icon12);
+            ImageView topicon3 = findViewById(R.id.icon13);
+            ImageView topicon4 = findViewById(R.id.icon14);
+            ImageView topicon5 = findViewById(R.id.icon15);
+
+            //agent details
+            ImageView agentpic = findViewById(R.id.agent_pic);
+            agentpic.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(PropertyDetails.this, AgentProfile.class);
+                    startActivity(intent);
+                }
+            });
+
+            TextView agentname = findViewById(R.id.agent_name);
+            agentname.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(PropertyDetails.this, AgentProfile.class);
+                    startActivity(intent);
+                }
+            });
+
+            TextView contactagent = findViewById(R.id.contact_agent);
+            contactagent.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    //contact agent code here
+
+                    //Intent intent = new Intent(PropertyDetails.this, ContactAgent.class);
+                    //startActivity(intent);
+                }
+            });
+
+
+            //message agent button code
+            ImageView messageAgent;
+            messageAgent= findViewById(R.id.icon1111);
+            messageAgent.setOnClickListener(new View.OnClickListener(){
+                @Override
+                public void onClick(View v){
+
+                }
+            });
+
+            //video agent button code
+            ImageView videoAgent;
+            videoAgent= findViewById(R.id.icon111111);
+            videoAgent.setOnClickListener(new View.OnClickListener(){
+                @Override
+                public void onClick(View v){
+
+                }
+            });
+
+            //call agent button code
+            ImageView callAgent;
+            callAgent= findViewById(R.id.icon1111111);
+            callAgent.setOnClickListener(new View.OnClickListener(){
+                @Override
+                public void onClick(View v){
+
+                }
+            });
+
+            //below overview
+            //property details
+
+            TextView propertydetails = findViewById(R.id.propertyDetails);
+
+
+            //facilities
+            ImageView facility1= findViewById(R.id.icon1);
+            ImageView facility2= findViewById(R.id.icon2);
+            ImageView facility3= findViewById(R.id.icon3);
+            ImageView facility4= findViewById(R.id.icon4);
+            ImageView facility5= findViewById(R.id.icon5);
+            ImageView facility6= findViewById(R.id.icon122);
+            ImageView facility7= findViewById(R.id.icon222);
+            ImageView facility8= findViewById(R.id.icon322);
+            ImageView facility9= findViewById(R.id.icon422);
+            ImageView facility10= findViewById(R.id.icon522);
+
+
+            //documents
+            TextView doc1 = findViewById(R.id.propdocs);
+            TextView doc2 = findViewById(R.id.propdocs1);
+
+            //document view button
+            ImageButton docview = findViewById(R.id.button_after_text);
+            docview.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(PropertyDetails.this, DocViewer.class);
+                    startActivity(intent);
+                }
+            });
+
+            //address
+        TextView location= findViewById(R.id.address11);
+
+
             //Code for video
             WebView webView = findViewById(R.id.youtube_video1);
             WebSettings webSettings = webView.getSettings();
@@ -75,99 +189,6 @@ public class PropertyDetails extends AppCompatActivity {
             Log.d("tag4", e.toString());
         }
 
-    //contact agent button code
-    TextView contactAgent;
-    contactAgent = findViewById(R.id.contact_agent);
-    contactAgent.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-
-        }
-    });
-
-    //message agent button code
-    ImageView messageAgent;
-    messageAgent = findViewById(R.id.icon1111);
-    messageAgent.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-
-        }
-    });
-
-    //video agent button code
-    ImageView videoAgent;
-    videoAgent = findViewById(R.id.icon111111);
-    videoAgent.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-
-        }
-    });
-
-    //call agent button code
-    ImageView callAgent;
-    callAgent = findViewById(R.id.icon1111111);
-    callAgent.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-
-        }
-    });
-
-//TODO
-
-//5 property features at top of class
-    ImageView feature1, feature2, feature3, feature4, feature5;
-    feature1 = findViewById(R.id.icon11);
-    feature2 = findViewById(R.id.icon12);
-    feature3 = findViewById(R.id.icon13);
-    feature4 = findViewById(R.id.icon14);
-    feature5 = findViewById(R.id.icon15);
-
-//12 facilities
-    ImageView facility1, facility2, facility3, facility4, facility5, facility6, facility7, facility8, facility9, facility10;
-    facility1 = findViewById(R.id.icon1);
-    facility2 = findViewById(R.id.icon2);
-    facility3 = findViewById(R.id.icon3);
-    facility4 = findViewById(R.id.icon4);
-    facility5 = findViewById(R.id.icon5);
-    facility6 = findViewById(R.id.icon122);
-    facility7 = findViewById(R.id.icon222);
-    facility8 = findViewById(R.id.icon322);
-    facility9 = findViewById(R.id.icon422);
-    facility10 = findViewById(R.id.icon522);
-
-    //documents
-
-    TextView doc1, doc2;
-    doc1 = findViewById(R.id.propdocs);
-    doc2 = findViewById(R.id.propdocs1);
-
-    ImageButton downloaddoc1, downloaddoc2;
-    downloaddoc1 = findViewById(R.id.button_after_text);
-    downloaddoc2 = findViewById(R.id.downloadbutton);
-
-//TODO
-    downloaddoc1.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            //download pdf
-            openDocViewerActivity();
-        }
-    });
-
-
-    downloaddoc2.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            //download pdf
-            openDocViewerActivity();
-        }
-    });
-
-    TextView address = findViewById(R.id.address);
-
 
     //see all button code
     TextView seeAll;
@@ -176,12 +197,19 @@ public class PropertyDetails extends AppCompatActivity {
         @Override
         public void onClick(View v) {
             //all reviews
+            Intent intent= new Intent(PropertyDetails.this, Ratings.class);
+            startActivity(intent);
         }
     });
+
+    //ratings text
+        TextView rating= findViewById(R.id.rating);
+
 
     //price of property
     TextView price = findViewById(R.id.costofproperty);
     //price.setText("\u062F.\u0625"+"");
+
 
     //book now button
     Button booknow = findViewById(R.id.booknow);
@@ -192,27 +220,7 @@ public class PropertyDetails extends AppCompatActivity {
         }
     });
 
-    //overview description
-    TextView overview = findViewById(R.id.propertyDetails);
-    //overview.setText("");
 
-    //agentdetails link
-    TextView agentdetails = findViewById(R.id.agent_name);
-    ImageView agentimage = findViewById(R.id.agent_pic);
-
-    agentdetails.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            openAgentProfileActivity();
-        }
-    });
-
-    agentimage.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            openAgentProfileActivity();
-        }
-    });
 
     }
 

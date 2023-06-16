@@ -28,6 +28,7 @@ public class SignUp extends AppCompatActivity {
         email= findViewById(R.id.totalAmountEditText);
         name= findViewById(R.id.totalAmountEditText11);
         password= findViewById(R.id.totalAmountEditText1);
+
         btn= findViewById(R.id.btn);
         signin= findViewById(R.id.txt5);
 
