@@ -6,27 +6,10 @@
     android:layout_height="match_parent"
     tools:context=".AboutUs">
 
-    <ImageView
-        android:id="@+id/background_image"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="centerCrop"
-        android:src="@drawable/bg_about_us" />
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <TextView
-            android:id="@+id/about_us_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="About Us"
-            android:textColor="@android:color/white"
-            android:textSize="21sp"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="60dp"
-            android:layout_marginTop="28dp"/>
+
         <ScrollView
             android:id="@+id/scrollView"
             android:layout_width="0dp"
@@ -41,20 +24,92 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-
                 android:paddingStart="26dp"
-                android:paddingTop="90dp"
+                android:paddingTop="30dp"
                 android:paddingEnd="26dp"
                 android:paddingBottom="146dp">
+
+                <TextView
+                    android:id="@+id/heading0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="21sp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:lineSpacingExtra="6sp"
+                    android:textColor="#004274"
+                    android:text="Propdub" />
 
                 <TextView
                     android:id="@+id/about_us_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="16sp"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/poppins_regular"
                     android:lineSpacingExtra="6sp"
-                    android:textColor="@android:color/white"
-                    tools:text="About Us Text" />
+                    android:textColor="#004274"
+                    android:text="PropDub is an online platform for real estate developers in Dubai to market their projects. We connect trusted real estate developers and select agents that advertise through our platform, to buyers worldwide. We provide access to a regularly updated bouquet of genuine and high-quality real estate investments, masterfully curated by industry experts. It is our endeavor to take this platter of opportunities, to a global audience like never before.
+The cornerstone of PropDub is our talented and enthusiastic team of professionals with extensive experience in the UAE real estate industry, digital marketing and advertising. With each member contributing numerous years of relevant work experience, our team represents the company’s greatest strength and asset." />
+                <TextView
+                    android:id="@+id/heading1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="21sp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:lineSpacingExtra="6sp"
+                    android:textColor="#004274"
+                    android:layout_marginTop="16dp"
+                    android:text="Our Vision" />
+
+                <TextView
+                    android:id="@+id/about_us_text1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:lineSpacingExtra="6sp"
+                    android:textColor="#004274"
+                    android:text="Our company’s vision is to fulfils the real estate needs and investment aspirations of individuals globally by connecting them to trusted real estate developers and agents. We also aim to empower potential buyers to make informed and value enhancing decisions by providing comprehensive guidance on all facets of the property market, and leveraging our extensive expertise, industry knowledge, and real estate experience." />
+                <TextView
+                    android:id="@+id/heading2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="21sp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:lineSpacingExtra="6sp"
+                    android:textColor="#004274"
+                    android:layout_marginTop="16dp"
+                    android:text="Our Mission" />
+
+                <TextView
+                    android:id="@+id/about_us_text2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:lineSpacingExtra="6sp"
+                    android:textColor="#004274"
+                    android:text="Our mission is to provide a 360° solutions platform for real estate developers throughout the UAE while upholding exceptional levels of quality in customer service and to make the Dubai real estate market accessible to everyone. Our team, composed of consummate professionals with extensive experience in the relevant fields, represents the company’s hallmark of excellence. Their collective years of work experience is the invaluable asset, based on which the organisation maintains its promise of ethical and exceptional service." />
+                <TextView
+                    android:id="@+id/heading3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="21sp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:lineSpacingExtra="6sp"
+                    android:layout_marginTop="16dp"
+                    android:textColor="#004274"
+                    android:text="Objective" />
+
+                <TextView
+                    android:id="@+id/about_us_text3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:lineSpacingExtra="6sp"
+                    android:textColor="#004274"
+                    android:text="Our objective is to deliver genuine real estate investment leads to trusted real estate developers and agents advertising customised real estate solutions on our platform, including residential, commercial, retail or land sector. We uphold our belief in integrity, clarity, promptness, and commitment to providing quality leads to the developers and quality projects to the buyers. We work tirelessly to achieve a mutually beneficial outcome for all parties involved." />
+
             </LinearLayout>
         </ScrollView>
     </androidx.constraintlayout.widget.ConstraintLayout>

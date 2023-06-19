@@ -1,0 +1,35 @@
+[33m49021ea[m[33m ([m[1;36mHEAD -> [m[1;32mdesign[m[33m)[m HEAD@{0}: reset: moving to HEAD~1
+[33md36d3f5[m HEAD@{1}: reset: moving to HEAD~1
+[33mb7a7a53[m[33m ([m[1;31morigin/design[m[33m)[m HEAD@{2}: commit: propertysale design
+[33md36d3f5[m HEAD@{3}: commit: design sale properties done.
+[33m49021ea[m[33m ([m[1;36mHEAD -> [m[1;32mdesign[m[33m)[m HEAD@{4}: commit: skeleton for contact done
+[33me661f4a[m HEAD@{5}: commit: imported fonts
+[33mfda184f[m HEAD@{6}: checkout: moving from master to design
+[33m2a24566[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmaster[m[33m)[m HEAD@{7}: commit: .
+[33mfda184f[m HEAD@{8}: checkout: moving from design to master
+[33mfda184f[m HEAD@{9}: checkout: moving from master to design
+[33mfda184f[m HEAD@{10}: reset: moving to design
+[33m554cfa7[m HEAD@{11}: checkout: moving from design to master
+[33mfda184f[m HEAD@{12}: commit: Half the design for property details done, app skeleton is fully completed and need to finish the rest of the design and attach it to the backend.
+[33m554cfa7[m HEAD@{13}: checkout: moving from master to design
+[33m554cfa7[m HEAD@{14}: reset: moving to design
+[33mc286b5c[m HEAD@{15}: checkout: moving from design to master
+[33m554cfa7[m HEAD@{16}: commit: Half the design for property details done, app skeleton is fully completed and need to finish the rest of the design and attach it to the backend.
+[33m2f30545[m HEAD@{17}: commit: sdkkdasudijuafnsdgneriugn3rhufn2jeoifj
+[33m185a503[m HEAD@{18}: commit: .
+[33m10b6cdd[m HEAD@{19}: commit: added property details text to propertydetails activity. Need to import fonts for title and activity header
+[33me193c51[m HEAD@{20}: commit: some more design changes in propertydetails activity.
+[33md9479e9[m HEAD@{21}: commit: added scrolling images
+[33me6b7efd[m HEAD@{22}: commit: temp commit
+[33m3b40789[m HEAD@{23}: reset: moving to HEAD
+[33m3b40789[m HEAD@{24}: reset: moving to HEAD
+[33m3b40789[m HEAD@{25}: commit: fixed about us height
+[33m090624e[m HEAD@{26}: commit: fixed hamburger menu showing
+[33m25d4f35[m HEAD@{27}: commit: idk
+[33ma484511[m HEAD@{28}: commit: removed main activity top bar
+[33ma863022[m HEAD@{29}: commit: asd
+[33m132c365[m HEAD@{30}: commit: IDK
+[33m03cf2ca[m HEAD@{31}: commit: f
+[33mbca95a5[m HEAD@{32}: commit: test
+[33mf0a9625[m HEAD@{33}: commit: added background image with blur to relevant activities
+[33m5c86ca2[m HEAD@{34}: clone: from https://github.com/akero/propdub.git

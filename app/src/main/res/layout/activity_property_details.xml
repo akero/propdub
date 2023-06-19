@@ -1,312 +1,783 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/root_layout"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PropertyDetails">
+    android:fitsSystemWindows="true"
+    tools:context=".PropertyDetails"
+    tools:openDrawer="start">
 
-    <ImageView
-        android:id="@+id/background_image3"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="centerCrop"
-        android:src="@drawable/bg_about_us" />
-
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <View
-            android:id="@+id/blue_tint"
+        <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#33004274" />
-    </FrameLayout>
+            android:fillViewport="true">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fillViewport="true">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/scroll_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/scroll_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/viewPager1"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="0dp"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/property_details_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Property Details"
-            android:textSize="20sp"
+                <TextView
+                    android:id="@+id/titleofproperty"
+                    android:layout_width="119dp"
+                    android:layout_height="37dp"
+                    android:layout_marginLeft="26dp"
+                    android:layout_marginTop="26dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="PEARLZ"
+                    android:textColor="@color/figmabluedark"
+                    android:textSize="32sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/viewPager1" />
+                <!--android:fontFamily="@font/poppins-bold" -->
 
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginLeft="60dp"
-            android:layout_marginTop="16dp"
-            android:textColor="@android:color/white" />
-        <!-- android:fontFamily="@font/poppins-semibold" -->
+                <LinearLayout
+                    android:id="@+id/star_container"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="23.33dp"
+                    android:layout_marginTop="24dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/titleofproperty">
 
-        <androidx.viewpager2.widget.ViewPager2
-            android:id="@+id/viewPager1"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_marginTop="16dp"
-            app:layout_constraintTop_toBottomOf="@+id/property_details_text" />
+                    <FrameLayout
+                        android:id="@+id/framelayout1"
+                        android:layout_width="60.66dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/smallbutton_bg"
+                        app:layout_constraintBottom_toTopOf="@+id/propertyDetails"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/titleofproperty">
 
-        <TextView
-            android:id="@+id/titleofproperty"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="PEARLZ"
-            android:textSize="32sp"
-            android:textColor="@android:color/white"
+                        <TextView
+                            android:id="@+id/typeofproperty"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="House"
+                            android:textColor="@color/figmablue"
+                            android:textSize="12sp" />
+                    </FrameLayout>
 
-            app:layout_constraintTop_toBottomOf="@id/viewPager1"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginLeft="26dp"
-            android:layout_marginTop="26dp" />
-        <!--android:fontFamily="@font/poppins-bold" -->
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/star" />
 
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/propertyDetails"
-            android:text="PEARLZ by Danube properties, located in Al Furjan, brings a new change in residential living in the Al Furjan community. The building has been aesthetically designed in a Modern style to seamlessly and beautifully blend with the surroundings. The plot is located within walking distance of the Al Furjan Metro Station. The ground floor consists of Entrance Lobbies for the Residents, Retail stores, "
-            app:layout_constraintTop_toBottomOf="@+id/titleofproperty"
-            android:layout_marginTop="8dp"
-            android:textColor="@android:color/white"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginLeft="26dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginRight="26dp"
-            />
+                    <TextView
+                        android:id="@+id/rating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="3.33dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="4.5  (1,225 reviews)"
+                        android:textColor="@color/black" />
+                </LinearLayout>
 
-        <View
-            android:id="@+id/horizontal_line"
-            android:layout_width="0dp"
-            android:layout_height="1dp"
-            android:background="@android:color/white"
-            app:layout_constraintTop_toBottomOf="@+id/propertyDetails"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="16dp" />
+                <LinearLayout
+                    android:id="@+id/icon_container0"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginEnd="14dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/star_container">
 
-        <LinearLayout
-            android:id="@+id/icon_container"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/horizontal_line"
-            android:layout_marginTop="16dp">
+                    <ImageView
+                        android:id="@+id/icon11"
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:layout_weight="1"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/bedrooms" />
 
-            <ImageView
-                android:id="@+id/icon1"
-                android:layout_width="0dp"
-                android:layout_height="55dp"
-                android:layout_weight="1"
-                android:scaleType="centerInside"
-                android:src="@drawable/bedrooms" />
+                    <ImageView
+                        android:id="@+id/icon12"
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:layout_weight="1"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/bathrooms" />
 
-            <ImageView
-                android:id="@+id/icon2"
-                android:layout_width="0dp"
-                android:layout_height="55dp"
-                android:layout_weight="1"
-                android:scaleType="centerInside"
-                android:src="@drawable/bathrooms" />
+                    <ImageView
+                        android:id="@+id/icon13"
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:layout_weight="1"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/parking" />
 
-            <ImageView
-                android:id="@+id/icon3"
-                android:layout_width="0dp"
-                android:layout_height="55dp"
-                android:layout_weight="1"
-                android:scaleType="centerInside"
-                android:src="@drawable/parking" />
+                    <ImageView
+                        android:id="@+id/icon14"
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:layout_weight="1"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/gym" />
+                    <ImageView
+                        android:id="@+id/icon15"
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:layout_weight="1"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/bedrooms" />
+                </LinearLayout>
 
-            <ImageView
-                android:id="@+id/icon4"
-                android:layout_width="0dp"
-                android:layout_height="55dp"
-                android:layout_weight="1"
-                android:scaleType="centerInside"
-                android:src="@drawable/gym" />
-        </LinearLayout>
-
-        <View
-            android:id="@+id/horizontal_line1"
-            android:layout_width="0dp"
-            android:layout_height="1dp"
-            android:background="@android:color/white"
-            app:layout_constraintTop_toBottomOf="@+id/icon_container"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="16dp" />
-
-        <TextView
-            android:id="@+id/documents"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Property Documents"
-            android:textSize="21sp"
-            android:textColor="@android:color/white"
-
-            app:layout_constraintTop_toBottomOf="@id/horizontal_line1"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginLeft="26dp"
-            android:layout_marginTop="16dp" />
-
-        <LinearLayout
-            android:id="@+id/linear_layout"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            app:layout_constraintTop_toBottomOf="@+id/documents"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="@id/scroll_view"
-            android:layout_marginTop="12dp">
-
-            <ImageView
-                android:id="@+id/image_before_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/pdficon"
-                android:layout_marginLeft="39dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/propdocs"
-                android:text="Danube Peralz Updated"
-                android:textSize="14sp"
-                android:textColor="@android:color/white"
-                android:layout_marginLeft="8dp" />
-
-            <ImageButton
-                android:id="@+id/button_after_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/downloadbutton"
-                android:background="@android:color/transparent"
-                android:layout_marginRight="23dp"
-                android:layout_weight="1" />
-        </LinearLayout>
+                <View
+                    android:id="@+id/horizontal_line11"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="#33024272"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/icon_container0" />
 
 
-        <LinearLayout
-            android:id="@+id/linear_layout1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            app:layout_constraintTop_toBottomOf="@+id/linear_layout"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="@id/scroll_view"
-            android:layout_marginTop="12dp">
+                <LinearLayout
+                    android:id="@+id/agent_details"
+                    android:layout_width="0dp"
+                    android:gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="22dp"
+                    app:layout_constraintTop_toBottomOf="@+id/horizontal_line11">
 
-            <ImageView
-                android:id="@+id/pdficon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/pdficon"
-                android:layout_marginLeft="39dp" />
+                    <ImageView
+                        android:id="@+id/agent_pic"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/agent_pic" />
+                <LinearLayout
+                    android:id="@+id/linear_layout2111"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_gravity="center">
+                    <TextView
+                        android:id="@+id/agent_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="0dp"
+                        android:text="John Doe"
+                        android:textColor="@color/black"
+                        android:textSize="17sp"
+                        android:fontFamily="@font/poppins_regular"
+                         />
+                    <TextView
+                        android:id="@+id/contact_agent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="12sp"
+                        android:text="contact"
+                        android:textColor="@color/figmablue"
+                        android:fontFamily="@font/poppins_regular"
+                        />
+                </LinearLayout>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/propdocs1"
-                android:text="Danube Peralz floor plan"
-                android:textSize="14sp"
-                android:textColor="@android:color/white"
-                android:layout_marginLeft="8dp" />
+                <LinearLayout
+                    android:id="@+id/icons"
+                    android:layout_width="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginRight="30dp"
+                    >
+                    <ImageView
+                        android:id="@+id/icon1111"
+                        android:layout_width="wrap_content"
+                        android:layout_height="55dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/message" />
+                    <ImageView
+                        android:id="@+id/icon111111"
+                        android:layout_width="wrap_content"
+                        android:layout_height="55dp"
+                        android:layout_marginLeft="18.2dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/videochat" />
+                    <ImageView
+                        android:id="@+id/icon1111111"
+                        android:layout_width="wrap_content"
+                        android:layout_height="55dp"
+                        android:layout_marginLeft="18.2dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/call1" />
 
-            <ImageButton
-                android:id="@+id/downloadbutton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/downloadbutton"
-                android:background="@android:color/transparent"
-                android:layout_marginRight="23dp"
-                android:layout_weight="1" />
-        </LinearLayout>
+
+                </LinearLayout>
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/overview"
+                    android:layout_width="119dp"
+                    android:layout_height="37dp"
+                    android:layout_marginLeft="26dp"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Overview"
+                    android:textColor="#034271"
+                    android:textSize="21sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/agent_details" />
+
+
+                <TextView
+                    android:id="@+id/propertyDetails"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="26dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="26dp"
+                    android:text="PEARLZ by Danube properties, located in Al Furjan, brings a new change in residential living in the Al Furjan community. The building has been aesthetically designed in a Modern style to seamlessly and beautifully blend with the surroundings. The plot is located within walking distance of the Al Furjan Metro Station. The ground floor consists of Entrance Lobbies for the Residents, Retail stores, "
+                    android:textColor="@color/color1"
+                    android:fontFamily="@font/poppins_regular"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/overview" />
+
+                <View
+                    android:id="@+id/horizontal_line"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@android:color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/propertyDetails" />
+
+                <TextView
+                    android:id="@+id/facilities"
+                    android:layout_width="119dp"
+                    android:layout_height="37dp"
+                    android:layout_marginLeft="26dp"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Facilities"
+                    android:textColor="@color/figmablue"
+                    android:textSize="21sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/propertyDetails" />
+
+                <LinearLayout
+                    android:id="@+id/icon_container"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginEnd="14dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/facilities">
+
+                    <ImageView
+                        android:id="@+id/icon1"
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:layout_weight="1"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/bedrooms" />
+
+                    <ImageView
+                        android:id="@+id/icon2"
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:layout_weight="1"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/bathrooms" />
+
+                    <ImageView
+                        android:id="@+id/icon3"
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:layout_weight="1"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/parking" />
+
+                    <ImageView
+                        android:id="@+id/icon4"
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:layout_weight="1"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/gym" />
+                    <ImageView
+                        android:id="@+id/icon5"
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:layout_weight="1"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/bedrooms" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/icon_container11"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginEnd="14dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/icon_container">
+
+                    <ImageView
+                        android:id="@+id/icon122"
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:layout_weight="1"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/bedrooms" />
+
+                    <ImageView
+                        android:id="@+id/icon222"
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:layout_weight="1"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/bathrooms" />
+
+                    <ImageView
+                        android:id="@+id/icon322"
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:layout_weight="1"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/parking" />
+
+                    <ImageView
+                        android:id="@+id/icon422"
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:layout_weight="1"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/gym" />
+                    <ImageView
+                        android:id="@+id/icon522"
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:layout_weight="1"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/bedrooms" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/Video1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="26dp"
+                    android:layout_marginTop="16dp"
+                    android:text="Video"
+                    android:textColor="@color/figmablue"
+                    android:textSize="21sp"
+                    android:fontFamily="@font/poppins_medium"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/icon_container11" />
+
+                <WebView
+                    android:id="@+id/youtube_video1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="200dp"
+                    android:elevation="4dp"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/Video1" />
 
 
 
-        <View
-            android:id="@+id/horizontal_line2"
-            android:layout_width="0dp"
-            android:layout_height="1dp"
-            android:background="@android:color/white"
-            app:layout_constraintTop_toBottomOf="@+id/linear_layout1"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="18dp" />
+                <TextView
+                    android:id="@+id/documents"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="26dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Property Documents"
+                    android:textColor="@color/figmablue"
+                    android:textSize="21sp"
+                    android:fontFamily="@font/poppins_medium"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/youtube_video1" />
 
-        <Button
-            android:id="@+id/contact"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Contact"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/horizontal_line2"
-            android:layout_marginTop="16dp"/>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraint_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    app:layout_constraintEnd_toEndOf="@id/scroll_view"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/documents">
 
-        <Button
-            android:id="@+id/schedule_viewing"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Schedule viewing"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/contact"
-            android:layout_marginTop="16dp"/>
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/right_guideline"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_end="55dp" />
 
-        <Button
-            android:id="@+id/location_on_map"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Location on map"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/schedule_viewing"
-            android:layout_marginTop="16dp"/>
+                    <ImageView
+                        android:id="@+id/image_before_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="39dp"
+                        android:src="@drawable/pdficon"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
-            android:id="@+id/video"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Video"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/location_on_map"
-            android:layout_marginTop="16dp"/>
+                    <TextView
+                        android:id="@+id/propdocs"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="3dp"
+                        android:text="Danube Peralz Updated"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/poppins_regular"
+                        app:layout_constraintEnd_toStartOf="@+id/right_guideline"
+                        app:layout_constraintStart_toEndOf="@+id/image_before_text"
+                        app:layout_constraintTop_toTopOf="@+id/image_before_text" />
 
-        <Button
-            android:id="@+id/documents_viewer"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Documents viewer"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/video"
-            android:layout_marginTop="16dp"/>
+                    <ImageButton
+                        android:id="@+id/button_after_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/downloadbutton"
+                        app:layout_constraintEnd_toEndOf="@+id/right_guideline"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
-            android:id="@+id/mortgage_calculator"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Mortgage calculator"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/documents_viewer"
-            android:layout_marginTop="16dp"/>
+                    <ImageView
+                        android:id="@+id/pdficon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="39dp"
+                        android:layout_marginTop="12dp"
+                        android:src="@drawable/pdficon"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/image_before_text" />
 
+                    <TextView
+                        android:id="@+id/propdocs1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="2.4dp"
+                        android:text="Danube Peralz floor plan"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/poppins_regular"
+                        app:layout_constraintEnd_toStartOf="@+id/right_guideline"
+                        app:layout_constraintStart_toEndOf="@+id/pdficon"
+                        app:layout_constraintTop_toTopOf="@+id/pdficon" />
+
+                    <ImageButton
+                        android:id="@+id/downloadbutton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/downloadbutton"
+                        app:layout_constraintEnd_toEndOf="@+id/right_guideline"
+                        app:layout_constraintTop_toBottomOf="@+id/button_after_text" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:id="@+id/horizontal_line2"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="18dp"
+                    android:background="@android:color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/constraint_layout" />
+
+                <TextView
+                    android:id="@+id/address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="26dp"
+                    android:layout_marginTop="16dp"
+                    android:text="Location"
+                    android:textColor="@color/figmablue"
+                    android:textSize="21sp"
+                    android:fontFamily="@font/poppins_medium"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/horizontal_line2" />
+
+                <LinearLayout
+                    android:id="@+id/address1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="12dp"
+                    app:layout_constraintTop_toBottomOf="@id/address"
+                    app:layout_constraintStart_toStartOf="parent">
+                    <ImageView
+                        android:id="@+id/image_before_text1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="39dp"
+                        android:src="@drawable/location1"
+                         />
+
+                    <TextView
+                        android:id="@+id/address11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="3dp"
+                        android:text="Address Al Furjan Dubai UAE"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/poppins_regular"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_layout21"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="@id/scroll_view"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:gravity="center"
+                    app:layout_constraintTop_toBottomOf="@+id/address1">
+
+
+
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/map_view_card"
+                            android:layout_width="314dp"
+                            android:layout_height="200dp"
+                            android:layout_marginTop="18dp"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="0dp"
+                            >
+
+                            <com.google.android.gms.maps.MapView
+                                android:id="@+id/map_view"
+                                android:elevation="4dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent" />
+                        </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/star_container1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="23.33dp"
+                    android:layout_marginEnd="33.33dp"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linear_layout21">
+
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/star2"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="0dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/rating1"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5.22dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="4.5  (1225 reviews)"
+                        android:textColor="@color/figmablue"
+                        android:layout_weight="1"/>
+                    <TextView
+                        android:id="@+id/see_all"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="See All"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textColor="@color/figmablue"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/agent_details1"
+                    android:layout_width="0dp"
+                    android:gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="22dp"
+                    app:layout_constraintTop_toBottomOf="@+id/star_container1">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/agent_pic" />
+
+
+                        <TextView
+                            android:id="@+id/agent_name1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="0dp"
+                            android:text="John Doe"
+                            android:textColor="@color/black"
+                            android:textSize="17sp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:layout_weight="1"
+                            />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="56dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/reviewbox"
+                        android:layout_marginEnd="22dp">
+
+                        <ImageView
+                            android:id="@+id/imageView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/star1button"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="5"
+                            android:textColor="@color/figmablue"
+                            android:layout_marginStart="8dp"
+                            android:fontFamily="@font/poppins_medium"
+                            app:layout_constraintStart_toEndOf="@+id/imageView"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintVertical_bias="0.69"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/agentdetails2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="25dp"
+                    android:text="Sample agent details"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins_regular"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/agent_details1" />
+
+                <TextView
+                    android:id="@+id/lastseen"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginRight="25dp"
+                    android:text="6 days ago"
+                    android:textColor="@color/figmablue"
+                    android:fontFamily="@font/poppins_regular"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/agentdetails2" />
+
+                <LinearLayout
+                    android:id="@+id/price"
+                    android:layout_width="0dp"
+                    android:gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="22dp"
+                    app:layout_constraintTop_toBottomOf="@+id/lastseen">
+
+
+                    <TextView
+                        android:id="@+id/costofproperty"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginBottom="31dp"
+                        android:layout_marginEnd="30dp"
+                        android:text="\u062F.\u062556800"
+                        android:layout_weight="1"
+                        android:textColor="@color/black"
+                        android:textSize="32sp"
+                        android:fontFamily="@font/poppins_semibold"
+
+                        />
+
+
+                    <Button
+                        android:id="@+id/booknow"
+                        android:layout_width="156dp"
+                        android:layout_height="43dp"
+                        android:text="Book Now"
+                        android:textSize="20sp"
+                        android:layout_marginBottom="31dp"
+                        android:textColor="@android:color/white"
+                        android:background="@drawable/button_gradient"
+                        android:layout_weight="1"
+                        android:layout_marginRight="18dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:gravity="center"
+                         />
+                </LinearLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
     </androidx.constraintlayout.widget.ConstraintLayout>
-    </ScrollView>
-</androidx.constraintlayout.widget.ConstraintLayout>

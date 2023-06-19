@@ -24,61 +24,116 @@ import androidx.navigation.ui.NavigationUI;
 
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.snackbar.Snackbar;
-import com.acme.propdub.databinding.ActivityMainBinding;
 
 //TODO: populate search code, UI, sidebar code
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private AppBarConfiguration appBarConfiguration;
-    private ActivityMainBinding binding;
+    //  private ActivityMainBinding binding;
     private DrawerLayout drawer;
     private ImageView menuIcon;
-
     private NavigationView navigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-
-        //binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(R.layout.activity_main);
+
         // Initialize the drawer variable
         drawer = findViewById(R.id.drawer_layout);
-
         menuIcon = findViewById(R.id.my_icon);
+
         menuIcon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d("tag1", "tag1");
                 if (!drawer.isDrawerOpen(GravityCompat.START)) {
                     drawer.openDrawer(GravityCompat.START);
-
-                    Log.d("tag1", "tag2");
                 }
             }
         });
+
         navigationView = findViewById(R.id.id_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        /*setSupportActionBar(binding.toolbar);
-
-        drawer =findViewById(R.id.drawer_layout);
-
-
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, binding.toolbar,
-                R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.addDrawerListener(toggle);
-        toggle.syncState();
-
-        binding.fab.setOnClickListener(new View.OnClickListener() {
+        // property details button code
+        View propertyDetailsButton = findViewById(R.id.property_details_button);
+        propertyDetailsButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+            public void onClick(View v) {
+
+                openPropertyDetailsActivity();
             }
         });
-2
-*/
+
+        // agent profile button code
+        View agentButton = findViewById(R.id.agent_button);
+        agentButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                openAgentActivity();
+            }
+        });
+
+        // home button code
+        View homeButton = findViewById(R.id.home_button);
+        homeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                openHomeActivity();
+            }
+        });
+
+        // review popup button code
+        View reviewButton = findViewById(R.id.review_popup_button);
+        reviewButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                openReviewPopupActivity();
+            }
+        });
+
+        // Sign up button code
+        View signupButton = findViewById(R.id.signup_button);
+        signupButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                openSignUpActivity();
+            }
+        });
+
+        // Sign in button code
+        View signinButton = findViewById(R.id.signin_button);
+        signinButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                openSignInActivity();
+            }
+        });
+
+        // search button code
+        View searchButton = findViewById(R.id.search_button);
+        searchButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                openSearchActivity();
+            }
+        });
+
+        // searchmap button code
+        View searchMapButton = findViewById(R.id.search_map_button);
+        searchMapButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                openSearchMapActivity();
+            }
+        });
+
         // property sale button code
         View propertySaleButton = findViewById(R.id.property_sale_button);
         propertySaleButton.setOnClickListener(new View.OnClickListener() {
@@ -86,6 +141,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             public void onClick(View v) {
                 Log.d("tag1", "In sale click");
                 openPropertySaleActivity();
+            }
+        });
+
+        // schedule visit button code
+        View propertyVisitButton = findViewById(R.id.schedule_visit_button);
+        propertyVisitButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d("tag1", "In sale click");
+                openScheduleActivity();
             }
         });
 
@@ -115,9 +180,67 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         startActivity(intent);
     }
 
+    private void openPropertyDetailsActivity() {
+
+        Log.d("tag1", "In sale intent");
+        Intent intent = new Intent(MainActivity.this, PropertyDetails.class);
+        Log.d("tag1", "In sale intent 2");
+        startActivity(intent);
+    }
+
+    private void openSignInActivity() {
+
+        Log.d("tag1", "In sale intent");
+        Intent intent = new Intent(MainActivity.this, login.class);
+        Log.d("tag1", "In sale intent 2");
+        startActivity(intent);
+    }
+
+    private void openSignUpActivity() {
+
+        Log.d("tag1", "In sale intent");
+        Intent intent = new Intent(MainActivity.this, SignUp.class);
+        Log.d("tag1", "In sale intent 2");
+        startActivity(intent);
+    }
+
     // Method to navigate to PropertyRent
     private void openPropertyRentActivity() {
         Intent intent = new Intent(MainActivity.this, PropertyRent.class);
+        startActivity(intent);
+    }
+
+    // Method to navigate to Home activity
+    private void openHomeActivity() {
+        Intent intent = new Intent(MainActivity.this, HomeActivity.class);
+        startActivity(intent);
+    }
+
+    private void openSearchActivity(){
+        Intent intent= new Intent(MainActivity.this, Search.class);
+        startActivity(intent);
+    }
+
+    private void openSearchMapActivity(){
+        Intent intent= new Intent(MainActivity.this, SearchByMap.class);
+        startActivity(intent);
+    }
+
+    // Method to navigate to schedule visit
+    private void openScheduleActivity() {
+        Intent intent = new Intent(MainActivity.this, ScheduleVisit.class);
+        startActivity(intent);
+    }
+
+    // Method to navigate to agent details
+    private void openAgentActivity() {
+        Intent intent = new Intent(MainActivity.this, AgentProfile.class);
+        startActivity(intent);
+    }
+
+    // Method to navigate to agent details
+    private void openReviewPopupActivity() {
+        Intent intent = new Intent(MainActivity.this, ReviewPopup.class);
         startActivity(intent);
     }
 
@@ -125,7 +248,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_main, menu);
-
         MenuItem searchItem = menu.findItem(R.id.action_search);
         SearchView searchView = (SearchView) searchItem.getActionView();
 
@@ -145,7 +267,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 return true;
             }
         });
-
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -172,7 +293,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 startActivity(new Intent(this, AboutUs.class));
                 break;
         }
-
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }

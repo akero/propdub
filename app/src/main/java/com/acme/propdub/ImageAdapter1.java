@@ -29,44 +29,28 @@ public class ImageAdapter1 extends RecyclerView.Adapter<ImageAdapter1.ViewHolder
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view= null;
+        View view = null;
         try {
             view = inflater.inflate(R.layout.image_item1, parent, false);
         } catch (Exception e) {
             Log.d("tag6", e.toString());
         }
-            return new ViewHolder(view);
-
-
+        return new ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-       try {
-           int imageId = imageIds[position];
-           Bitmap originalBitmap = BitmapFactory.decodeResource(inflater.getContext().getResources(), imageId);
-
-           float aspectRatio = (float) originalBitmap.getWidth() / (float) originalBitmap.getHeight();
-           int newHeight = (int) (screenWidth / aspectRatio);
-
-           Bitmap scaledBitmap = Bitmap.createScaledBitmap(originalBitmap, screenWidth, newHeight, true);
-           holder.imageView.setImageBitmap(scaledBitmap);
-
-           // Set ImageView layout parameters
-           /* ViewGroup.LayoutParams layoutParams = holder.imageView.getLayoutParams();
-           layoutParams.width = screenWidth;
-           layoutParams.height = newHeight;
-           holder.imageView.setLayoutParams(layoutParams);
-       */
-       }
-
-       catch(Exception e){
-           Log.d("tag6",e.toString());
-       }
+        int imageId = imageIds[position];
+        Bitmap originalBitmap = BitmapFactory.decodeResource(inflater.getContext().getResources(), imageId);
+        float aspectRatio = (float) originalBitmap.getWidth() / (float) originalBitmap.getHeight();
+        int newHeight = (int) (screenWidth / aspectRatio);
+        Bitmap scaledBitmap = Bitmap.createScaledBitmap(originalBitmap, screenWidth, newHeight, true);
+        holder.imageView.setImageBitmap(scaledBitmap);
     }
 
     @Override
     public int getItemCount() {
+
         return imageIds.length;
     }
 

@@ -1,0 +1,6 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@android:color/transparent" /> <!-- Make the shape transparent -->
+    <corners android:radius="20dp" /> <!-- Adjust the radius value for the desired corner roundness -->
+    <stroke
+        android:color="#004274" /> <!-- Set the desired width and border color -->
+</shape>

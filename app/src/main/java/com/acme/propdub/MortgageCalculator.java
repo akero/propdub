@@ -1,26 +1,31 @@
 package com.acme.propdub;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+
 import android.os.Bundle;
+import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import java.text.DecimalFormat;
 
-//Taking inputs in edittext and passing values to MortgageCalculatorCode to calculate values
-public class MortgageCalculator extends AppCompatActivity{
+public class MortgageCalculator extends AppCompatActivity {
 
-    DecimalFormat df = new DecimalFormat("#.##");
     private EditText totalAmountEditText, downPaymentEditText, interestRateEditText, loanTermEditText, propertyTaxEditText, homeInsuranceEditText, pmiEditText;
     private Button calculateButton;
-    private TextView monthlyMortgageTextView, principalAndInterestTextView, monthlyPropertyTaxTextView, monthlyHomeInsuranceTextView, monthlyPMITextView;
+    private TextView monthlyMortgageTextView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mortgage_calculator);
-
+try{
         totalAmountEditText = findViewById(R.id.totalAmountEditText);
         downPaymentEditText = findViewById(R.id.downPaymentEditText);
         interestRateEditText = findViewById(R.id.interestRateEditText);
@@ -29,11 +34,12 @@ public class MortgageCalculator extends AppCompatActivity{
         homeInsuranceEditText = findViewById(R.id.homeInsuranceEditText);
         pmiEditText = findViewById(R.id.pmiEditText);
         calculateButton = findViewById(R.id.calculateButton);
-        monthlyMortgageTextView = findViewById(R.id.monthlyMortgageTextView);
-        principalAndInterestTextView = findViewById(R.id.principalAndInterestTextView);
-        monthlyPropertyTaxTextView = findViewById(R.id.monthlyPropertyTaxTextView);
-        monthlyHomeInsuranceTextView = findViewById(R.id.monthlyHomeInsuranceTextView);
-        monthlyPMITextView = findViewById(R.id.monthlyPMITextView);
+        monthlyMortgageTextView = findViewById(R.id.top_text);
+        ActionBar actionBar = getSupportActionBar();
+        if (actionBar != null) {
+            actionBar.setDisplayHomeAsUpEnabled(true);
+            actionBar.setHomeAsUpIndicator(R.drawable.back_button);
+            actionBar.setTitle("Mortgage Calculator");}
 
         calculateButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,34 +52,35 @@ public class MortgageCalculator extends AppCompatActivity{
                 double homeInsurance = Double.parseDouble(homeInsuranceEditText.getText().toString());
                 double pmi = Double.parseDouble(pmiEditText.getText().toString());
 
-            //calculating mortgage
                 MortgageCalculatorCode mortgageCalculator = new MortgageCalculatorCode(totalAmount, downPayment, interestRate, loanTerm, propertyTax, homeInsurance, pmi);
                 double monthlyMortgage = mortgageCalculator.calculateMonthlyMortgage();
-                double principalAndInterest = mortgageCalculator.calculatePrincipalAndInterest();
-                double monthlyPropertyTax = mortgageCalculator.calculatePropertyTax();
-                double monthlyHomeInsurance = mortgageCalculator.calculateHomeInsurance();
-                double monthlyPMI = mortgageCalculator.calculatePMI();
 
-            //trimming to two decimal points
-                String formattedValue = df.format(monthlyMortgage);
-                monthlyMortgage = Double.parseDouble(formattedValue);
-                formattedValue = df.format(principalAndInterest);
-                principalAndInterest = Double.parseDouble(formattedValue);
-                formattedValue = df.format(monthlyPropertyTax);
-                monthlyPropertyTax = Double.parseDouble(formattedValue);
-                formattedValue = df.format(monthlyHomeInsurance);
-                monthlyHomeInsurance = Double.parseDouble(formattedValue);
-                formattedValue = df.format(monthlyPMI);
-                monthlyPMI = Double.parseDouble(formattedValue);
+                // Format to two decimal points
+                DecimalFormat df = new DecimalFormat("#.00");
+                String formattedMonthlyMortgage = df.format(monthlyMortgage);
+                String dihramsymbol="\u062F.\u0625";
 
-            //setting textview
-                monthlyMortgageTextView.setText("Monthly Mortgage: " + String.format("%.2f", monthlyMortgage));
-                principalAndInterestTextView.setText("Principal and Interest: " + String.format("%.2f", principalAndInterest));
-                monthlyPropertyTaxTextView.setText("Monthly Property Tax: " + String.format("%.2f", monthlyPropertyTax));
-                monthlyHomeInsuranceTextView.setText("Monthly Home Insurance: " + String.format("%.2f", monthlyHomeInsurance));
-                monthlyPMITextView.setText("Monthly PMI: " + String.format("%.2f", monthlyPMI));
-                Toast.makeText(MortgageCalculator.this, "Monthly Mortgage: " + monthlyMortgage, Toast.LENGTH_LONG).show();
+                monthlyMortgageTextView.setText("Monthly Mortgage: " +dihramsymbol+ " "+ formattedMonthlyMortgage);
+                ScrollView scrollView = (ScrollView) findViewById(R.id.scroll);
+                scrollView.fullScroll(ScrollView.FOCUS_UP);
+
+                Toast.makeText(MortgageCalculator.this, "Monthly Mortgage: " + formattedMonthlyMortgage, Toast.LENGTH_LONG).show();
             }
         });
+    }catch(Exception e){
+        Log.d("tag11",e.toString());
+    }
+}
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle item selection
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                // Respond to the action bar's Up/Home button
+                onBackPressed();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 }
