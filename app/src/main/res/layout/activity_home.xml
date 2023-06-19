@@ -9,14 +9,88 @@
     tools:openDrawer="start"
     tools:context=".HomeActivity">
 
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/topbuttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="@drawable/homerounded">
+
+            <TextView
+                android:id="@+id/propertytype"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Property Type"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="12sp"
+                android:textColor="#6A778B"
+                app:layout_constraintStart_toStartOf="@id/topbuttons"
+                app:layout_constraintTop_toTopOf="@id/topbuttons"/>
+
+            <View
+                android:id="@+id/line"
+                android:layout_width="1dp"
+                android:layout_height="30dp"
+                app:layout_constraintStart_toEndOf="@id/propertytype"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/cities"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="All Cities"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="12sp"
+                android:textColor="#6A778B"
+                app:layout_constraintStart_toEndOf="@id/line"
+                app:layout_constraintTop_toTopOf="@id/topbuttons"/>
+
+            <View
+                android:id="@+id/line1"
+                android:layout_width="1dp"
+                android:layout_height="30dp"
+                app:layout_constraintStart_toEndOf="@id/cities"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/bedrooms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bedrooms"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="12sp"
+                android:textColor="#6A778B"
+                app:layout_constraintStart_toEndOf="@id/line1"
+                app:layout_constraintTop_toTopOf="@id/topbuttons"/>
+
+            <View
+                android:id="@+id/line2"
+                android:layout_width="1dp"
+                android:layout_height="30dp"
+                app:layout_constraintStart_toEndOf="@id/bedrooms"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/filtersearch"
+                app:layout_constraintStart_toEndOf="@id/line2"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/topbuttons"
             app:layout_constraintStart_toStartOf="parent"
             android:text= "Our Recommendations"
             android:fontFamily="@font/poppins_medium"
@@ -41,7 +115,7 @@
             android:background="#00000000"
             android:textSize="17sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/topbuttons" />
 
         <androidx.viewpager2.widget.ViewPager2
             android:id="@+id/viewPager"
@@ -261,17 +335,21 @@
                 <!-- Add more CoordinatorLayouts here as needed -->
             </LinearLayout>
         </HorizontalScrollView>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/id_view"
         android:layout_width="261dp"
         android:layout_height="match_parent"
+        tools:visibility="gone"
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
         android:background="#004274"
         app:itemTextColor="@color/white"
         app:headerLayout="@layout/nav_header_main"
         app:menu="@menu/activity_main_drawer" />
+
 
 </androidx.drawerlayout.widget.DrawerLayout>

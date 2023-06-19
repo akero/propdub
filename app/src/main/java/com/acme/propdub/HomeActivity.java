@@ -11,6 +11,7 @@ import androidx.viewpager2.widget.MarginPageTransformer;
 import androidx.viewpager2.widget.ViewPager2;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.util.TypedValue;
@@ -40,7 +41,17 @@ try{
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
 
-        viewPager = findViewById(R.id.viewPager);
+    View lineView = findViewById(R.id.line);
+    View lineView1 = findViewById(R.id.line1);
+    View lineView2 = findViewById(R.id.line2);
+    int alphaValue = (int) (0.2 * 255); // replace 0.2 with the actual alpha value
+    int color = Color.argb(alphaValue, 0, 66, 116);
+    lineView.setBackgroundColor(color);
+    lineView1.setBackgroundColor(color);
+    lineView2.setBackgroundColor(color);
+
+
+    viewPager = findViewById(R.id.viewPager);
         viewPager.setAdapter(new ImageAdapter());
         viewPager.setPageTransformer(new DepthPageTransformer());
 
