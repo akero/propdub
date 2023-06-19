@@ -199,7 +199,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/featured"
@@ -210,7 +209,6 @@
                 android:layout_height="192dp"
                 android:layout_marginStart="11dp"
                 android:layout_marginEnd="16dp"
-
                 android:orientation="horizontal">
 
                 <androidx.cardview.widget.CardView
@@ -221,19 +219,16 @@
                     app:cardCornerRadius="8dp"
                     app:cardPreventCornerOverlap="true"
                     app:cardUseCompatPadding="true">
+
                 <androidx.coordinatorlayout.widget.CoordinatorLayout
                     android:id="@+id/featured1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-
-
                     android:background="@drawable/border_background">
 
                     <FrameLayout
-
                         android:layout_width="196dp"
                         android:layout_height="114dp"
-
                         android:background="@drawable/image_background">
 
                         <ImageView
@@ -259,7 +254,6 @@
                         android:text="Ellington House 4"
                         android:layout_marginEnd="6dp"
                         android:layout_marginStart="12dp"
-
                         android:textColor="#0A2753" />
 
                     <LinearLayout
@@ -272,8 +266,7 @@
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-android:layout_marginTop="3dp"
-
+                            android:layout_marginTop="3dp"
                             android:src="@drawable/pinicon" />
 
                         <TextView
@@ -284,9 +277,9 @@ android:layout_marginTop="3dp"
                             android:text="Dubai Hills Park"
                             android:textColor="#6A778B"
                             android:textSize="12sp" />
+
                     </LinearLayout>
                 </androidx.coordinatorlayout.widget.CoordinatorLayout>
-
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
@@ -297,6 +290,7 @@ android:layout_marginTop="3dp"
                     app:cardCornerRadius="8dp"
                     app:cardPreventCornerOverlap="true"
                     app:cardUseCompatPadding="true">
+
                 <androidx.coordinatorlayout.widget.CoordinatorLayout
                     android:id="@+id/featured2"
                     android:layout_width="match_parent"
@@ -304,13 +298,11 @@ android:layout_marginTop="3dp"
                     android:background="@drawable/border_background">
 
                     <FrameLayout
-
                         android:layout_width="196dp"
                         android:layout_height="114dp"
                         android:background="@drawable/image_background">
 
                         <ImageView
-
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:scaleType="centerCrop"
@@ -346,7 +338,6 @@ android:layout_marginTop="3dp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="3dp"
-
                             android:src="@drawable/pinicon" />
 
                         <TextView
@@ -357,9 +348,11 @@ android:layout_marginTop="3dp"
                             android:text="Dubai Hills Park"
                             android:textColor="#6A778B"
                             android:textSize="12sp" />
+
                     </LinearLayout>
                 </androidx.coordinatorlayout.widget.CoordinatorLayout>
                 </androidx.cardview.widget.CardView>
+
                 <androidx.cardview.widget.CardView
                     android:id="@+id/featured11"
                     android:layout_width="wrap_content"
@@ -372,8 +365,6 @@ android:layout_marginTop="3dp"
                     <androidx.coordinatorlayout.widget.CoordinatorLayout
                     android:id="@+id/featured3"
                     android:layout_width="match_parent"
-
-
                     android:layout_height="match_parent"
                     android:background="@drawable/border_background">
 
@@ -383,7 +374,6 @@ android:layout_marginTop="3dp"
                         android:background="@drawable/image_background">
 
                         <ImageView
-
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:scaleType="centerCrop"
@@ -419,7 +409,6 @@ android:layout_marginTop="3dp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="3dp"
-
                             android:src="@drawable/pinicon" />
 
                         <TextView
@@ -439,12 +428,10 @@ android:layout_marginTop="3dp"
                     android:layout_height="match_parent"
                     android:background="@android:color/transparent"/>
                 <!-- Add more CoordinatorLayouts here as needed -->
+
             </LinearLayout>
-
         </HorizontalScrollView>
-
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/id_view"
@@ -457,6 +444,5 @@ android:layout_marginTop="3dp"
         app:itemTextColor="@color/white"
         app:headerLayout="@layout/nav_header_main"
         app:menu="@menu/activity_main_drawer" />
-
 
 </androidx.drawerlayout.widget.DrawerLayout>

@@ -23,7 +23,7 @@ import android.widget.TextView;
 
 import com.google.android.material.navigation.NavigationView;
 
-public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
+public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private NavigationView navigationView;
     DrawerLayout drawerLayout;
     private ViewPager2 viewPager;
@@ -32,105 +32,106 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-try{
-        ActionBar actionBar = getSupportActionBar();
-        if (actionBar != null) {
-            actionBar.setDisplayHomeAsUpEnabled(true);
-            actionBar.setHomeAsUpIndicator(R.drawable.menubutton);
-            actionBar.setTitle("Noida, India");}
+        try {
+            ActionBar actionBar = getSupportActionBar();
+            if (actionBar != null) {
+                actionBar.setDisplayHomeAsUpEnabled(true);
+                actionBar.setHomeAsUpIndicator(R.drawable.menubutton);
+                actionBar.setTitle("Noida, India");
+            }
 
-        drawerLayout = findViewById(R.id.drawer_layout);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawerLayout.addDrawerListener(toggle);
-        toggle.syncState();
+            drawerLayout = findViewById(R.id.drawer_layout);
+            ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+            drawerLayout.addDrawerListener(toggle);
+            toggle.syncState();
 
-        //setting color of the demarcators in top bar
-    View lineView = findViewById(R.id.line);
-    View lineView1 = findViewById(R.id.line1);
-    View lineView2 = findViewById(R.id.line2);
-    int alphaValue = (int) (0.2 * 255); // replace 0.2 with the actual alpha value
-    int color = Color.argb(alphaValue, 0, 66, 116);
-    lineView.setBackgroundColor(color);
-    lineView1.setBackgroundColor(color);
-    lineView2.setBackgroundColor(color);
+            //setting color of the demarcators in top bar
+            View lineView = findViewById(R.id.line);
+            View lineView1 = findViewById(R.id.line1);
+            View lineView2 = findViewById(R.id.line2);
+            int alphaValue = (int) (0.2 * 255); // replace 0.2 with the actual alpha value
+            int color = Color.argb(alphaValue, 0, 66, 116);
+            lineView.setBackgroundColor(color);
+            lineView1.setBackgroundColor(color);
+            lineView2.setBackgroundColor(color);
 
-    TextView proptype=findViewById(R.id.ourrecommendations);
-    int h= proptype.getMeasuredHeight();
-    int w= proptype.getMeasuredWidth();
-    Log.d("taga", String.valueOf(h)+" "+String.valueOf(w));
+            TextView proptype = findViewById(R.id.ourrecommendations);
+            int h = proptype.getMeasuredHeight();
+            int w = proptype.getMeasuredWidth();
+            Log.d("taga", String.valueOf(h) + " " + String.valueOf(w));
 
-    viewPager = findViewById(R.id.viewPager);
-        viewPager.setAdapter(new ImageAdapter());
-        viewPager.setPageTransformer(new DepthPageTransformer());
+            viewPager = findViewById(R.id.viewPager);
+            viewPager.setAdapter(new ImageAdapter());
+            viewPager.setPageTransformer(new DepthPageTransformer());
 
-        // This makes lower pages of the ViewPager show
-        viewPager.setOffscreenPageLimit(3);
-    // Positive margin to make adjacent pages visible
-    viewPager.setPageTransformer(new MarginPageTransformer((int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 16, getResources().getDisplayMetrics())));
+            // This makes lower pages of the ViewPager show
+            viewPager.setOffscreenPageLimit(3);
+            // Positive margin to make adjacent pages visible
+            viewPager.setPageTransformer(new MarginPageTransformer((int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 16, getResources().getDisplayMetrics())));
 
-    navigationView = findViewById(R.id.id_view);
-        navigationView.setNavigationItemSelectedListener(this);
+            navigationView = findViewById(R.id.id_view);
+            navigationView.setNavigationItemSelectedListener(this);
 
-    CoordinatorLayout coordinatorLayout = findViewById(R.id.featured1);
-        coordinatorLayout.setOnClickListener(new CoordinatorLayout.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            startActivity(new Intent(HomeActivity.this, PropertyDetails.class));
+            CoordinatorLayout coordinatorLayout = findViewById(R.id.featured1);
+            coordinatorLayout.setOnClickListener(new CoordinatorLayout.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    startActivity(new Intent(HomeActivity.this, PropertyDetails.class));
+                }
+            });
+
+            CoordinatorLayout coordinatorLayout1 = findViewById(R.id.featured2);
+
+            coordinatorLayout1.setOnClickListener(new CoordinatorLayout.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    startActivity(new Intent(HomeActivity.this, PropertyDetails.class));
+                }
+            });
+
+            CoordinatorLayout coordinatorLayout2 = findViewById(R.id.featured3);
+            coordinatorLayout2.setOnClickListener(new CoordinatorLayout.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    startActivity(new Intent(HomeActivity.this, PropertyDetails.class));
+                }
+            });
+
+            final View view1 = findViewById(R.id.ourrecommendations);
+            final View view2 = findViewById(R.id.topbuttons1);
+
+            view1.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
+                @Override
+                public void onGlobalLayout() {
+                    // Ensure we call this only once
+                    if (Build.VERSION.SDK_INT < Build.VERSION_CODES.JELLY_BEAN) {
+                        view1.getViewTreeObserver().removeGlobalOnLayoutListener(this);
+                    } else {
+                        view1.getViewTreeObserver().removeOnGlobalLayoutListener(this);
+                    }
+
+                    int[] location1 = new int[2];
+                    int[] location2 = new int[2];
+
+                    view1.getLocationOnScreen(location1);
+                    view2.getLocationOnScreen(location2);
+
+                    int xDistance = Math.abs(location1[0] - location2[0]);
+                    int yDistance = Math.abs(location1[1] - location2[1]);
+
+                    Log.d("taga", "X Distance: " + xDistance + " pixels, Y Distance: " + yDistance + " pixels");
+                }
+            });
+        } catch (Exception e) {
+            Log.d("tag15", e.toString());
         }
-    });
-
-        CoordinatorLayout coordinatorLayout1 = findViewById(R.id.featured2);
-
-        coordinatorLayout1.setOnClickListener(new CoordinatorLayout.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(HomeActivity.this, PropertyDetails.class));
-            }
-        });
-
-        CoordinatorLayout coordinatorLayout2 = findViewById(R.id.featured3);
-        coordinatorLayout2.setOnClickListener(new CoordinatorLayout.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(HomeActivity.this, PropertyDetails.class));
-            }
-        });
-
-    final View view1 = findViewById(R.id.ourrecommendations);
-    final View view2 = findViewById(R.id.topbuttons1);
-
-    view1.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
-        @Override
-        public void onGlobalLayout() {
-            // Ensure we call this only once
-            if (Build.VERSION.SDK_INT < Build.VERSION_CODES.JELLY_BEAN) {
-                view1.getViewTreeObserver().removeGlobalOnLayoutListener(this);
-            } else {
-                view1.getViewTreeObserver().removeOnGlobalLayoutListener(this);
-            }
-
-            int[] location1 = new int[2];
-            int[] location2 = new int[2];
-
-            view1.getLocationOnScreen(location1);
-            view2.getLocationOnScreen(location2);
-
-            int xDistance = Math.abs(location1[0] - location2[0]);
-            int yDistance = Math.abs(location1[1] - location2[1]);
-
-            Log.d("taga", "X Distance: " + xDistance + " pixels, Y Distance: " + yDistance + " pixels");
-        }
-    });
-}catch (Exception e){
-    Log.d("tag15",e.toString());}
     }
 
     @Override
-    public void onBackPressed(){
-
-
+    public void onBackPressed() {
         super.onBackPressed();
     }
+
     //menu code
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -159,8 +160,8 @@ try{
     }
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem item){
-        if(item.getItemId()== android.R.id.home){
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
             DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);
             if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
                 drawerLayout.closeDrawer(GravityCompat.START);
@@ -171,5 +172,5 @@ try{
         }
 
         return super.onOptionsItemSelected(item);
-        }
     }
+}
