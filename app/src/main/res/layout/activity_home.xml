@@ -16,40 +16,47 @@
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/topbuttons1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
+            android:layout_width="328dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="16dp"
             app:cardCornerRadius="10dp"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:cardElevation="2dp"
             app:strokeColor="#FFFFFF"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
             app:strokeWidth="1dp">
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/topbuttons"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:background="@drawable/homerounded">
 
             <TextView
+                app:layout_constraintVertical_bias="0.6"
                 android:id="@+id/propertytype"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Property Type"
                 android:fontFamily="@font/poppins_regular"
                 android:textSize="12sp"
-                android:textColor="#6A778B"
+                android:textColor="#E66A778B"
                 app:layout_constraintEnd_toStartOf="@id/line"
                 app:layout_constraintStart_toStartOf="@id/topbuttons"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toTopOf="@id/topbuttons"/>
 
             <View
                 android:id="@+id/line"
                 android:layout_width="1dp"
                 android:layout_height="30dp"
+                app:layout_constraintVertical_bias="0.6"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/cities"
                 app:layout_constraintStart_toEndOf="@id/propertytype"
                 app:layout_constraintTop_toTopOf="parent"/>
 
@@ -58,16 +65,21 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="All Cities"
+                app:layout_constraintVertical_bias="0.6"
                 android:fontFamily="@font/poppins_regular"
                 app:layout_constraintEnd_toStartOf="@id/line1"
                 android:textSize="12sp"
-                android:textColor="#6A778B"
+                android:textColor="#E66A778B"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@id/line"
                 app:layout_constraintTop_toTopOf="@id/topbuttons"/>
 
             <View
                 android:id="@+id/line1"
                 android:layout_width="1dp"
+                app:layout_constraintVertical_bias="0.6"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/bedrooms"
                 android:layout_height="30dp"
                 app:layout_constraintStart_toEndOf="@id/cities"
                 app:layout_constraintTop_toTopOf="parent"/>
@@ -77,10 +89,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Bedrooms"
+                app:layout_constraintBottom_toBottomOf="parent"
                 android:fontFamily="@font/poppins_regular"
                 app:layout_constraintEnd_toStartOf="@id/line2"
                 android:textSize="12sp"
-                android:textColor="#6A778B"
+                android:textColor="#E66A778B"
+                app:layout_constraintVertical_bias="0.6"
                 app:layout_constraintStart_toEndOf="@id/line1"
                 app:layout_constraintTop_toTopOf="@id/topbuttons"/>
 
@@ -88,22 +102,30 @@
                 android:id="@+id/line2"
                 android:layout_width="1dp"
                 android:layout_height="30dp"
+                app:layout_constraintVertical_bias="0.6"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/image"
                 app:layout_constraintStart_toEndOf="@id/bedrooms"
                 app:layout_constraintTop_toTopOf="parent"/>
 
             <ImageView
+                android:id="@+id/image"
+                app:layout_constraintVertical_bias="0.6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/filtersearch"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@id/line2"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
-        </com.google.android.material.card.MaterialCardView>
+    </com.google.android.material.card.MaterialCardView>
 
 
         <TextView
+            android:id="@+id/ourrecommendations"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@id/topbuttons1"

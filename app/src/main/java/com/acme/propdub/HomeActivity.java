@@ -12,11 +12,14 @@ import androidx.viewpager2.widget.ViewPager2;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.util.TypedValue;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewTreeObserver;
+import android.widget.TextView;
 
 import com.google.android.material.navigation.NavigationView;
 
@@ -41,6 +44,7 @@ try{
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
 
+        //setting color of the demarcators in top bar
     View lineView = findViewById(R.id.line);
     View lineView1 = findViewById(R.id.line1);
     View lineView2 = findViewById(R.id.line2);
@@ -50,6 +54,10 @@ try{
     lineView1.setBackgroundColor(color);
     lineView2.setBackgroundColor(color);
 
+    TextView proptype=findViewById(R.id.ourrecommendations);
+    int h= proptype.getMeasuredHeight();
+    int w= proptype.getMeasuredWidth();
+    Log.d("taga", String.valueOf(h)+" "+String.valueOf(w));
 
     viewPager = findViewById(R.id.viewPager);
         viewPager.setAdapter(new ImageAdapter());
@@ -88,10 +96,41 @@ try{
             }
         });
 
+    final View view1 = findViewById(R.id.ourrecommendations);
+    final View view2 = findViewById(R.id.topbuttons1);
+
+    view1.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
+        @Override
+        public void onGlobalLayout() {
+            // Ensure we call this only once
+            if (Build.VERSION.SDK_INT < Build.VERSION_CODES.JELLY_BEAN) {
+                view1.getViewTreeObserver().removeGlobalOnLayoutListener(this);
+            } else {
+                view1.getViewTreeObserver().removeOnGlobalLayoutListener(this);
+            }
+
+            int[] location1 = new int[2];
+            int[] location2 = new int[2];
+
+            view1.getLocationOnScreen(location1);
+            view2.getLocationOnScreen(location2);
+
+            int xDistance = Math.abs(location1[0] - location2[0]);
+            int yDistance = Math.abs(location1[1] - location2[1]);
+
+            Log.d("taga", "X Distance: " + xDistance + " pixels, Y Distance: " + yDistance + " pixels");
+        }
+    });
 }catch (Exception e){
     Log.d("tag15",e.toString());}
     }
 
+    @Override
+    public void onBackPressed(){
+
+
+        super.onBackPressed();
+    }
     //menu code
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
