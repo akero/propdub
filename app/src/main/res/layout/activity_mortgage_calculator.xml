@@ -5,7 +5,6 @@
     android:id="@+id/scroll"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-
     android:fillViewport="true">
 
 <androidx.constraintlayout.widget.ConstraintLayout
@@ -14,8 +13,6 @@
     android:layout_height="wrap_content"
     android:paddingBottom="20dp"
     tools:context=".MortgageCalculator">
-
-
 
     <TextView
         android:id="@+id/top_text"
@@ -313,8 +310,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
-
-
                 <EditText
                     android:id="@+id/totalAmountEditText"
                     style="@style/CustomEditTextHintColor"
@@ -332,6 +327,7 @@
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -343,6 +339,7 @@
                     app:layout_constraintEnd_toStartOf="@+id/vertical_line"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
+
                 <View
                     android:id="@+id/vertical_line"
                     android:layout_width="1dp"
@@ -363,8 +360,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/constraintlayout1">
 
-
-
                 <EditText
                     android:id="@+id/downPaymentEditText"
                     style="@style/CustomEditTextHintColor"
@@ -382,6 +377,7 @@
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -393,6 +389,7 @@
                     app:layout_constraintEnd_toStartOf="@+id/vertical_line1"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
+
                 <View
                     android:id="@+id/vertical_line1"
                     android:layout_width="1dp"
@@ -414,8 +411,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/constraintlayout2">
 
-
-
                 <EditText
                     android:id="@+id/interestRateEditText"
                     style="@style/CustomEditTextHintColor"
@@ -434,6 +429,7 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -445,6 +441,7 @@
                     app:layout_constraintEnd_toStartOf="@+id/vertical_line3"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
+
                 <View
                     android:id="@+id/vertical_line3"
                     android:layout_width="1dp"
@@ -466,8 +463,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/constraintlayout3">
 
-
-
                 <EditText
                     android:id="@+id/loanTermEditText"
                     style="@style/CustomEditTextHintColor"
@@ -485,6 +480,7 @@
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -496,6 +492,7 @@
                     app:layout_constraintEnd_toStartOf="@+id/vertical_line2"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
+
                 <View
                     android:id="@+id/vertical_line2"
                     android:layout_width="1dp"
@@ -517,8 +514,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/constraintlayout4">
 
-
-
                 <EditText
                     android:id="@+id/propertyTaxEditText"
                     style="@style/CustomEditTextHintColor"
@@ -536,6 +531,7 @@
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -547,6 +543,7 @@
                     app:layout_constraintEnd_toStartOf="@+id/vertical_line4"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
+
                 <View
                     android:id="@+id/vertical_line4"
                     android:layout_width="1dp"
@@ -567,8 +564,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/constraintlayout5">
 
-
-
                 <EditText
                     android:id="@+id/homeInsuranceEditText"
                     style="@style/CustomEditTextHintColor"
@@ -586,6 +581,7 @@
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -597,6 +593,7 @@
                     app:layout_constraintEnd_toStartOf="@+id/vertical_line5"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
+
                 <View
                     android:id="@+id/vertical_line5"
                     android:layout_width="1dp"
@@ -617,8 +614,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/constraintlayout6">
 
-
-
                 <EditText
                     android:id="@+id/pmiEditText"
                     style="@style/CustomEditTextHintColor"
@@ -636,6 +631,7 @@
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -647,6 +643,7 @@
                     app:layout_constraintEnd_toStartOf="@+id/vertical_line6"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
+
                 <View
                     android:id="@+id/vertical_line6"
                     android:layout_width="1dp"

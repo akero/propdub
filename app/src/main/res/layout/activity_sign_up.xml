@@ -4,14 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context=".SignUp"
-    >
+    tools:context=".SignUp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingBottom="20dp"
-        >
+        android:paddingBottom="20dp">
 
         <ImageView
             android:id="@+id/img0"
@@ -30,8 +28,7 @@
             app:layout_constraintTop_toTopOf="@id/img0"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginTop="164dp"
-            android:layout_marginStart="23dp"
-            />
+            android:layout_marginStart="23dp"/>
 
         <TextView
             android:id="@+id/welcome"
@@ -43,8 +40,7 @@
             android:fontFamily="@font/poppins_regular"
             app:layout_constraintTop_toBottomOf="@+id/login"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="23dp"
-            />
+            android:layout_marginStart="23dp"/>
 
         <TextView
             android:id="@+id/txt"
@@ -56,8 +52,7 @@
             android:textColor="@color/figmabluedark"
             android:textSize="14sp"
             android:layout_marginStart="22dp"
-            android:layout_marginTop="30dp"
-            />
+            android:layout_marginTop="30dp"/>
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintlayout1"
@@ -69,8 +64,6 @@
             app:layout_constraintTop_toBottomOf="@id/txt"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent">
-
-
 
             <EditText
                 android:id="@+id/totalAmountEditText"
@@ -121,8 +114,7 @@
             android:textColor="@color/figmabluedark"
             android:textSize="14sp"
             android:layout_marginStart="22dp"
-            android:layout_marginTop="12dp"
-            />
+            android:layout_marginTop="12dp"/>
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintlayout111"
@@ -134,8 +126,6 @@
             app:layout_constraintTop_toBottomOf="@id/text1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent">
-
-
 
             <EditText
                 android:id="@+id/totalAmountEditText11"
@@ -186,8 +176,7 @@
             android:textColor="@color/figmabluedark"
             android:textSize="14sp"
             android:layout_marginStart="22dp"
-            android:layout_marginTop="12dp"
-            />
+            android:layout_marginTop="12dp" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintlayout11"
@@ -199,8 +188,6 @@
             app:layout_constraintTop_toBottomOf="@id/txt2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent">
-
-
 
             <EditText
                 android:id="@+id/totalAmountEditText1"
@@ -219,6 +206,7 @@
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -250,8 +238,7 @@
             android:layout_marginTop="27dp"
             android:layout_marginEnd="23dp"
             android:layout_marginStart="23dp"
-            android:text="Sign Up"
-            />
+            android:text="Sign Up"/>
 
         <LinearLayout
             android:id="@+id/linearlayout1"
@@ -400,7 +387,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="21dp"
             android:layout_marginEnd="32dp"
-
             app:layout_constraintEnd_toStartOf="@+id/img3"
             app:layout_constraintBottom_toBottomOf="parent"
             android:layout_marginStart="144dp"

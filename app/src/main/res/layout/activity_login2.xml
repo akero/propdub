@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context=".login"
-    >
+    tools:context=".login">
 
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
@@ -29,8 +28,7 @@
         app:layout_constraintTop_toTopOf="@+id/img0"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="164dp"
-        android:layout_marginStart="23dp"
-        />
+        android:layout_marginStart="23dp"/>
 
     <TextView
         android:id="@+id/welcome"
@@ -42,8 +40,7 @@
         android:fontFamily="@font/poppins_regular"
         app:layout_constraintTop_toBottomOf="@+id/login"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginStart="23dp"
-        />
+        android:layout_marginStart="23dp"/>
 
     <TextView
         android:id="@+id/txt"
@@ -55,8 +52,7 @@
         android:textColor="@color/figmabluedark"
         android:textSize="14sp"
         android:layout_marginStart="22dp"
-        android:layout_marginTop="30dp"
-        />
+        android:layout_marginTop="30dp"/>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintlayout1"
@@ -68,8 +64,6 @@
         app:layout_constraintTop_toBottomOf="@id/txt"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
-
-
 
     <EditText
         android:id="@+id/totalAmountEditText"
@@ -120,8 +114,7 @@
         android:textColor="@color/figmabluedark"
         android:textSize="14sp"
         android:layout_marginStart="22dp"
-        android:layout_marginTop="12dp"
-        />
+        android:layout_marginTop="12dp"/>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintlayout11"
@@ -186,8 +179,7 @@
         android:clickable="true"
         android:focusable="true"
         android:layout_marginEnd="23dp"
-        android:layout_marginTop="10dp"
-        />
+        android:layout_marginTop="10dp" />
 
     <Button
         android:id="@+id/btn"
@@ -199,8 +191,7 @@
         android:layout_marginTop="24dp"
         android:layout_marginEnd="23dp"
         android:layout_marginStart="23dp"
-        android:text="Sign In"
-/>
+        android:text="Sign In"/>
 
     <LinearLayout
         android:id="@+id/linearlayout1"
@@ -216,22 +207,19 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/rect1"
-            />
+            android:src="@drawable/rect1"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Or continue with"
         android:fontFamily="@font/poppins_regular"
-        android:textColor="@color/figmabluedark"
-        />
+        android:textColor="@color/figmabluedark"/>
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/rect2"
-            />
+            android:src="@drawable/rect2"/>
 
     </LinearLayout>
 
@@ -250,21 +238,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/google"
-            android:layout_marginEnd="20dp"
-            />
+            android:layout_marginEnd="20dp"/>
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/apple"
-            android:layout_marginEnd="20dp"
-            />
+            android:layout_marginEnd="20dp"/>
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/facebook"
-            />
+            android:src="@drawable/facebook"/>
 
     </LinearLayout>
 
@@ -280,8 +265,7 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/rect1"
-            />
+            android:src="@drawable/rect1"/>
 
     <TextView
         android:id="@+id/txt4"
@@ -289,8 +273,7 @@
         android:layout_height="wrap_content"
         android:text="Not a member? "
         android:fontFamily="@font/poppins_medium"
-        android:textColor="#A4A4A4"
-        />
+        android:textColor="#A4A4A4"/>
 
         <TextView
         android:id="@+id/txt5"
@@ -303,14 +286,12 @@
         android:clickable="true"
         android:focusable="true"
         android:fontFamily="@font/poppins_medium"
-        android:textColor="#004274"
-        />
+        android:textColor="#004274"/>
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/rect2"
-            />
+            android:src="@drawable/rect2"/>
 
     </LinearLayout>
 

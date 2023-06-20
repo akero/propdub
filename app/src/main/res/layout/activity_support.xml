@@ -6,16 +6,11 @@
     android:layout_height="wrap_content"
     android:fillViewport="true">
 
-
-
     <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="16dp"
     tools:context=".Support">
-
-
-
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/edittextconstraint"
@@ -41,7 +36,6 @@
 
             <EditText
                 android:id="@+id/totalAmountEditText"
-
                 android:layout_width="match_parent"
                 android:layout_height="43dp"
                 style="@style/CustomEditTextHintColorSupport"
@@ -142,23 +136,6 @@
             android:fontFamily="@font/poppins_light"
             app:layout_constraintTop_toBottomOf="@+id/title3" />
 
-     <!--   <EditText
-            android:id="@+id/totalAmountEditText3"
-            style="@style/CustomEditTextHintColorSupport"
-            android:layout_width="match_parent"
-            android:layout_height="43dp"
-            android:background="@drawable/edittext_background"
-            android:hint="Select"
-            android:inputType="numberDecimal"
-            android:paddingStart="16dp"
-            android:paddingEnd="16dp"
-            android:textColor="@color/black"
-            android:textSize="15sp"
-            android:fontFamily="@font/poppins_light"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/title3" />
- -->
         <TextView
             android:id="@+id/title4"
             android:layout_width="wrap_content"
@@ -224,6 +201,7 @@
             android:textColor="@color/figmablue"/>
 
     </LinearLayout>
+
         <Button
             android:id="@+id/button"
             android:layout_width="match_parent"
@@ -273,6 +251,7 @@
                 android:layout_weight="1"
                 android:scaleType="centerInside"
                 android:src="@drawable/li" />
+
             <ImageView
                 android:id="@+id/icon15"
                 android:layout_width="0dp"
@@ -385,12 +364,7 @@
                     android:layout_height="match_parent" />
 
             </androidx.cardview.widget.CardView>
-
-
-
         </RelativeLayout>
-
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

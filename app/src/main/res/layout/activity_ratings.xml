@@ -22,41 +22,35 @@
             android:layout_width="84dp"
             android:layout_height="match_parent"
             android:layout_marginLeft="10dp"
-
             android:text="All"
-            android:background="@drawable/rounded_button"
-            />
+            android:background="@drawable/rounded_button"/>
 
         <Button
             android:layout_width="84dp"
             android:layout_height="match_parent"
             android:text="5"
             android:layout_marginLeft="10dp"
-            android:background="@drawable/rounded_button"
-            />
+            android:background="@drawable/rounded_button"/>
 
         <Button
             android:layout_width="84dp"
             android:layout_height="match_parent"
             android:text="4"
             android:layout_marginLeft="10dp"
-            android:background="@drawable/rounded_button"
-            />
+            android:background="@drawable/rounded_button"/>
 
         <Button
             android:layout_width="84dp"
             android:layout_height="match_parent"
             android:text="3"
             android:layout_marginLeft="10dp"
-            android:background="@drawable/rounded_button"
-            />
+            android:background="@drawable/rounded_button"/>
         <Button
             android:layout_width="84dp"
             android:layout_height="match_parent"
             android:text="2"
             android:layout_marginLeft="10dp"
-            android:background="@drawable/rounded_button"
-            />
+            android:background="@drawable/rounded_button"/>
 
         <Button
             android:layout_width="84dp"
@@ -64,7 +58,6 @@
             android:text="1"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:background="@drawable/rounded_button"
-            />
+            android:background="@drawable/rounded_button"/>
     </LinearLayout></ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

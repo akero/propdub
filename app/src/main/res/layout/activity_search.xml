@@ -12,8 +12,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center">
 
-
-
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintlayout1"
             android:layout_width="328dp"
@@ -69,9 +67,8 @@
             app:layout_constraintTop_toBottomOf="@+id/constraintlayout1"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
 
-            />
         <TextView
             android:id="@+id/text"
             android:layout_width="wrap_content"
@@ -83,8 +80,7 @@
             android:textColor="@color/black"
             app:layout_constraintTop_toBottomOf="@+id/image"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            />
+            app:layout_constraintEnd_toEndOf="parent"/>
 
         <TextView
             android:id="@+id/text1"
@@ -98,9 +94,7 @@
             app:layout_constraintTop_toBottomOf="@+id/text"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            />
-
+            app:layout_constraintBottom_toBottomOf="parent"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

@@ -9,7 +9,6 @@
     tools:openDrawer="start"
     tools:context=".HomeActivity">
 
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -28,7 +27,6 @@
             android:layout_marginEnd="16dp"
             android:layout_marginStart="16dp"
             app:strokeWidth="1dp">
-
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/topbuttons"
@@ -117,8 +115,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@id/line2"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                />
+                app:layout_constraintEnd_toEndOf="parent"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>
@@ -135,8 +132,7 @@
             android:textSize="17sp"
             android:textColor="#0A2753"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            />
+            android:layout_marginTop="16dp"/>
 
         <TextView
             android:id="@+id/see_all"
@@ -153,7 +149,7 @@
             android:background="#00000000"
             android:textSize="17sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/topbuttons1" />
+            app:layout_constraintTop_toBottomOf="@+id/topbuttons1"/>
 
         <androidx.viewpager2.widget.ViewPager2
             android:id="@+id/viewPager"
@@ -175,8 +171,7 @@
             android:textSize="17sp"
             android:textColor="#0A2753"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            />
+            android:layout_marginTop="16dp"/>
 
         <TextView
             android:id="@+id/see_all1"
@@ -444,5 +439,4 @@
         app:itemTextColor="@color/white"
         app:headerLayout="@layout/nav_header_main"
         app:menu="@menu/activity_main_drawer" />
-
 </androidx.drawerlayout.widget.DrawerLayout>
