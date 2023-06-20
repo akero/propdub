@@ -81,7 +81,6 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             });
 
             CoordinatorLayout coordinatorLayout1 = findViewById(R.id.featured2);
-
             coordinatorLayout1.setOnClickListener(new CoordinatorLayout.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -136,6 +135,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
+
             case R.id.ID1:
                 startActivity(new Intent(this, Favorites.class));
                 break;
@@ -155,6 +155,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                 startActivity(new Intent(this, AboutUs.class));
                 break;
         }
+
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;
     }

@@ -49,6 +49,7 @@
                     android:textColor="#004274"
                     android:text="PropDub is an online platform for real estate developers in Dubai to market their projects. We connect trusted real estate developers and select agents that advertise through our platform, to buyers worldwide. We provide access to a regularly updated bouquet of genuine and high-quality real estate investments, masterfully curated by industry experts. It is our endeavor to take this platter of opportunities, to a global audience like never before.
 The cornerstone of PropDub is our talented and enthusiastic team of professionals with extensive experience in the UAE real estate industry, digital marketing and advertising. With each member contributing numerous years of relevant work experience, our team represents the company’s greatest strength and asset." />
+
                 <TextView
                     android:id="@+id/heading1"
                     android:layout_width="wrap_content"
@@ -69,6 +70,7 @@ The cornerstone of PropDub is our talented and enthusiastic team of professional
                     android:lineSpacingExtra="6sp"
                     android:textColor="#004274"
                     android:text="Our company’s vision is to fulfils the real estate needs and investment aspirations of individuals globally by connecting them to trusted real estate developers and agents. We also aim to empower potential buyers to make informed and value enhancing decisions by providing comprehensive guidance on all facets of the property market, and leveraging our extensive expertise, industry knowledge, and real estate experience." />
+
                 <TextView
                     android:id="@+id/heading2"
                     android:layout_width="wrap_content"
@@ -89,6 +91,7 @@ The cornerstone of PropDub is our talented and enthusiastic team of professional
                     android:lineSpacingExtra="6sp"
                     android:textColor="#004274"
                     android:text="Our mission is to provide a 360° solutions platform for real estate developers throughout the UAE while upholding exceptional levels of quality in customer service and to make the Dubai real estate market accessible to everyone. Our team, composed of consummate professionals with extensive experience in the relevant fields, represents the company’s hallmark of excellence. Their collective years of work experience is the invaluable asset, based on which the organisation maintains its promise of ethical and exceptional service." />
+
                 <TextView
                     android:id="@+id/heading3"
                     android:layout_width="wrap_content"
