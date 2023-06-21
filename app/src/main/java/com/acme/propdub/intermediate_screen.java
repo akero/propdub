@@ -15,6 +15,8 @@ import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
@@ -43,6 +45,8 @@ public class intermediate_screen extends AppCompatActivity {
 
         //lets go button code
         View letsgoButton = findViewById(R.id.lets_go_button);
+        Animation buttonAnim= AnimationUtils.loadAnimation(this, R.anim.loadanim);
+        letsgoButton.setAnimation(buttonAnim);
         letsgoButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
