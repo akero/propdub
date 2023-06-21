@@ -134,6 +134,17 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             }
         });
 
+        // agent listings button code
+        View agentsearchMapButton = findViewById(R.id.search_map_button);
+        searchMapButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(MainActivity.this, AgentListings.class);
+                startActivity(intent);
+            }
+        });
+
         // property sale button code
         View propertySaleButton = findViewById(R.id.property_sale_button);
         propertySaleButton.setOnClickListener(new View.OnClickListener() {
