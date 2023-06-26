@@ -17,6 +17,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
@@ -48,6 +49,14 @@ public class intermediate_screen extends AppCompatActivity {
         Animation buttonAnim= AnimationUtils.loadAnimation(this, R.anim.loadanim);
         letsgoButton.setAnimation(buttonAnim);
         letsgoButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openMainActivity();
+            }
+        });
+
+        Button a= findViewById(R.id.lets_go_button1);
+        a.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openMainActivity();

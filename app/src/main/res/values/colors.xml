@@ -14,4 +14,5 @@
     <color name="figmablue">#004273</color>
     <color name="figmabluedark">#004274</color>
     <color name="transparentblack">#80000000</color>
+    <color name="solid_color">#004274</color>
 </resources>
