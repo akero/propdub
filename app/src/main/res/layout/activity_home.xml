@@ -151,20 +151,22 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/topbuttons1"/>
 
-        <androidx.viewpager2.widget.ViewPager2
-            android:id="@+id/viewPager"
-            android:layout_width="match_parent"
-            app:layout_constraintTop_toBottomOf="@id/see_all"
+        <com.yarolegovich.discretescrollview.DiscreteScrollView
+            android:id="@+id/picker"
+            android:layout_width="328dp"
+            android:layout_height="216dp"
+            android:layout_marginTop="8dp"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ourrecommendations"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_height="wrap_content">
-        </androidx.viewpager2.widget.ViewPager2>
+             />
+
 
         <TextView
             android:id="@+id/featured"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/viewPager"
+            app:layout_constraintTop_toBottomOf="@id/picker"
             app:layout_constraintStart_toStartOf="parent"
             android:text= "Featured"
             android:fontFamily="@font/poppins_medium"
@@ -188,12 +190,12 @@
             android:background="#00000000"
             android:textSize="17sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/viewPager" />
+            app:layout_constraintTop_toBottomOf="@id/picker" />
 
         <HorizontalScrollView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="8dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/featured"

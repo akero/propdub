@@ -9,6 +9,8 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.viewpager2.widget.MarginPageTransformer;
 import androidx.viewpager2.widget.ViewPager2;
+import java.util.Arrays;
+import java.util.List;
 
 import android.content.Intent;
 import android.graphics.Color;
@@ -22,17 +24,58 @@ import android.view.ViewTreeObserver;
 import android.widget.TextView;
 
 import com.google.android.material.navigation.NavigationView;
+import com.yarolegovich.discretescrollview.DiscreteScrollView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private NavigationView navigationView;
     DrawerLayout drawerLayout;
     private ViewPager2 viewPager;
+    private DiscreteScrollView discreteScrollView;
+    private MyAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+        // Initialize and setup your DiscreteScrollView
+        discreteScrollView = findViewById(R.id.picker);
+
+        List<Integer> images = Arrays.asList(
+                R.drawable.image1,
+                R.drawable.image2,
+                R.drawable.image3,
+                R.drawable.image4,
+                R.drawable.image5
+        );
+
+        List<String> titles = Arrays.asList(
+                "Azizi Park Avenue",
+                "Title 2",
+                "Title 3",
+                "Title 4",
+                "Title 5"
+        );
+
+        List<String> subtitles = Arrays.asList(
+                "Street 1 - Dubai - United Arab Emirates",
+                "Subtitle 2",
+                "Subtitle 3",
+                "Subtitle 4",
+                "Subtitle 5"
+        );
+
         try {
+            adapter = new MyAdapter(images, titles, subtitles);
+
+
+
+            discreteScrollView.setAdapter(adapter);
+
+
+
             ActionBar actionBar = getSupportActionBar();
             if (actionBar != null) {
                 actionBar.setDisplayHomeAsUpEnabled(true);
@@ -60,7 +103,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             int w = proptype.getMeasuredWidth();
             Log.d("taga", String.valueOf(h) + " " + String.valueOf(w));
 
-            viewPager = findViewById(R.id.viewPager);
+    /*        viewPager = findViewById(R.id.viewPager);
             viewPager.setAdapter(new ImageAdapter());
             viewPager.setPageTransformer(new DepthPageTransformer());
 
@@ -68,7 +111,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             viewPager.setOffscreenPageLimit(3);
             // Positive margin to make adjacent pages visible
             viewPager.setPageTransformer(new MarginPageTransformer((int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 16, getResources().getDisplayMetrics())));
-
+*/
             navigationView = findViewById(R.id.id_view);
             navigationView.setNavigationItemSelectedListener(this);
 
