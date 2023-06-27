@@ -238,8 +238,25 @@
             android:layout_marginTop="27dp"
             android:layout_marginEnd="23dp"
             android:layout_marginStart="23dp"
-            android:text="Sign Up"/>
+            android:text="Sign Up"
+            android:textAllCaps="false"
+            android:textSize="17sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/poppins_medium"
+            android:background="@drawable/propertybooknowbuttongradient"
 
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:layout_constraintTop_toBottomOf="@id/constraintlayout11"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="23dp"
+            android:layout_marginStart="23dp"
+            android:background="@drawable/button_blue_bg"
+            />
         <LinearLayout
             android:id="@+id/linearlayout1"
             android:layout_width="match_parent"
