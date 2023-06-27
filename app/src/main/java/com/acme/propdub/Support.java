@@ -26,6 +26,7 @@ import java.util.List;
 
 public class Support extends AppCompatActivity {
 MapView mapView;
+    Button submit;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -268,7 +269,7 @@ try{
         email = findViewById(R.id.totalAmountEditText2);
         message = findViewById(R.id.totalAmountEditText4);
 
-        Button submit;
+
         submit= findViewById(R.id.button);
 
         CheckBox checkbox;
@@ -316,6 +317,10 @@ try{
         });
     }
 
+    @Override
+    public void onBackPressed(){
+        super.onBackPressed();
+    }
     @Override
     protected void onResume() {
         super.onResume();

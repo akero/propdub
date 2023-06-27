@@ -144,7 +144,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Submit"
-        android:textSize="20sp"
+        android:textSize="17sp"
         android:paddingTop="4dp"
         android:textColor="@color/white"
         android:textAllCaps="false"
@@ -157,7 +157,7 @@
         />
         <View
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="48dp"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
