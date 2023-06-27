@@ -227,6 +227,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                android:textSize="16sp"
                 android:fontFamily="@font/poppins_regular"
                 android:textColor="@color/white"
                 android:background="@drawable/propertybooknowbuttongradient"
