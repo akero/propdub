@@ -198,8 +198,8 @@
         android:textColor="@color/white"
         android:fontFamily="@font/poppins_medium"
         android:background="@drawable/propertybooknowbuttongradient"
-
         />
+
     <View
         android:layout_width="match_parent"
         android:layout_height="50dp"
