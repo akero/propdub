@@ -231,8 +231,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 android:background="@drawable/button_blue_bg"
                 />
-
         </androidx.constraintlayout.widget.ConstraintLayout>
+
         <LinearLayout
             android:id="@+id/icon_container0"
             android:layout_width="match_parent"
