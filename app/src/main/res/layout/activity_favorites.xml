@@ -8,296 +8,600 @@
 
     <ScrollView
         android:id="@+id/scrollView"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
         android:fillViewport="true"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/topbuttons1"
+            android:layout_width="328dp"
+            android:layout_height="40dp"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:cardElevation="2dp"
+            app:strokeColor="#FFFFFF"
+
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            app:strokeWidth="1dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/topbuttons"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/homerounded">
+
+                <TextView
+                    app:layout_constraintVertical_bias="0.6"
+                    android:id="@+id/propertytype"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Property Type"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textSize="12sp"
+                    android:textColor="#E66A778B"
+                    app:layout_constraintEnd_toStartOf="@id/line"
+                    app:layout_constraintStart_toStartOf="@id/topbuttons"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/topbuttons"/>
+
+                <View
+                    android:id="@+id/line"
+                    android:layout_width="1dp"
+                    android:layout_height="30dp"
+                    app:layout_constraintVertical_bias="0.6"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/cities"
+                    app:layout_constraintStart_toEndOf="@id/propertytype"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <TextView
+                    android:id="@+id/cities"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="All Cities"
+                    app:layout_constraintVertical_bias="0.6"
+                    android:fontFamily="@font/poppins_regular"
+                    app:layout_constraintEnd_toStartOf="@id/line1"
+                    android:textSize="12sp"
+                    android:textColor="#E66A778B"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/line"
+                    app:layout_constraintTop_toTopOf="@id/topbuttons"/>
+
+                <View
+                    android:id="@+id/line1"
+                    android:layout_width="1dp"
+                    app:layout_constraintVertical_bias="0.6"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/bedrooms"
+                    android:layout_height="30dp"
+                    app:layout_constraintStart_toEndOf="@id/cities"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <TextView
+                    android:id="@+id/bedrooms"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bedrooms"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:fontFamily="@font/poppins_regular"
+                    app:layout_constraintEnd_toStartOf="@id/line2"
+                    android:textSize="12sp"
+                    android:textColor="#E66A778B"
+                    app:layout_constraintVertical_bias="0.6"
+                    app:layout_constraintStart_toEndOf="@id/line1"
+                    app:layout_constraintTop_toTopOf="@id/topbuttons"/>
+
+                <View
+                    android:id="@+id/line2"
+                    android:layout_width="1dp"
+                    android:layout_height="30dp"
+                    app:layout_constraintVertical_bias="0.6"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/image"
+                    app:layout_constraintStart_toEndOf="@id/bedrooms"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <ImageView
+                    android:id="@+id/image"
+                    app:layout_constraintVertical_bias="0.6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/filtersearch"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/line2"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
 
         <GridLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/topbuttons1"
+            app:layout_constraintBottom_toBottomOf="parent"
             android:columnCount="2"
             android:rowCount="4"
             android:padding="16dp"
             android:alignmentMode="alignMargins"
             android:columnOrderPreserved="false">
 
-            <FrameLayout
+            <androidx.cardview.widget.CardView
                 android:id="@+id/fragment1_container"
                 android:layout_width="0dp"
-                android:layout_height="0dp"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
                 android:layout_columnWeight="1"
-                android:layout_rowWeight="1">
+                app:cardPreventCornerOverlap="true"
+                app:cardUseCompatPadding="true">
 
-                <LinearLayout
+                <androidx.coordinatorlayout.widget.CoordinatorLayout
+                    android:id="@+id/featured1"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:background="?attr/selectableItemBackground">
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_background">
 
-                    <ImageView
-                        android:id="@+id/iamge1"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/iamge1"/>
-
-                    <TextView
-                        android:id="@+id/text1"
+                    <FrameLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Fragment 1"
-                        android:padding="16dp"/>
-                </LinearLayout>
-            </FrameLayout>
+                        android:background="@drawable/image_background">
 
-            <FrameLayout
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/houseimage" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:layout_marginEnd="6dp"
+                            android:layout_marginTop="6dp"
+                            android:src="@drawable/favicon" />
+                    </FrameLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="122dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Ellington House 4"
+                        android:layout_marginEnd="6dp"
+                        android:layout_marginStart="12dp"
+                        android:textColor="#0A2753" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="141dp"
+                        android:layout_marginStart="12dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:src="@drawable/pinicon" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:fontFamily="@font/poppins_light"
+                            android:text="Dubai Hills Park"
+                            android:textColor="#6A778B"
+                            android:textSize="12sp" />
+
+
+                    </LinearLayout>
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="150dp"/>
+                </androidx.coordinatorlayout.widget.CoordinatorLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
                 android:id="@+id/fragment2_container"
                 android:layout_width="0dp"
-                android:layout_height="0dp"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
                 android:layout_columnWeight="1"
-                android:layout_rowWeight="1">
+                app:cardPreventCornerOverlap="true"
+                app:cardUseCompatPadding="true">
 
-                <LinearLayout
+                <androidx.coordinatorlayout.widget.CoordinatorLayout
+                    android:id="@+id/featured2"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:background="?attr/selectableItemBackground">
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_background">
 
-                    <ImageView
-                        android:id="@+id/image2"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/iamge1"/>
-
-                    <TextView
-                        android:id="@+id/text2"
+                    <FrameLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Fragment 2"
-                        android:padding="16dp"/>
+                        android:background="@drawable/image_background">
 
-                </LinearLayout>
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/houseimage" />
 
-            </FrameLayout>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:layout_marginEnd="6dp"
+                            android:layout_marginTop="6dp"
+                            android:src="@drawable/favicon" />
+                    </FrameLayout>
 
-            <FrameLayout
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="122dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Ellington House 4"
+                        android:layout_marginEnd="6dp"
+                        android:layout_marginStart="12dp"
+                        android:textColor="#0A2753" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="141dp"
+                        android:layout_marginStart="12dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:src="@drawable/pinicon" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:fontFamily="@font/poppins_light"
+                            android:text="Dubai Hills Park"
+                            android:textColor="#6A778B"
+                            android:textSize="12sp" />
+
+
+                    </LinearLayout>
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="150dp"/>
+                </androidx.coordinatorlayout.widget.CoordinatorLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
                 android:id="@+id/fragment3_container"
                 android:layout_width="0dp"
-                android:layout_height="0dp"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
                 android:layout_columnWeight="1"
-                android:layout_rowWeight="1">
+                app:cardPreventCornerOverlap="true"
+                app:cardUseCompatPadding="true">
 
-                <LinearLayout
+                <androidx.coordinatorlayout.widget.CoordinatorLayout
+                    android:id="@+id/featured3"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:background="?attr/selectableItemBackground">
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_background">
 
-                    <ImageView
-                        android:id="@+id/image3"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/iamge1"/>
-
-                    <TextView
-                        android:id="@+id/text3"
+                    <FrameLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Fragment 3"
-                        android:padding="16dp"/>
-                </LinearLayout>
-            </FrameLayout>
+                        android:background="@drawable/image_background">
 
-            <FrameLayout
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/houseimage" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:layout_marginEnd="6dp"
+                            android:layout_marginTop="6dp"
+                            android:src="@drawable/favicon" />
+                    </FrameLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="122dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Ellington House 4"
+                        android:layout_marginEnd="6dp"
+                        android:layout_marginStart="12dp"
+                        android:textColor="#0A2753" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="141dp"
+                        android:layout_marginStart="12dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:src="@drawable/pinicon" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:fontFamily="@font/poppins_light"
+                            android:text="Dubai Hills Park"
+                            android:textColor="#6A778B"
+                            android:textSize="12sp" />
+
+
+                    </LinearLayout>
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="150dp"/>
+                </androidx.coordinatorlayout.widget.CoordinatorLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
                 android:id="@+id/fragment4_container"
                 android:layout_width="0dp"
-                android:layout_height="0dp"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
                 android:layout_columnWeight="1"
-                android:layout_rowWeight="1">
+                app:cardPreventCornerOverlap="true"
+                app:cardUseCompatPadding="true">
 
-                <LinearLayout
+                <androidx.coordinatorlayout.widget.CoordinatorLayout
+                    android:id="@+id/featured4"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:background="?attr/selectableItemBackground">
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_background">
 
-                    <ImageView
-                        android:id="@+id/image4"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/iamge1"/>
-
-                    <TextView
-                        android:id="@+id/text4"
+                    <FrameLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Fragment 4"
-                        android:padding="16dp"/>
+                        android:background="@drawable/image_background">
 
-                </LinearLayout>
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/houseimage" />
 
-            </FrameLayout>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:layout_marginEnd="6dp"
+                            android:layout_marginTop="6dp"
+                            android:src="@drawable/favicon" />
+                    </FrameLayout>
 
-            <FrameLayout
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="122dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Ellington House 4"
+                        android:layout_marginEnd="6dp"
+                        android:layout_marginStart="12dp"
+                        android:textColor="#0A2753" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="141dp"
+                        android:layout_marginStart="12dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:src="@drawable/pinicon" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:fontFamily="@font/poppins_light"
+                            android:text="Dubai Hills Park"
+                            android:textColor="#6A778B"
+                            android:textSize="12sp" />
+
+
+                    </LinearLayout>
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="150dp"/>
+                </androidx.coordinatorlayout.widget.CoordinatorLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
                 android:id="@+id/fragment5_container"
                 android:layout_width="0dp"
-                android:layout_height="0dp"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
                 android:layout_columnWeight="1"
-                android:layout_rowWeight="1">
+                app:cardPreventCornerOverlap="true"
+                app:cardUseCompatPadding="true">
 
-                <LinearLayout
+                <androidx.coordinatorlayout.widget.CoordinatorLayout
+                    android:id="@+id/featured5"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:background="?attr/selectableItemBackground">
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_background">
 
-                    <ImageView
-                        android:id="@+id/image5"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/iamge1"/>
-
-                    <TextView
-                        android:id="@+id/text5"
+                    <FrameLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Fragment 5"
-                        android:padding="16dp"/>
+                        android:background="@drawable/image_background">
 
-                </LinearLayout>
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/houseimage" />
 
-            </FrameLayout>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:layout_marginEnd="6dp"
+                            android:layout_marginTop="6dp"
+                            android:src="@drawable/favicon" />
+                    </FrameLayout>
 
-            <FrameLayout
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="122dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Ellington House 4"
+                        android:layout_marginEnd="6dp"
+                        android:layout_marginStart="12dp"
+                        android:textColor="#0A2753" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="141dp"
+                        android:layout_marginStart="12dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:src="@drawable/pinicon" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:fontFamily="@font/poppins_light"
+                            android:text="Dubai Hills Park"
+                            android:textColor="#6A778B"
+                            android:textSize="12sp" />
+
+
+                    </LinearLayout>
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="150dp"/>
+                </androidx.coordinatorlayout.widget.CoordinatorLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
                 android:id="@+id/fragment6_container"
                 android:layout_width="0dp"
-                android:layout_height="0dp"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
                 android:layout_columnWeight="1"
-                android:layout_rowWeight="1">
+                app:cardPreventCornerOverlap="true"
+                app:cardUseCompatPadding="true">
 
-                <LinearLayout
+                <androidx.coordinatorlayout.widget.CoordinatorLayout
+                    android:id="@+id/featured6"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:background="?attr/selectableItemBackground">
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_background">
 
-                    <ImageView
-                        android:id="@+id/image6"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/iamge1"/>
-
-                    <TextView
-                        android:id="@+id/text6"
+                    <FrameLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Fragment 6"
-                        android:padding="16dp"/>
+                        android:background="@drawable/image_background">
 
-                </LinearLayout>
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/houseimage" />
 
-            </FrameLayout>
-            <FrameLayout
-                android:id="@+id/fragment7_container"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:background="?attr/selectableItemBackground">
-
-                    <ImageView
-                        android:id="@+id/image7"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/iamge1"/>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:layout_marginEnd="6dp"
+                            android:layout_marginTop="6dp"
+                            android:src="@drawable/favicon" />
+                    </FrameLayout>
 
                     <TextView
-                        android:id="@+id/text7"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Fragment 7"
-                        android:padding="16dp"/>
+                        android:layout_marginTop="122dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Ellington House 4"
+                        android:layout_marginEnd="6dp"
+                        android:layout_marginStart="12dp"
+                        android:textColor="#0A2753" />
 
-                </LinearLayout>
-
-            </FrameLayout>
-
-
-            <FrameLayout
-                android:id="@+id/fragment8_container"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:background="?attr/selectableItemBackground">
-
-                    <ImageView
-                        android:id="@+id/image8"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/iamge1"/>
-
-                    <TextView
-                        android:id="@+id/text8"
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Fragment 8"
-                        android:padding="16dp"/>
+                        android:layout_marginTop="141dp"
+                        android:layout_marginStart="12dp"
+                        android:orientation="horizontal">
 
-                </LinearLayout>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:src="@drawable/pinicon" />
 
-            </FrameLayout>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:fontFamily="@font/poppins_light"
+                            android:text="Dubai Hills Park"
+                            android:textColor="#6A778B"
+                            android:textSize="12sp" />
+
+
+                    </LinearLayout>
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="150dp"/>
+                </androidx.coordinatorlayout.widget.CoordinatorLayout>
+            </androidx.cardview.widget.CardView>
+
+
         </GridLayout>
 
 
-
+</androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

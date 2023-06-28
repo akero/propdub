@@ -29,7 +29,6 @@ public class AgentProfile extends AppCompatActivity {
             actionBar.setHomeAsUpIndicator(R.drawable.back_button);
             actionBar.setTitle("Agent Details");}
 
-
         //contact agent button code
         TextView contactAgent;
         contactAgent= findViewById(R.id.contact_agent);
