@@ -39,9 +39,7 @@ try{
         actionBar.setHomeAsUpIndicator(R.drawable.back_button);
         actionBar.setTitle("Contact");
     }
-}catch(Exception e){
-    Log.d("tag9",e.toString());
-}
+
         mapView = findViewById(R.id.map_view);
             mapView.onCreate(savedInstanceState);
 
@@ -315,6 +313,9 @@ try{
                 }
             }
         });
+}catch(Exception e){
+    Log.d("tag9",e.toString());
+}
     }
 
     @Override
