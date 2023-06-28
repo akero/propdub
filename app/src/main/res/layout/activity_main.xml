@@ -104,8 +104,17 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Search by map"
-                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/search_button"
+                android:layout_marginTop="16dp" />
+
+            <Button
+                android:id="@+id/agent_listings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Agent listings"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/search_map_button"
                 app:layout_constraintTop_toBottomOf="@+id/search_button"
                 android:layout_marginTop="16dp" />
 
