@@ -9,7 +9,6 @@ import android.view.MenuItem;
 
 import com.google.android.gms.maps.MapView;
 
-
 public class SearchByMap extends AppCompatActivity {
 
     MapView mapView;
@@ -28,6 +27,7 @@ public class SearchByMap extends AppCompatActivity {
         }catch(Exception e){
             Log.d("tag9", e.toString());
         }
+        Log.d("tag9", "correct ");
     }
 
     @Override
@@ -71,5 +71,4 @@ public class SearchByMap extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
-
 }

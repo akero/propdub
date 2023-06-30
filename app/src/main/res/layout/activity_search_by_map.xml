@@ -41,7 +41,7 @@
         <EditText
             android:id="@+id/totalAmountEditText"
             style="@style/CustomEditTextHintColorBlue"
-            android:layout_width="308dp"
+            android:layout_width="265dp"
             android:layout_height="43dp"
             android:background="@drawable/edittext_background"
             android:hint="Search"
@@ -51,7 +51,7 @@
             android:textColor="@color/figmabluedark"
             android:textSize="17sp"
             android:fontFamily="@font/poppins_regular"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/meme1"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -65,6 +65,7 @@
             app:layout_constraintHorizontal_bias="0.14"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -74,38 +75,96 @@
             app:layout_constraintStart_toStartOf="@id/totalAmountEditText"
             app:layout_constraintTop_toTopOf="@id/totalAmountEditText"/>
 
+        <View
+            android:id="@+id/meme1"
+            android:layout_width="53dp"
+            android:layout_height="40dp"
+            android:background="@drawable/rectfilter"
+            app:layout_constraintBottom_toBottomOf="@id/constraintlayout1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/totalAmountEditText"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/filtersearchicon"
+            app:layout_constraintBottom_toBottomOf="@id/meme1"
+            app:layout_constraintEnd_toEndOf="@+id/meme1"
+            app:layout_constraintStart_toStartOf="@id/meme1"
+            app:layout_constraintTop_toTopOf="@id/meme1"
+            />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+        <ScrollView
+            app:layout_constraintTop_toBottomOf="@id/constraintlayout1"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="0dp"
+
+            android:layout_marginTop="16dp"
+            android:layout_height="wrap_content"
+            android:layoutDirection="ltr"
+            >
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="30dp"
-            app:layout_constraintTop_toBottomOf="@id/constraintlayout1"
-            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="16dp"
+            android:textColor="#0A2753"
             android:gravity="center"
             >
 
             <Button
                 android:layout_width="84dp"
-                android:layout_height="match_parent"
+                android:layout_height="30dp"
                 android:text="All"
+                android:paddingTop="4dp"
+                android:textColor="#0A2753"
+                android:layout_marginRight="16dp"
+                android:fontFamily="@font/poppins_medium"
+                android:textSize="14sp"
+                android:background="@drawable/rounded_button"
+                />
+
+            <Button
+                android:layout_width="111dp"
+                android:layout_height="30dp"
+                android:text="All"
+                android:textColor="#FFFFFF"
+                android:layout_marginRight="16dp"
+                android:fontFamily="@font/poppins_medium"
+                android:textSize="14sp"
+                android:paddingTop="4dp"
+                android:background="@drawable/button_blue"
+                />
+
+            <Button
+                android:layout_width="84dp"
+                android:layout_height="30dp"
+                android:text="All"
+                android:paddingTop="4dp"
+                android:textColor="#0A2753"
+                android:layout_marginRight="16dp"
+                android:fontFamily="@font/poppins_medium"
+                android:textSize="14sp"
                 android:background="@drawable/rounded_button"
                 />
 
             <Button
                 android:layout_width="84dp"
-                android:layout_height="match_parent"
+                android:layout_height="30dp"
                 android:text="All"
-                android:background="@drawable/rounded_button"
-                />
-
-            <Button
-                android:layout_width="84dp"
-                android:layout_height="match_parent"
-                android:text="All"
+                android:paddingTop="4dp"
+                android:textColor="#0A2753"
+                android:layout_marginRight="16dp"
+                android:fontFamily="@font/poppins_medium"
+                android:textSize="14sp"
                 android:background="@drawable/rounded_button"
                 />
 
         </LinearLayout>
+        </ScrollView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>
