@@ -371,6 +371,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:clipToPadding="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/see_all"
@@ -387,6 +388,7 @@
             <androidx.coordinatorlayout.widget.CoordinatorLayout
                 android:id="@+id/featured1"
                 android:layout_width="196dp"
+                android:background="@drawable/border_background"
                 android:layout_height="match_parent"
                 android:layout_marginEnd="26dp"
                 >
@@ -401,6 +403,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:scaleType="centerCrop"
+                        android:paddingStart="8dp"
+                        android:paddingTop="8dp"
+                        android:paddingEnd="8dp"
                         android:src="@drawable/houseimage"
                         android:background="@drawable/image_background"/>
 
@@ -409,15 +414,16 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="end"
                         android:src="@drawable/favicon"
-                        android:layout_marginEnd="6dp"
-                        android:layout_marginTop="6dp"/>
+                        android:layout_marginEnd="14dp"
+                        android:layout_marginTop="14dp"/>
 
                 </FrameLayout>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="21dp"
-                    android:layout_marginTop="114dp"
+                    android:layout_marginTop="124dp"
+                    android:layout_marginLeft="10dp"
                     android:fontFamily="@font/poppins_regular"
                     android:text="Ellington House 4"
                     android:textColor="#0A2753" />
@@ -425,17 +431,21 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="135dp"
+                    android:layout_marginTop="145dp"
                     android:orientation="horizontal">
 
                     <ImageView
+                        android:layout_marginLeft="10dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:paddingTop="3dp"
                         android:src="@drawable/pinicon" />
 
                     <TextView
+                        android:paddingBottom="10dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
                         android:fontFamily="@font/poppins_light"
                         android:text="Dubai Hills Park"
                         android:textColor="#6A778B"
@@ -446,11 +456,13 @@
             <androidx.coordinatorlayout.widget.CoordinatorLayout
                 android:id="@+id/featured2"
                 android:layout_width="196dp"
+                android:background="@drawable/border_background"
                 android:layout_height="match_parent"
                 android:layout_marginEnd="26dp"
-                android:background="@drawable/border_background">
+                >
 
                 <FrameLayout
+
                     android:layout_width="196dp"
                     android:layout_height="114dp"
                     android:background="@drawable/image_background">
@@ -459,21 +471,27 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/houseimage1" />
+                        android:paddingStart="8dp"
+                        android:paddingTop="8dp"
+                        android:paddingEnd="8dp"
+                        android:src="@drawable/houseimage1"
+                        android:background="@drawable/image_background"/>
 
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="end"
                         android:src="@drawable/favicon"
-                        android:layout_marginEnd="6dp"
-                        android:layout_marginTop="6dp"/>
+                        android:layout_marginEnd="14dp"
+                        android:layout_marginTop="14dp"/>
+
                 </FrameLayout>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="21dp"
-                    android:layout_marginTop="114dp"
+                    android:layout_marginTop="124dp"
+                    android:layout_marginLeft="10dp"
                     android:fontFamily="@font/poppins_regular"
                     android:text="Royal Bay"
                     android:textColor="#0A2753" />
@@ -481,17 +499,21 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="135dp"
+                    android:layout_marginTop="145dp"
                     android:orientation="horizontal">
 
                     <ImageView
+                        android:layout_marginLeft="10dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:paddingTop="3dp"
                         android:src="@drawable/pinicon" />
 
                     <TextView
+                        android:paddingBottom="10dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
                         android:fontFamily="@font/poppins_light"
                         android:text="Dubai Hills Park"
                         android:textColor="#6A778B"
@@ -502,11 +524,13 @@
             <androidx.coordinatorlayout.widget.CoordinatorLayout
                 android:id="@+id/featured3"
                 android:layout_width="196dp"
-                android:layout_marginEnd="26dp"
+                android:background="@drawable/border_background"
                 android:layout_height="match_parent"
-                android:background="@drawable/border_background">
+                android:layout_marginEnd="26dp"
+                >
 
                 <FrameLayout
+
                     android:layout_width="196dp"
                     android:layout_height="114dp"
                     android:background="@drawable/image_background">
@@ -515,45 +539,56 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/houseimage2" />
+                        android:paddingStart="8dp"
+                        android:paddingTop="8dp"
+                        android:paddingEnd="8dp"
+                        android:src="@drawable/houseimage2"
+                        android:background="@drawable/image_background"/>
 
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="end"
                         android:src="@drawable/favicon"
-                        android:layout_marginEnd="6dp"
-                        android:layout_marginTop="6dp"/>
+                        android:layout_marginEnd="14dp"
+                        android:layout_marginTop="14dp"/>
+
                 </FrameLayout>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="21dp"
-                    android:layout_marginTop="114dp"
+                    android:layout_marginTop="124dp"
+                    android:layout_marginLeft="10dp"
                     android:fontFamily="@font/poppins_regular"
-                    android:text="Azizi Mina"
+                    android:text="Palm Jumeriah"
                     android:textColor="#0A2753" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="135dp"
+                    android:layout_marginTop="145dp"
                     android:orientation="horizontal">
 
                     <ImageView
+                        android:layout_marginLeft="10dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:paddingTop="3dp"
                         android:src="@drawable/pinicon" />
 
                     <TextView
+                        android:paddingBottom="10dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
                         android:fontFamily="@font/poppins_light"
-                        android:text="Palm Jumeriah"
+                        android:text="Dubai Hills Park"
                         android:textColor="#6A778B"
                         android:textSize="12sp" />
                 </LinearLayout>
             </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
 
             <!-- Add more CoordinatorLayouts here as needed -->
         </LinearLayout>
