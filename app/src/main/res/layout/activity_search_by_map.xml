@@ -108,6 +108,7 @@
             android:layout_height="wrap_content"
             android:scrollbars="none"
             >
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="30dp"
@@ -169,6 +170,284 @@
 
         </LinearLayout>
         </HorizontalScrollView>
+
+        <HorizontalScrollView
+            android:id="@+id/meme11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="25dp"
+            android:layout_marginEnd="34dp"
+            android:layout_marginStart="34dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="328dp"
+                android:layout_height="113dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/featured09"
+                    android:layout_width="328dp"
+                    android:layout_height="113dp"
+                    android:layout_marginEnd="12dp"
+                    android:elevation="4dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardPreventCornerOverlap="true"
+                    app:cardUseCompatPadding="true">
+
+                    <androidx.coordinatorlayout.widget.CoordinatorLayout
+                        android:id="@+id/featured1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/border_background">
+
+                        <FrameLayout
+                            android:layout_width="142dp"
+                            android:layout_height="97dp"
+                            android:background="@drawable/image_background">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                android:paddingStart="8dp"
+                                android:paddingBottom="8dp"
+                                android:paddingTop="8dp"
+                                android:src="@drawable/mappic" />
+                        </FrameLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginStart="162dp"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:text="$5680"
+                            android:textSize="22sp"
+                            android:layout_marginEnd="6dp"
+                            android:textColor="#004274" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="280dp"
+                            android:layout_marginTop="14dp"
+                            android:src="@drawable/heart" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="65dp"
+                            android:layout_marginStart="160dp"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="3dp"
+                                android:src="@drawable/bed" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="4dp"
+                                android:fontFamily="@font/poppins_light"
+                                android:text="2"
+                                android:paddingTop="4dp"
+                                android:textColor="#6A778B"
+                                android:textSize="12sp" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="3dp"
+                                android:paddingTop="2dp"
+                                android:layout_marginStart="8dp"
+                                android:src="@drawable/shower" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="4dp"
+                                android:fontFamily="@font/poppins_light"
+                                android:text="1"
+                                android:paddingTop="4dp"
+                                android:textColor="#6A778B"
+                                android:textSize="12sp" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="3dp"
+                                android:layout_marginStart="8dp"
+                                android:src="@drawable/maximize3" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="4dp"
+                                android:fontFamily="@font/poppins_light"
+                                android:text="60m"
+                                android:textColor="#6A778B"
+                                android:paddingTop="5dp"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="162dp"
+                            android:layout_marginTop="45dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="Danube, Arab Emirates "
+                            android:textColor="#666666"
+                            android:paddingTop="5dp"
+                            android:textSize="10sp" />
+                    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/featured10"
+                    android:layout_width="328dp"
+                    android:layout_height="113dp"
+                    android:layout_marginEnd="12dp"
+                    android:elevation="4dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardPreventCornerOverlap="true"
+                    app:cardUseCompatPadding="true">
+
+                    <androidx.coordinatorlayout.widget.CoordinatorLayout
+                        android:id="@+id/featured2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/border_background">
+
+                        <FrameLayout
+                            android:layout_width="142dp"
+                            android:layout_height="97dp"
+                            android:background="@drawable/image_background">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                android:paddingStart="8dp"
+                                android:paddingEnd="8dp"
+                                android:paddingTop="8dp"
+                                android:src="@drawable/mappic" />
+                        </FrameLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginStart="162dp"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:text="$5680"
+                            android:textSize="22sp"
+                            android:layout_marginEnd="6dp"
+                            android:textColor="#004274" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="280dp"
+                            android:layout_marginTop="14dp"
+                            android:src="@drawable/heart" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="65dp"
+                            android:layout_marginStart="160dp"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="3dp"
+                                android:src="@drawable/bed" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="4dp"
+                                android:fontFamily="@font/poppins_light"
+                                android:text="2"
+                                android:paddingTop="4dp"
+                                android:textColor="#6A778B"
+                                android:textSize="12sp" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="3dp"
+                                android:paddingTop="2dp"
+                                android:layout_marginStart="8dp"
+                                android:src="@drawable/shower" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="4dp"
+                                android:fontFamily="@font/poppins_light"
+                                android:text="1"
+                                android:paddingTop="4dp"
+                                android:textColor="#6A778B"
+                                android:textSize="12sp" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="3dp"
+                                android:layout_marginStart="8dp"
+                                android:src="@drawable/maximize3" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="4dp"
+                                android:fontFamily="@font/poppins_light"
+                                android:text="60m"
+                                android:textColor="#6A778B"
+                                android:paddingTop="5dp"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="162dp"
+                            android:layout_marginTop="45dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="Danube, Arab Emirates "
+                            android:textColor="#666666"
+                            android:paddingTop="5dp"
+                            android:textSize="10sp" />
+
+                    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+                </androidx.cardview.widget.CardView>
+
+
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="22dp"
+            android:layout_marginBottom="2dp"
+            app:layout_constraintBottom_toTopOf="@id/meme11"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:src="@drawable/pin"
+            />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

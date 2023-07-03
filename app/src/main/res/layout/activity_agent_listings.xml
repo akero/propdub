@@ -91,7 +91,6 @@
             >
 
             <ImageView
-
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ratingicon"/>
@@ -101,7 +100,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="4dp"
-
                 android:text="4.5"/>
 
         </LinearLayout>
@@ -127,7 +125,6 @@
                 android:text="Dubai Hills Park"
                 android:textColor="#6A778B"
                 android:textSize="12sp" />
-
         </LinearLayout>
 
         <LinearLayout
