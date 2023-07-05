@@ -192,7 +192,8 @@
             android:textColor="#004274"
             android:text="Message" />
 
-        <EditText android:textColorHint="@color/black"
+        <EditText
+            android:textColorHint="@color/black"
             android:id="@+id/edittext3"
             style="@style/CustomEditTextHintColorSupport"
             android:layout_width="match_parent"
@@ -229,6 +230,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 android:textSize="16sp"
                 android:fontFamily="@font/poppins_regular"
+                android:paddingTop="4dp"
                 android:textColor="@color/white"
                 android:background="@drawable/propertybooknowbuttongradient"
                 app:layout_constraintStart_toStartOf="parent"
