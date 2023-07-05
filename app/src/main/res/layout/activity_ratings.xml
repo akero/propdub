@@ -6,58 +6,247 @@
     android:layout_height="match_parent"
     tools:context=".Ratings">
 
-    <ScrollView
+    <HorizontalScrollView
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         android:layout_width="0dp"
-        android:layout_height="wrap_content">
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        >
 
-    <LinearLayout
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:textColor="#0A2753"
+            android:gravity="center"
+            >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="84dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="16dp"
+                >
+
+            <Button
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:id="@+id/all_button1"
+                android:layout_width="84dp"
+                android:layout_height="30dp"
+                android:text="All"
+                android:paddingTop="4dp"
+                android:paddingLeft="15dp"
+                android:textColor="#0A2753"
+                android:fontFamily="@font/poppins_medium"
+                android:textSize="14sp"
+                android:background="@drawable/rounded_button"
+                />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/reviewstar"
+                    android:elevation="4dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginBottom="1dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="84dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="16dp"
+                >
+
+            <Button
+                android:id="@+id/all_button2"
+                android:layout_width="84dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_height="30dp"
+                android:text="5"
+                android:textColor="#FFFFFF"
+                android:paddingTop="4dp"
+                android:paddingLeft="15dp"
+                android:fontFamily="@font/poppins_medium"
+                android:textSize="14sp"
+                android:background="@drawable/button_blue"
+                />
+    <ImageView
         android:layout_width="wrap_content"
-        android:layout_height="30dp"
-        android:layout_marginTop="20dp"
-        android:gravity="center">
+        android:layout_height="wrap_content"
+        android:src="@drawable/reviewstar"
+        android:elevation="4dp"
+        android:layout_marginLeft="26dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
 
-        <Button
-            android:layout_width="84dp"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="10dp"
-            android:text="All"
-            android:background="@drawable/rounded_button"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <Button
-            android:layout_width="84dp"
-            android:layout_height="match_parent"
-            android:text="5"
-            android:layout_marginLeft="10dp"
-            android:background="@drawable/rounded_button"/>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="84dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="16dp"
+                >
 
-        <Button
-            android:layout_width="84dp"
-            android:layout_height="match_parent"
-            android:text="4"
-            android:layout_marginLeft="10dp"
-            android:background="@drawable/rounded_button"/>
+                <Button
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:id="@+id/all_button8"
+                    android:layout_width="84dp"
+                    android:layout_height="30dp"
+                    android:text="4"
+                    android:paddingTop="4dp"
+                    android:paddingLeft="15dp"
+                    android:textColor="#0A2753"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textSize="14sp"
+                    android:background="@drawable/rounded_button"
+                    />
 
-        <Button
-            android:layout_width="84dp"
-            android:layout_height="match_parent"
-            android:text="3"
-            android:layout_marginLeft="10dp"
-            android:background="@drawable/rounded_button"/>
-        <Button
-            android:layout_width="84dp"
-            android:layout_height="match_parent"
-            android:text="2"
-            android:layout_marginLeft="10dp"
-            android:background="@drawable/rounded_button"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/reviewstar"
+                    android:elevation="4dp"
+                    android:layout_marginLeft="26dp"
+                    android:layout_marginBottom="1dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
 
-        <Button
-            android:layout_width="84dp"
-            android:layout_height="match_parent"
-            android:text="1"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:background="@drawable/rounded_button"/>
-    </LinearLayout></ScrollView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="84dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="16dp"
+                >
+
+                <Button
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:id="@+id/all_button3"
+                    android:layout_width="84dp"
+                    android:layout_height="30dp"
+                    android:text="3"
+                    android:paddingTop="4dp"
+                    android:paddingLeft="15dp"
+                    android:textColor="#0A2753"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textSize="14sp"
+                    android:background="@drawable/rounded_button"
+                    />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/reviewstar"
+                    android:elevation="4dp"
+                    android:layout_marginLeft="26dp"
+                    android:layout_marginBottom="1dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="84dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="16dp"
+                >
+
+                <Button
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:id="@+id/all_button4"
+                    android:layout_width="84dp"
+                    android:layout_height="30dp"
+                    android:text="2"
+                    android:paddingTop="4dp"
+                    android:paddingLeft="15dp"
+                    android:textColor="#0A2753"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textSize="14sp"
+                    android:background="@drawable/rounded_button"
+                    />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/reviewstar"
+                    android:elevation="4dp"
+                    android:layout_marginLeft="26dp"
+                    android:layout_marginBottom="1dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="84dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="16dp"
+                >
+
+                <Button
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:id="@+id/all_button5"
+                    android:layout_width="84dp"
+                    android:layout_height="30dp"
+                    android:text="1"
+                    android:paddingTop="4dp"
+                    android:paddingLeft="15dp"
+                    android:textColor="#0A2753"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textSize="14sp"
+                    android:background="@drawable/rounded_button"
+                    />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/reviewstar"
+                    android:elevation="4dp"
+                    android:layout_marginLeft="26dp"
+                    android:layout_marginBottom="1dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        </LinearLayout>
+    </HorizontalScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
