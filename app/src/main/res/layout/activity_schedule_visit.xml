@@ -46,7 +46,7 @@
             android:textColor="#004274"
             android:text="Name" />
 
-        <EditText
+        <EditText android:textColorHint="@color/black"
             android:id="@+id/editText0"
             android:layout_width="match_parent"
             android:layout_height="43dp"
@@ -72,7 +72,7 @@
             android:textColor="#004274"
             android:text="Phone" />
 
-        <EditText
+        <EditText android:textColorHint="@color/black"
             android:id="@+id/editText1"
             android:layout_width="match_parent"
             android:layout_height="43dp"
@@ -97,7 +97,7 @@
             android:textColor="#004274"
             android:text="Email" />
 
-        <EditText
+        <EditText android:textColorHint="@color/black"
             android:id="@+id/editText2"
             android:layout_width="match_parent"
             android:layout_height="43dp"
@@ -138,7 +138,7 @@
             android:textColor="#004274"
             android:text="Date" />
 
-        <EditText
+        <EditText android:textColorHint="@color/black"
             android:id="@+id/datepicker"
             android:layout_width="match_parent"
             android:layout_height="43dp"
@@ -165,7 +165,7 @@
             android:textColor="#004274"
             android:text="Time" />
 
-        <EditText
+        <EditText android:textColorHint="@color/black"
             android:id="@+id/timepicker"
             android:layout_width="match_parent"
             android:layout_height="43dp"
@@ -192,7 +192,7 @@
             android:textColor="#004274"
             android:text="Message" />
 
-        <EditText
+        <EditText android:textColorHint="@color/black"
             android:id="@+id/edittext3"
             style="@style/CustomEditTextHintColorSupport"
             android:layout_width="match_parent"
@@ -217,14 +217,13 @@
             android:layout_marginTop="30dp"
             android:textSize="18sp"
             android:layout_gravity="center"
-
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/constraintlayout7">
 
             <Button
                 android:id="@+id/button"
                 android:layout_width="match_parent"
-                android:layout_height="43dp"
+                android:layout_height="match_parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -242,14 +241,11 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
                 android:background="@drawable/button_blue_bg"
                 />
 
-
-
         </androidx.constraintlayout.widget.ConstraintLayout>
-
-
     </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

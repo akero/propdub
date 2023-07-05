@@ -394,7 +394,6 @@
                 >
 
                 <FrameLayout
-
                     android:layout_width="196dp"
                     android:layout_height="114dp"
                     android:background="@drawable/image_background">
