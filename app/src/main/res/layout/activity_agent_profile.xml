@@ -466,9 +466,11 @@
                     android:layout_height="114dp"
                     android:background="@drawable/image_background">
 
-                    <com.acme.propdub.RoundedImageView
+                    <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:adjustViewBounds="false"
+                        android:layout_centerInParent="true"
                         android:scaleType="centerCrop"
                         android:paddingStart="8dp"
                         android:paddingTop="8dp"
