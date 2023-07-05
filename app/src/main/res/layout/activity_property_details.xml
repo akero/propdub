@@ -771,7 +771,8 @@
                             app:layout_constraintBottom_toBottomOf="parent"
                             android:background="@drawable/button_blue_bg"
                             />
-                    <Button
+
+                    <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/booknow"
                         android:layout_width="156dp"
                         android:layout_height="43dp"

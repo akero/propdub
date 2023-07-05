@@ -61,6 +61,8 @@
             android:layout_width="1dp"
             android:layout_height="match_parent"
             android:background="#13131326"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.14"
             app:layout_constraintStart_toStartOf="parent"
@@ -215,9 +217,9 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:scaleType="centerCrop"
-                                android:paddingStart="8dp"
+                                android:paddingStart="5dp"
                                 android:paddingBottom="8dp"
-                                android:paddingTop="8dp"
+                                android:paddingTop="11dp"
                                 android:src="@drawable/mappic" />
                         </FrameLayout>
 
@@ -336,9 +338,9 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:scaleType="centerCrop"
-                                android:paddingStart="8dp"
-                                android:paddingEnd="8dp"
-                                android:paddingTop="8dp"
+                                android:paddingStart="5dp"
+                                android:paddingBottom="8dp"
+                                android:paddingTop="11dp"
                                 android:src="@drawable/mappic" />
                         </FrameLayout>
 

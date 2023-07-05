@@ -21,14 +21,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/glass"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/vertical_line"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"/>
+
 
             <EditText
                 android:id="@+id/totalAmountEditText"
@@ -37,6 +30,7 @@
                 android:layout_height="43dp"
                 android:background="@drawable/edittext_background"
                 android:hint="Search"
+                android:paddingTop="4dp"
                 android:inputType="numberDecimal"
                 android:paddingStart="56dp"
                 android:paddingEnd="56dp"
@@ -48,10 +42,21 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/glass"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/vertical_line"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
             <View
                 android:id="@+id/vertical_line"
                 android:layout_width="1dp"
                 android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
                 android:background="#13131326"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.14"
@@ -59,12 +64,86 @@
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
+        <HorizontalScrollView
+            android:id="@+id/horizontalScrollView"
+            app:layout_constraintTop_toBottomOf="@id/constraintlayout1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:textColor="#0A2753"
+                android:gravity="center"
+                >
+
+                <Button
+                    android:id="@+id/all_button1"
+                    android:layout_width="84dp"
+                    android:layout_height="30dp"
+                    android:text="All"
+                    android:paddingTop="4dp"
+                    android:textColor="#0A2753"
+                    android:layout_marginRight="16dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textSize="14sp"
+                    android:background="@drawable/rounded_button"
+                    />
+
+                <Button
+                    android:id="@+id/all_button2"
+                    android:layout_width="111dp"
+                    android:layout_height="30dp"
+                    android:text="House"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginRight="16dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textSize="14sp"
+                    android:paddingTop="4dp"
+                    android:background="@drawable/button_blue"
+                    />
+
+                <Button
+                    android:id="@+id/all_button3"
+                    android:layout_width="84dp"
+                    android:layout_height="30dp"
+                    android:text="Villa"
+                    android:paddingTop="4dp"
+                    android:textColor="#0A2753"
+                    android:layout_marginRight="16dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textSize="14sp"
+                    android:background="@drawable/rounded_button"
+                    />
+
+                <Button
+                    android:id="@+id/all_button4"
+                    android:layout_width="84dp"
+                    android:layout_height="30dp"
+                    android:text="All"
+                    android:paddingTop="4dp"
+                    android:textColor="#0A2753"
+                    android:layout_marginRight="16dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textSize="14sp"
+                    android:background="@drawable/rounded_button"
+                    />
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
         <ImageView
             android:id="@+id/image"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/noresults"
-            app:layout_constraintTop_toBottomOf="@+id/constraintlayout1"
+            app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"/>
