@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
@@ -173,6 +174,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
                 openPropertyRentActivity();
             }
+        });
+
+        Button reviews= findViewById(R.id.review_button);
+        reviews.setOnClickListener(new Button.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent intent= new Intent(MainActivity.this, Ratings.class);
+                startActivity(intent);
+;            }
         });
     }
 

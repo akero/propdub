@@ -7,12 +7,12 @@
     tools:context=".Ratings">
 
     <HorizontalScrollView
+        android:id="@+id/hsv"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_width="0dp"
         android:layout_marginTop="16dp"
-        android:layout_marginLeft="16dp"
         android:layout_height="wrap_content"
         android:scrollbars="none"
         >
@@ -28,6 +28,7 @@
                 android:layout_width="84dp"
                 android:layout_height="30dp"
                 android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
                 >
 
             <Button
@@ -244,9 +245,74 @@
                     />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
         </LinearLayout>
     </HorizontalScrollView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_height="174dp"
+        android:layout_width="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/hsv"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        app:cardCornerRadius="10dp"
+        app:strokeColor="#000000"
+        app:strokeWidth="1dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_height="match_parent"
+            android:layout_width="match_parent">
+            >
+
+            <ImageView
+                android:id="@+id/image1"
+                android:layout_width="74dp"
+                android:layout_height="36dp"
+                android:background="@drawable/image_background"
+                android:layout_margin="10dp"
+                app:layout_constraintBottom_toTopOf="@id/view1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:src="@drawable/image1"
+                android:scaleType="centerCrop"
+                />
+
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/image1"
+                android:text="Fairview Apartment"
+                android:fontFamily="@font/poppins_semibold"
+                android:textSize="10sp"
+                android:textColor="#252B5C"
+                />
+
+            <ImageView
+                android:id="@+id/image2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/star"
+                app:layout_constraintStart_toEndOf="@id/image1"
+                app:layout_constraintBottom_toTopOf="@id/view1"
+                app:layout_constraintTop_toBottomOf="@id/text1"
+                />
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="match_parent"
+                android:layout_height="118dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:background="#f2f2f2"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
