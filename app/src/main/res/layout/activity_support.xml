@@ -176,13 +176,13 @@
             app:layout_constraintTop_toBottomOf="@+id/totalAmountEditText4"
             android:textColor="@color/figmablue"/>
 
-    <LinearLayout
-    android:id="@+id/llayout"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    app:layout_constraintTop_toBottomOf="@+id/gdpr"
-    app:layout_constraintStart_toStartOf="parent">
+        <LinearLayout
+            android:id="@+id/llayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/gdpr"
+            app:layout_constraintStart_toStartOf="parent">
 
         <CheckBox
             android:id="@+id/checkbox_id"
@@ -199,7 +199,6 @@
             android:fontFamily="@font/poppins_light"
             android:textSize="14sp"
             android:textColor="@color/figmablue"/>
-
     </LinearLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -229,8 +228,7 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                android:background="@drawable/button_blue_bg"
-                />
+                android:background="@drawable/button_blue_bg" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <LinearLayout
@@ -309,8 +307,7 @@
                 android:textColor="@color/figmablue"
                 android:text="For enquiries contact:"
                 android:fontFamily="@font/poppins_medium"
-                android:textSize="17sp"
-                />
+                android:textSize="17sp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -319,7 +316,6 @@
                 android:textColor="@color/transparentblack"
                 android:fontFamily="@font/poppins_light"
                 android:textSize="15sp" />
-
         </LinearLayout>
         </androidx.cardview.widget.CardView>
 
@@ -348,8 +344,7 @@
                     android:textColor="@color/figmablue"
                     android:text="Corporate Headquarters"
                     android:fontFamily="@font/poppins_medium"
-                    android:textSize="17sp"
-                    />
+                    android:textSize="17sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -358,7 +353,6 @@
                     android:textColor="@color/transparentblack"
                     android:fontFamily="@font/poppins_light"
                     android:textSize="15sp" />
-
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
@@ -385,7 +379,6 @@
                     android:elevation="4dp"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" />
-
             </androidx.cardview.widget.CardView>
         </RelativeLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
