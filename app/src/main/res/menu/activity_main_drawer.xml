@@ -8,7 +8,6 @@
             android:id="@+id/ID0"
             android:title="My Bookings"
             android:actionLayout="@layout/custom_action_layout"
-
             />
         <item
             android:id="@+id/ID1"

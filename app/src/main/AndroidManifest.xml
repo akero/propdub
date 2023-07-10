@@ -16,14 +16,15 @@
         tools:targetApi="31">
         <activity
             android:name=".HomeActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".Ratings"
             android:exported="false"/>
         <activity
             android:name=".SignUp"
             android:exported="false"
-            android:theme="@style/AppTheme.NoActionBar" />
+             />
         <activity
             android:name=".login"
             android:exported="false"
@@ -86,9 +87,7 @@
             android:name=".DocViewer"
             android:exported="false"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".Contact"
-            android:exported="false" />
+
         <activity
             android:name=".MortgageCalculator"
             android:exported="false" />

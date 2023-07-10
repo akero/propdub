@@ -243,8 +243,8 @@ public class PropertyDetails extends AppCompatActivity {
 
     // Method to navigate to Contact
     private void openContactActivity() {
-        Intent intent = new Intent(PropertyDetails.this, Contact.class);
-        startActivity(intent);
+        //Intent intent = new Intent(PropertyDetails.this, Contact.class);
+        //startActivity(intent);
     }
 
     @Override

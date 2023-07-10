@@ -78,6 +78,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
+                        android:paddingTop="2dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toEndOf="@id/framelayout1"
                         app:layout_constraintTop_toTopOf="parent"
@@ -117,7 +118,7 @@
                         android:layout_height="55dp"
                         android:layout_weight="1"
                         android:scaleType="centerInside"
-                        android:src="@drawable/bedrooms" />
+                        android:src="@drawable/bedroomspd" />
 
                     <ImageView
                         android:id="@+id/icon12"
@@ -125,7 +126,7 @@
                         android:layout_height="55dp"
                         android:layout_weight="1"
                         android:scaleType="centerInside"
-                        android:src="@drawable/bathrooms" />
+                        android:src="@drawable/gympd" />
 
                     <ImageView
                         android:id="@+id/icon13"
@@ -133,7 +134,7 @@
                         android:layout_height="55dp"
                         android:layout_weight="1"
                         android:scaleType="centerInside"
-                        android:src="@drawable/parking" />
+                        android:src="@drawable/parkingpd" />
 
                     <ImageView
                         android:id="@+id/icon14"
@@ -141,14 +142,14 @@
                         android:layout_height="55dp"
                         android:layout_weight="1"
                         android:scaleType="centerInside"
-                        android:src="@drawable/gym" />
+                        android:src="@drawable/bathroomspd" />
                     <ImageView
                         android:id="@+id/icon15"
                         android:layout_width="0dp"
                         android:layout_height="55dp"
                         android:layout_weight="1"
                         android:scaleType="centerInside"
-                        android:src="@drawable/bedrooms" />
+                        android:src="@drawable/sizepd" />
                 </LinearLayout>
 
                 <View
@@ -684,6 +685,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:src="@drawable/star1button"
+                            android:paddingTop="1dp"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintBottom_toBottomOf="parent"/>
@@ -778,6 +780,8 @@
                         android:layout_height="43dp"
                         android:text="Book Now"
                         android:paddingTop="6dp"
+                        android:textSize="20sp"
+                        android:textAllCaps="false"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"

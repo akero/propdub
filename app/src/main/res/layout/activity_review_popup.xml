@@ -144,7 +144,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Submit"
-        android:textSize="17sp"
+        android:textSize="20sp"
         android:paddingTop="4dp"
         android:textColor="@color/white"
         android:textAllCaps="false"
