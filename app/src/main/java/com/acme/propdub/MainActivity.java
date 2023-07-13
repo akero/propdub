@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 openPropertyDetailsActivity();
             }
         });
-
+        
         // agent profile button code
         View agentButton = findViewById(R.id.agent_button);
         agentButton.setOnClickListener(new View.OnClickListener() {
