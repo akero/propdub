@@ -70,11 +70,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         try {
             adapter = new MyAdapter(images, titles, subtitles);
 
-
-
             discreteScrollView.setAdapter(adapter);
-
-
 
             ActionBar actionBar = getSupportActionBar();
             if (actionBar != null) {

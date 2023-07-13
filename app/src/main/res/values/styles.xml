@@ -25,6 +25,14 @@
         <item name="colorPrimaryDark">@color/figmabluedark</item>
     </style>
 
+    <style name="AppThemeMaterial" parent="Theme.Material3.Light">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/figmabluedark</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="colorPrimaryDark">@color/figmabluedark</item>
+    </style>
+
 
     <style name="SpinnerStyle" parent="Widget.AppCompat.Spinner.DropDown">
         <item name="android:textColor">@color/black</item> <!-- Replace with your desired text color -->

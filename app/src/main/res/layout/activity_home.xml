@@ -13,6 +13,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="68dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="#004274"
+            app:menu="@menu/navigation_bar"
+            />
+
+
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/topbuttons1"
             android:layout_width="328dp"
