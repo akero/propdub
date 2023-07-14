@@ -4,7 +4,9 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
+import androidx.core.content.res.ResourcesCompat;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.viewpager2.widget.MarginPageTransformer;
@@ -14,13 +16,18 @@ import java.util.List;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.Typeface;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.util.TypedValue;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewTreeObserver;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.android.material.navigation.NavigationView;
@@ -40,6 +47,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
         // Initialize and setup your DiscreteScrollView
         discreteScrollView = findViewById(R.id.picker);
 
@@ -67,20 +75,61 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                 "Subtitle 5"
         );
 
+        View view=null;
+
         try {
             adapter = new MyAdapter(images, titles, subtitles);
 
             discreteScrollView.setAdapter(adapter);
 
-            ActionBar actionBar = getSupportActionBar();
-            if (actionBar != null) {
-                actionBar.setDisplayHomeAsUpEnabled(true);
-                actionBar.setHomeAsUpIndicator(R.drawable.menubutton);
-                actionBar.setTitle("Noida, India");
-            }
+            //action bar
+
+                ActionBar actionBar = getSupportActionBar();
+                if (actionBar != null) {
+                    actionBar.setDisplayHomeAsUpEnabled(true);
+                    actionBar.setHomeAsUpIndicator(R.drawable.whitemenubutton);
+
+                    // Set the background color of the ActionBar
+                    ColorDrawable colorDrawable = new ColorDrawable(Color.parseColor("#004274"));
+                    actionBar.setBackgroundDrawable(colorDrawable);
+
+                    // Create a custom layout for the ActionBar title
+                    LayoutInflater inflater = LayoutInflater.from(this);
+                    view = inflater.inflate(R.layout.actionbar_title, null);
+
+
+
+                    ImageView iconView = view.findViewById(R.id.actionbar_icon);
+                    iconView.setImageResource(R.drawable.my_icon);
+
+                    // Set the text and font for the title
+                    TextView titleView = view.findViewById(R.id.actionbar_title);
+                    titleView.setText("Noida, India");
+                    titleView.setTextColor(Color.WHITE);
+                    titleView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 14);
+                    Typeface typeface = ResourcesCompat.getFont(this, R.font.poppins_light);
+                    titleView.setTypeface(typeface);
+
+                    // Set layout parameters for the custom view
+                    ActionBar.LayoutParams layoutParams = new ActionBar.LayoutParams(ActionBar.LayoutParams.WRAP_CONTENT, ActionBar.LayoutParams.WRAP_CONTENT);
+                    layoutParams.gravity = Gravity.CENTER;
+                    view.setLayoutParams(layoutParams);
+
+
+                    // Set the custom layout as the ActionBar title
+                    actionBar.setCustomView(view);
+                    actionBar.setDisplayShowCustomEnabled(true);
+                }
+
+
+            //coordinatorlayout
+            ConstraintLayout constraintLayout = view.findViewById(R.id.constraint);
+            double a= constraintLayout.getWidth();
+            Log.d("tag29", String.valueOf(a));
 
             drawerLayout = findViewById(R.id.drawer_layout);
             ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+            //toggle.setHomeAsUpIndicator(R.drawable.whitemenubutton);
             drawerLayout.addDrawerListener(toggle);
             toggle.syncState();
 
