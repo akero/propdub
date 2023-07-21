@@ -26,7 +26,7 @@
             android:name=".SignUp"
             android:exported="false"
             android:theme="@style/AppTheme.NoActionBar" />
-             />
+
         <activity
             android:name=".login"
             android:exported="false"
@@ -92,7 +92,7 @@
 
         <activity
             android:name=".MortgageCalculator"
-            android:exported="false" />
+            android:exported="false"/>
         <activity
             android:name=".SavedSearches"
             android:exported="false" />
